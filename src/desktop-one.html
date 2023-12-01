@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desktop One</title>
+    <link rel="stylesheet" href="./output.css">
+
+    <style>
+        
+    </style>
+
+</head>
+<body>
+    
+    <section class="flex justify-center mx-auto px-5 bg-[#ffffff]">
+        <div class="max-w-[1440px] mx-auto pt-[40px] sm:pt-[104px] ">
+            <h1 class="max-w-[570px] mx-auto text-[42px] font-extrabold leading-[52px] text-black text-center py-4">Providing the best solutions for your study</h1>
+                <p class="max-w-[570px] mx-auto pb-[40px] sm:pb-[84px] text-[18px] leading-[28px]  text-center font-normal text-[#686977]">You learn today and earn tomorrow. The roots of education are bitter but the fruits are sweet.</p>
+    
+                <div class=" flex justify-center items-center w-full max-w-[1170px] gap-x-5 mx-auto ">
+                    <!-- first-div ----- -->
+                    <div class=" bg-[#ffffff] rounded-[20px] mx-auto">
+                        <div class="grid grid-cols-3 gap-x-7 mx-auto pt-[30px] sm:pt-[40px]  ">
+                            <button href="#" id="showRecorded" class="w-full text-[18px]  cursor-pointer 
+                             font-bold text-black hover:text-[#434EC4] border-b border-transparent hover:border-[#434EC4]">Recorded Class</button>
+                            <button href="#" id="showLive" class="w-full text-[18px]  cursor-pointer 
+                            font-bold text-black hover:text-[#434EC4] border-b border-transparent hover:border-[#434EC4]">Live Class<hr class=" bg-black hover:bg-[#434EC4]"></button>
+                            <button href="#" id="showLifetime" class="w-full text-[18px]  cursor-pointer 
+                            font-bold text-black hover:text-[#434EC4] border-b border-transparent hover:border-[#434EC4]">Lifetime support<hr class=" bg-black hover:bg-[#434EC4]"></button>
+                            </div> 
+                            <hr class=" bg-black">
+                            <div id="page1" class="flex justify-center items-center mx-auto pt-[70px]">
+                               <div class="flex justify-center items-center mx-auto">
+                                <div class="">
+                                    <h1 class="max-w-[470px] text-[42px] text-[#0B0D21] font-extrabold leading-[52px]  pb-[40px] pt-[16px] capitalize">Recorded class gives you more flexibility to learn faster.</h1>
+                                    <p class="max-w-[470px] text-[18px] font-normal text-black leading-[28px] pt-[20px] pb-[40px] ">You learn today and earn tomorrow. The roots of education are bitter but the fruits are sweet. If you learn today you can lead tomorrow.</p>
+                                    <button class=" max-w-[194px]  cursor-pointer text-center bg-[#FFEE00] rounded-[8px] font-bold text-[18px] text-black px-[35px] py-[15px]">
+                                    Start Learning
+                                    </button>
+                                    </div>
+                                    <div class="max-w-[570px] hidden md:block">
+                                    <img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/AuxyhzYYqs30HqNMA15P1692424860.webp" alt="">
+                                    </div>
+                               </div>
+                                </div>
+                            <div id="page2" class=" hidden justify-center items-center mx-auto pt-[70px]">
+                                <div class="">
+                                    <h1 class="max-w-[470px] text-[42px] text-[#0B0D21] font-extrabold leading-[52px]  pb-[40px] pt-[16px] capitalize">Learn anything from the best mentors in real time.</h1>
+                                    <p class="max-w-[470px] text-[18px] font-normal text-black leading-[28px] pt-[20px] pb-[40px] ">You learn today and earn tomorrow. The roots of education are bitter but the fruits are sweet. If you learn today you can lead tomorrow.</p>
+                                    <button class=" max-w-[194px]  cursor-pointer text-center bg-[#FFEE00] rounded-[8px] font-bold text-[18px] text-black px-[35px] py-[15px]">
+                                    Start Learning
+                                    </button>
+                                    </div>
+                                    <div class="max-w-[570px] hidden md:block">
+                                    <img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/JIkZN2Ewy7AdIowo2zXV1692371076.webp" alt="">
+                                    </div>
+                                
+                                </div>
+                            <div id="page3" class="hidden justify-center items-center mx-auto pt-[70px]">
+                                <div class="">
+                                    <h1 class="max-w-[470px] text-[42px] text-[#0B0D21] font-extrabold leading-[52px]  pb-[40px] pt-[16px] capitalize">Get lifetime support from your expert mentors</h1>
+                                    <p class="max-w-[470px] text-[18px] font-normal text-black leading-[28px] pt-[20px] pb-[40px] ">You learn today and earn tomorrow. The roots of education are bitter but the fruits are sweet. If you learn today you can lead tomorrow.</p>
+                                    <button class=" max-w-[194px]  cursor-pointer text-center bg-[#FFEE00] rounded-[8px] font-bold text-[18px] text-black px-[35px] py-[15px]">
+                                    Start Learning
+                                    </button>
+                                    </div>
+                                    <div class="max-w-[570px] hidden md:block">
+                                    <img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/6up7yZJTIdn3U7zHqPnW1692370727.webp" alt="">
+                                    </div>
+                                </div>
+                    </div>
+                </div>	
+        </div>
+    </section>
+
+
+    <script>
+        // creaive solution 
+	document.addEventListener('DOMContentLoaded', () => {
+      const page1 = document.getElementById('page1');
+      const page2 = document.getElementById('page2');
+	  const page3 = document.getElementById('page3');
+      const showFounder = document.getElementById('showRecorded');
+      const showBlogger = document.getElementById('showLive');
+	  const showMerketer = document.getElementById('showLifetime');
+
+      showFounder.addEventListener('click', () => {
+        page1.style.display = 'flex';
+        page2.style.display = 'none';
+		page3.style.display = 'none';
+      });
+	  showBlogger.addEventListener('click', () => {
+        page1.style.display = 'none';
+        page2.style.display = 'flex';
+		page3.style.display = 'none';
+      });
+	  showMerketer.addEventListener('click', () => {
+        page1.style.display = 'none';
+        page2.style.display = 'none';
+		page3.style.display = 'flex';
+      });
+      
+    });
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./include-html.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

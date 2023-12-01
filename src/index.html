@@ -1,0 +1,1171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Learning Platform</title>
+<link rel="stylesheet" href="./output.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+<style>
+/* Marquee  */
+  li {
+  list-style-type: none;
+}
+
+/* / Marquee styles / */
+.marquee {
+  --gap: 0rem;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+  width: 100%;
+}
+
+.marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: var(--gap);
+  min-width: fit-content;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+/* / Enable animation / */
+.enable-animation .marquee__content {
+  animation: scroll 15s linear infinite;
+}
+
+
+/* / Other page demo styles / */
+.marquee__content > * {
+  flex: 0 0 auto;
+  color: #1f1f1f;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 2px;
+  padding: 1rem 2rem;
+  border-radius: 0.25rem;
+  text-align: center;
+}
+
+
+
+
+
+
+
+.mobile-menu {
+left: -150%;
+transition: 0.5s;
+}
+
+.mobile-menu.active {
+left: 0;
+}
+
+/* slider ----- */
+
+.swiper-pagination{
+  
+}
+.swiper-pagination-bullet{
+  background-color: #ababab ;
+  width: 25px;
+  height: 4px;
+}
+.swiper-pagination-bullet-active{
+  background-color: #0B0D21;
+  width: 25px;
+  height: 4px;
+}
+.swiper-pagination-bullet{
+  border-radius: 0px;
+}	  
+@media screen and (max-width: 640px) {
+
+  .swiper-pagination{
+    
+  }
+	   
+}
+@media screen and (max-width: 768px) {
+  .swiper-pagination{
+     
+  }
+}
+@media screen and (max-width: 1024px) {
+  .swiper-pagination{
+    
+  }
+}
+@media screen and (min-width: 1440px){
+		.swiper-pagination{
+     
+    }
+}
+</style>
+</head>
+<body>
+<!-- MARQUEE  -->
+<section class="enable-animation">
+  <div class="marquee bg-[#FFEE00]">
+    <ul class="marquee__content">
+      <li>・Get Discount Of 10% On All our Video Courses For a Limited Time </li>      
+      <li>・Get Discount Of 10% On All our Video Courses For a Limited Time </li>      
+      <li>・Get Discount Of 10% On All our Video Courses For a Limited Time </li> 
+    </ul>
+    <ul class="marquee__content">
+      <li>・Get Discount Of 10% On All our Video Courses For a Limited Time </li>      
+      <li>・Get Discount Of 10% On All our Video Courses For a Limited Time </li>      
+      <li>・Get Discount Of 10% On All our Video Courses For a Limited Time </li> 
+    </ul>
+  </div>
+</section>
+
+
+<!-- NAVBAR START  -->
+<nav class="relative z-[999] bg-[#FDF0DF] text-black py-5">
+<div class="max-w-[1170px] mx-auto px-5 ">
+  <div class="flex justify-between items-center">
+    <div>
+      <a  href="./index.html" rel="noopener noreferrer"
+      ><img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/Vq6zqT8zg9FnTVqvgvtE1692285732.webp" alt="logo"
+    /></a>
+    </div>
+    
+    <div class="flex  items-center ">
+      <ul class="hidden md:flex  py-5 justify-end">
+        <li><a class="px-[14px] lg:px-[30px] cursor-pointer py-2 hover:bg-[#FFEE00] rounded-[4px] font-normal text-[16px] sm:text-[18px] text-black hover:text-black" href="./index.html">Home</a></li>
+        <li><a class="px-[14px] lg:px-[30px] cursor-pointer py-2 hover:bg-[#FFEE00] rounded-[4px] font-normal text-[16px] sm:text-[18px] text-black hover:text-black" href="./all-courses.html">Courses</a></li>
+        <li><a class="px-[14px] lg:px-[30px] cursor-pointer py-2 hover:bg-[#FFEE00] rounded-[4px] font-normal text-[16px] sm:text-[18px] text-black hover:text-black" href="./mentors.html">Mentors</a></li>
+        <li><a class="px-[14px] lg:px-[30px] cursor-pointer py-2 hover:bg-[#FFEE00] rounded-[4px] font-normal text-[16px] sm:text-[18px] text-black hover:text-black" href="./about.html">About</a></li>
+        <li><a class="px-[14px] lg:px-[30px] cursor-pointer py-2 hover:bg-[#FFEE00] rounded-[4px] font-normal text-[16px] sm:text-[18px] text-black hover:text-black" href="./blog.html">Blog</a></li>
+      </ul>
+      <a
+        href=""
+        target="_blank"
+        class="ml-[54px] px-[25px] cursor-pointer py-2 bg-[#0B0D21] hover:bg-[#FFEE00] rounded-[4px] font-bold text-[18px] text-white hover:text-black hidden md:block"
+        >Log In</a>
+    </div>
+    <!-- Mobile menu icon -->
+
+    <div id="openMenuIcon" class="md:hidden inline-block cursor-pointer">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none">
+        <rect width="18" height="2" fill="#0B0D21"/>
+        <rect y="7" width="18" height="2" fill="#0B0D21"/>
+        <rect y="14" width="18" height="2" fill="#0B0D21"/>
+      </svg>
+    </div>
+    
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="md:hidden flex justify-center w-full ">
+    <div id="mobile-content" class="mobile-menu absolute top-0 w-full bg-[#FDF0DF] px-5 pt-5">
+      <!-- add hidden here later -->
+      <div class="flex justify-between items-center">
+          <a  href="/" rel="noopener noreferrer"
+          ><img class="hidden md:block" src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/Vq6zqT8zg9FnTVqvgvtE1692285732.webp" alt="logo"
+        /></a>
+          <div id="closeMenuIcon" class="md:hidden inline-block cursor-pointer">
+              <svg
+                width="31"
+                height="30"
+                viewBox="0 0 31 30"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                class="fill-black"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M1.42367 27.8804C0.6374 27.1046 0.6374 25.8468 1.42367 25.071L25.4095 1.40504C26.1958 0.629247 27.4706 0.629246 28.2568 1.40503C29.0431 2.18082 29.0431 3.43863 28.2568 4.21442L4.27102 27.8804C3.48475 28.6562 2.20995 28.6562 1.42367 27.8804Z"
+                  fill="#ffffff"
+                />
+                <path
+                  class="fill-black"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M1.93793 1.40469C2.7242 0.628901 3.999 0.628901 4.78528 1.40469L28.7711 25.0707C29.5574 25.8465 29.5574 27.1043 28.7711 27.8801C27.9848 28.6559 26.71 28.6559 25.9238 27.8801L1.93793 4.21407C1.15166 3.43828 1.15166 2.18048 1.93793 1.40469Z"
+                  fill="#ffffff"
+                />
+              </svg>
+            </div>
+      </div>
+      <ul
+        class="mt-4 leading-9 font-bold h-screen pt-5 relative"
+      >
+      <li><a class="px-[30px] cursor-pointer py-2 hover:bg-[#FFEE00] rounded-[4px] font-normal text-[18px] text-black hover:text-black" href="">Home</a></li>
+      <li><a class="px-[30px] cursor-pointer py-2 hover:bg-[#FFEE00] rounded-[4px] font-normal text-[18px] text-black hover:text-black" href="">Courses</a></li>
+      <li><a class="px-[30px] cursor-pointer py-2 hover:bg-[#FFEE00] rounded-[4px] font-normal text-[18px] text-black hover:text-black" href="">Mentors</a></li>
+      <li><a class="px-[30px] cursor-pointer py-2 hover:bg-[#FFEE00] rounded-[4px] font-normal text-[18px] text-black hover:text-black" href="">About</a></li>
+      <li><a class="px-[30px] cursor-pointer py-2 hover:bg-[#FFEE00] rounded-[4px] font-normal text-[18px] text-black hover:text-black" href="">Blog</a></li>
+
+        <li>
+          <a
+          href=""
+          target="_blank"
+          class="px-[25px] cursor-pointer py-2 bg-[#0B0D21] hover:bg-[#FFEE00] rounded-[4px] font-bold text-[18px] text-white hover:text-black "
+          >Log In</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</nav>
+
+<main>
+<!-- BANNER SECTION  -->
+<section class="flex justify-center mx-auto px-5  bg-[#FDF0DF]">
+    <div class="max-w-[1440px] w-full mx-auto ">
+            <div class="lg:flex  justify-center items-center w-full max-w-[1170px] gap-x-[50px] lg:gap-x-[99px]  mx-auto py-[37px] sm:py-[100px]">
+              <!-- first ----- -->
+              <div class="">
+                <h1 class=" sm:w-[470px] w-[338px]  text-[32px] sm:text-[52px] lg:text-[52px] xl:text-[62px] font-extrabold text-[#0B0D21] leading-[38px] sm:leading-[66px] capitalize pb-[14px] ">You learn today and earn tomorrow.</h1>
+                  <p class="md:w-[445px] w-[339px] text-[14px] sm:text-[18px] text-[#0B0D21] font-normal leading-[20px] sm:leading-[28px]  pb-[20px] sm:pb-[26px]">You learn today and earn tomorrow. The roots of education are bitter but the fruits are sweet. If you learn today you can lead tomorrow.</p>
+                  <button class="px-[40px] py-[15px] cursor-pointer  bg-[#0B0D21] hover:bg-[#FFEE00] hover:text-black rounded-[8px] font-medium text-[18px] text-white mx-auto text-center mr-[17px] mb-[18px] sm:mb-0">
+                    Start Learning
+                </button>
+                <button class="mb-[28px] sm:mb-[62px] px-[40px] py-[15px] cursor-pointer  bg-[#0B0D21] hover:bg-[#FFEE00] hover:text-black rounded-[8px] font-medium text-[18px] text-white mx-auto text-center">
+                  Explore Courses
+              </button>
+              <svg xmlns="http://www.w3.org/2000/svg" width="172" height="28" viewBox="0 0 172 28" fill="none">
+                <path d="M15.2965 0.886187C14.8471 -0.295396 13.1518 -0.295396 12.7038 0.886187H12.7024L9.80456 8.91366C9.70363 9.17528 9.52565 9.40007 9.29416 9.55832C9.06268 9.71656 8.78861 9.80079 8.50821 9.79985H1.38673C0.0735874 9.79985 -0.503187 11.4378 0.532767 12.24L5.60054 16.7997C5.82755 16.9743 5.99345 17.2162 6.07443 17.4909C6.15542 17.7655 6.14733 18.0588 6.05132 18.3285L4.2006 26.1726C3.74982 27.4312 5.20996 28.5148 6.31171 27.7392L13.1952 23.3712C13.4309 23.2056 13.712 23.1167 14.0002 23.1167C14.2883 23.1167 14.5694 23.2056 14.8051 23.3712L21.6886 27.7392C22.7918 28.5148 24.2505 27.4326 23.7997 26.1726L21.949 18.3285C21.853 18.0588 21.8449 17.7655 21.9259 17.4909C22.0069 17.2162 22.1728 16.9743 22.3998 16.7997L27.4676 12.24C28.5021 11.4378 27.9282 9.79985 26.6122 9.79985H19.4907C19.2104 9.80059 18.9364 9.71629 18.7049 9.55807C18.4735 9.39985 18.2955 9.17516 18.1944 8.91366L15.2965 0.886187Z" fill="#FDBF1C"/>
+                <path d="M51.2965 0.886187C50.8471 -0.295396 49.1518 -0.295396 48.7038 0.886187H48.7024L45.8046 8.91366C45.7036 9.17528 45.5256 9.40007 45.2942 9.55832C45.0627 9.71656 44.7886 9.80079 44.5082 9.79985H37.3867C36.0736 9.79985 35.4968 11.4378 36.5328 12.24L41.6005 16.7997C41.8276 16.9743 41.9934 17.2162 42.0744 17.4909C42.1554 17.7655 42.1473 18.0588 42.0513 18.3285L40.2006 26.1726C39.7498 27.4312 41.21 28.5148 42.3117 27.7392L49.1952 23.3712C49.4309 23.2056 49.712 23.1167 50.0002 23.1167C50.2883 23.1167 50.5694 23.2056 50.8051 23.3712L57.6886 27.7392C58.7918 28.5148 60.2505 27.4326 59.7997 26.1726L57.949 18.3285C57.853 18.0588 57.8449 17.7655 57.9259 17.4909C58.0069 17.2162 58.1728 16.9743 58.3998 16.7997L63.4676 12.24C64.5021 11.4378 63.9282 9.79985 62.6122 9.79985H55.4907C55.2104 9.80059 54.9364 9.71629 54.7049 9.55807C54.4735 9.39985 54.2955 9.17516 54.1944 8.91366L51.2965 0.886187Z" fill="#FDBF1C"/>
+                <path d="M87.2965 0.886187C86.8471 -0.295396 85.1518 -0.295396 84.7038 0.886187H84.7024L81.8046 8.91366C81.7036 9.17528 81.5256 9.40007 81.2942 9.55832C81.0627 9.71656 80.7886 9.80079 80.5082 9.79985H73.3867C72.0736 9.79985 71.4968 11.4378 72.5328 12.24L77.6005 16.7997C77.8276 16.9743 77.9934 17.2162 78.0744 17.4909C78.1554 17.7655 78.1473 18.0588 78.0513 18.3285L76.2006 26.1726C75.7498 27.4312 77.21 28.5148 78.3117 27.7392L85.1952 23.3712C85.4309 23.2056 85.712 23.1167 86.0002 23.1167C86.2883 23.1167 86.5694 23.2056 86.8051 23.3712L93.6886 27.7392C94.7918 28.5148 96.2505 27.4326 95.7997 26.1726L93.949 18.3285C93.853 18.0588 93.8449 17.7655 93.9259 17.4909C94.0069 17.2162 94.1728 16.9743 94.3998 16.7997L99.4676 12.24C100.502 11.4378 99.9282 9.79985 98.6122 9.79985H91.4907C91.2104 9.80059 90.9364 9.71629 90.7049 9.55807C90.4735 9.39985 90.2955 9.17516 90.1944 8.91366L87.2965 0.886187Z" fill="#FDBF1C"/>
+                <path d="M123.297 0.886187C122.847 -0.295396 121.152 -0.295396 120.704 0.886187H120.702L117.805 8.91366C117.704 9.17528 117.526 9.40007 117.294 9.55832C117.063 9.71656 116.789 9.80079 116.508 9.79985H109.387C108.074 9.79985 107.497 11.4378 108.533 12.24L113.601 16.7997C113.828 16.9743 113.993 17.2162 114.074 17.4909C114.155 17.7655 114.147 18.0588 114.051 18.3285L112.201 26.1726C111.75 27.4312 113.21 28.5148 114.312 27.7392L121.195 23.3712C121.431 23.2056 121.712 23.1167 122 23.1167C122.288 23.1167 122.569 23.2056 122.805 23.3712L129.689 27.7392C130.792 28.5148 132.251 27.4326 131.8 26.1726L129.949 18.3285C129.853 18.0588 129.845 17.7655 129.926 17.4909C130.007 17.2162 130.173 16.9743 130.4 16.7997L135.468 12.24C136.502 11.4378 135.928 9.79985 134.612 9.79985H127.491C127.21 9.80059 126.936 9.71629 126.705 9.55807C126.474 9.39985 126.295 9.17516 126.194 8.91366L123.297 0.886187Z" fill="#FDBF1C"/>
+                <path d="M159.297 0.886187C158.847 -0.295396 157.152 -0.295396 156.704 0.886187H156.702L153.805 8.91366C153.704 9.17528 153.526 9.40007 153.294 9.55832C153.063 9.71656 152.789 9.80079 152.508 9.79985H145.387C144.074 9.79985 143.497 11.4378 144.533 12.24L149.601 16.7997C149.828 16.9743 149.993 17.2162 150.074 17.4909C150.155 17.7655 150.147 18.0588 150.051 18.3285L148.201 26.1726C147.75 27.4312 149.21 28.5148 150.312 27.7392L157.195 23.3712C157.431 23.2056 157.712 23.1167 158 23.1167C158.288 23.1167 158.569 23.2056 158.805 23.3712L165.689 27.7392C166.792 28.5148 168.251 27.4326 167.8 26.1726L165.949 18.3285C165.853 18.0588 165.845 17.7655 165.926 17.4909C166.007 17.2162 166.173 16.9743 166.4 16.7997L171.468 12.24C172.502 11.4378 171.928 9.79985 170.612 9.79985H163.491C163.21 9.80059 162.936 9.71629 162.705 9.55807C162.474 9.39985 162.295 9.17516 162.194 8.91366L159.297 0.886187Z" fill="#FDBF1C"/>
+              </svg>
+              <p class="text-[22px] font-bold text-[#0B0D21] pt-[16px]">10000+</p>
+              <p class="text-[18px] font-normal pt-[6px] pb-[16px]">Clients reviews (4.5 of 5)</p>
+              <a href="" class="text-[18px] font-bold text-[#0B0D21] pb-[45px] sm:pb-52">All Review</a>
+              </div>
+              <!-- second ---- -->
+              <img class=" w-[339px] sm:w-[500px] xl:w-[570px] lg:w-[363px] object-cover mt-[45px] " src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/Cc8G5kJWqfZQtY4Pkx7R1692591212.webp" alt="">
+            
+            </div>
+        </div>
+</section>
+
+<!-- COUNTER  -->
+<section class="bg-[#434EC4]">
+  <div class="antialiased max-w-[970px] flex flex-col md:flex-row justify-around mx-auto gap-x-7 gap-y-7 items-center text-center  bg-[#434EC4] text-white py-[70px]">
+    <div class=" w-48 md:border-r-[2px] ">
+      <span class="text-[42px] font-extrabold text-white leading-[46px] pb-[8px] " 
+        x-data="animation()"
+        x-init="animate(800)"
+        x-text="counter">
+        8K+
+      </span>
+      <p class="text-[18px] font-normal leading-[28px] ">Success Stories</p>
+    </div>
+    <div class="w-48 md:border-r-[2px]">
+      <span class="text-[42px] font-extrabold text-white leading-[46px] pb-[8px]" 
+        x-data="animation()"
+        x-init="animate(12000)"
+        x-text="counter">
+        12K+
+      </span>
+      <p class="text-[18px] font-normal leading-[28px]">Expert Instructor</p>
+    </div>
+    <div class="w-48 md:border-r-[2px]">
+      <span class="text-[42px] font-extrabold text-white leading-[46px] pb-[8px]" 
+        x-data="animation()"
+        x-init="animate(9400)"
+        x-text="counter">
+        108K+
+      </span>
+      <p class="text-[18px] font-normal leading-[28px]">Worldwide Students</p>
+    </div>
+    <div class="w-48 ">
+      <span class="text-[42px] font-extrabold text-white leading-[46px] pb-[8px]" 
+        x-data="animation()"
+        x-init="animate(11024)"
+        x-text="counter">
+        310+
+      </span>
+      <p class="text-[18px] font-normal leading-[28px]">Trendy Subjects</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROVIDING THE BEST  -->
+<section class="flex justify-center mx-auto px-5 bg-[#ffffff]">
+    <div class="max-w-[1440px] mx-auto pt-[40px] sm:pt-[104px] px-5">
+        <h1 class="max-w-[570px] mx-auto text-[36px] sm:text-[42px] font-extrabold leading-[36px] sm:leading-[52px] text-black text-center py-4">Providing the best solutions for your study</h1>
+            <p class="max-w-[570px] mx-auto pb-[40px] sm:pb-[84px] text-[14px] sm:text-[18px] leading-[24px]  sm:leading-[28px]  text-center font-normal text-[#686977]">You learn today and earn tomorrow. The roots of education are bitter but the fruits are sweet.</p>
+
+            <div class=" flex justify-center items-center w-full max-w-[1170px] gap-x-5 mx-auto ">
+                <!-- first-div ----- -->
+                <div class=" bg-[#ffffff] rounded-[20px] mx-auto ">
+                    <div class="md:grid grid-cols-3 gap-x-7 mx-auto pt-[30px] sm:pt-[40px] hidden ">
+                        <button href="#" id="showRecorded" class="w-full text-[18px]  cursor-pointer 
+                         font-bold text-black hover:text-[#434EC4] border-b border-transparent hover:border-[#434EC4]">Recorded Class</button>
+                        <button href="#" id="showLive" class="w-full text-[18px]  cursor-pointer 
+                        font-bold text-black hover:text-[#434EC4] border-b border-transparent hover:border-[#434EC4]">Live Class<hr class=" bg-black hover:bg-[#434EC4]"></button>
+                        <button href="#" id="showLifetime" class="w-full text-[18px]  cursor-pointer 
+                        font-bold text-black hover:text-[#434EC4] border-b border-transparent hover:border-[#434EC4]">Lifetime support<hr class=" bg-black hover:bg-[#434EC4]"></button>
+                        </div> 
+                        <hr class=" bg-black hidden md:block">
+                        <div id="page1" class="flex justify-center items-center mx-auto sm:pt-[70px]">
+                           <div class="flex flex-col md:flex-row justify-center items-center mx-auto">
+                            <div class="order-2 md:order-1">
+                                <h1 class="max-w-[470px] text-[26px] lg:text-[42px] text-[#0B0D21] font-extrabold leading-[36px] lg:leading-[52px]  md:pb-[40px] pt-[16px] capitalize">Recorded class gives you more flexibility to learn faster.</h1>
+                                <p class="max-w-[470px] text-[14px] lg:text-[18px] font-normal text-black leading-[24px] sm:leading-[28px] md:pt-[20px] pb-[28px] sm:pb-[40px] ">You learn today and earn tomorrow. The roots of education are bitter but the fruits are sweet. If you learn today you can lead tomorrow.</p>
+                                <button class=" max-w-[194px]  cursor-pointer text-center bg-[#FFEE00] hover:bg-[#f0e65c] rounded-[8px] font-bold text-[18px] text-black px-[35px] py-[15px]">
+                                Start Learning
+                                </button>
+                                </div>
+                                <div class="w-[339px] sm:w-[570px] order-1 md:order-2">
+                                <img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/AuxyhzYYqs30HqNMA15P1692424860.webp" alt="">
+                                </div>
+                           </div>
+                            </div>
+                        <div id="page2" class=" hidden justify-center items-center mx-auto pt-[70px]">
+                            <div class="">
+                                <h1 class="max-w-[470px] text-[26px] lg:text-[42px] text-[#0B0D21] font-extrabold leading-[36px] lg:leading-[52px]  pb-[40px] pt-[16px] capitalize">Learn anything from the best mentors in real time.</h1>
+                                <p class="max-w-[470px] text-[14px] lg:text-[18px] font-normal text-black leading-[28px] pt-[20px] pb-[40px] ">Certainly! If you're eager to learn and grow, seeking guidance from the best mentors can be an invaluable journey. Real-time mentorship offers the opportunity to receive personalized insights, feedback.</p>
+                                <button class=" max-w-[194px]  cursor-pointer text-center bg-[#FFEE00] hover:bg-[#f0e65c] rounded-[8px] font-bold text-[18px] text-black px-[35px] py-[15px]">
+                                Start Learning
+                                </button>
+                                </div>
+                                <div class="w-[339px] sm:w-[570px]">
+                                <img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/JIkZN2Ewy7AdIowo2zXV1692371076.webp" alt="">
+                                </div>
+                            
+                            </div>
+                        <div id="page3" class="hidden justify-center items-center mx-auto pt-[70px]">
+                            <div class="">
+                                <h1 class="max-w-[470px] text-[26px] lg:text-[42px] text-[#0B0D21] font-extrabold leading-[36px] lg:leading-[52px]  pb-[40px] pt-[16px] capitalize">Get lifetime support from your expert mentors</h1>
+                                <p class="max-w-[470px] text-[14px] lg:text-[18px] font-normal text-black leading-[24px] sm:leading-[28px] pt-[20px] pb-[40px] ">Online forums, industry conferences, and networking events are excellent places to discover potential mentors. It's important to approach mentorship with a clear sense .</p>
+                                <button class=" max-w-[194px]  cursor-pointer text-center bg-[#FFEE00] hover:bg-[#f0e65c] rounded-[8px] font-bold text-[18px] text-black px-[35px] py-[15px]">
+                                Start Learning
+                                </button>
+                                </div>
+                                <div class="w-[339px] sm:w-[570px] ">
+                                <img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/6up7yZJTIdn3U7zHqPnW1692370727.webp" alt="">
+                                </div>
+                            </div>
+                </div>
+            </div>	
+    </div>
+</section>    
+
+<!-- EXPLORE COURSES -->
+<section class="flex justify-center mx-auto px-5 py-[50px] sm:py-[100px] bg-[#ffffff] ">
+    <div class="max-w-[1440px] w-full mx-auto ">
+            <div class="flex justify-center items-center w-full max-w-[1170px] mx-auto ">
+                <div class="grid grid-cols-1 md:grid-cols-2  w-full max-w-[1170px] gap-x-[99px] lg:px-8 mx-auto ">
+                   <!-- first-card ----- -->
+                   <div class=" max-w-[570px]">
+                      <h1 class="text-[26px] lg:text-[42px] font-extrabold leading-[36px] lg:leading-[50px] pb-[70px]">Explore courses by category</h1>
+                      <!-- <video class="w-full" controls>
+                        <source src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/PS0C22l9Saw6lpFYPq9N1692609675.webp" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video> -->
+  
+                       <img class=" sm:w-[470px] rounded-[12px]" src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/PS0C22l9Saw6lpFYPq9N1692609675.webp" alt=""> 
+                  </div>
+                    
+                  <!-- second-card ---- -->
+                  <div class="">
+                      <p class=" text-[14px] lg:text-[18px] text-[#686977] font-normal leading-[20px] sm:leading-[28px] pt-[28px] sm:pt-0 pb-[28px] lg:pb-[80px]">You learn today and earn tomorrow. The roots of education are bitter but the fruits are sweet. If you learn today you can lead tomorrow. Explore the best categories.</p>
+                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-[30px]">
+                      <div class="max-w-[270px] rounded-[12px] border border-[#E9EAF0] pl-[20px] py-[20px] lg:py-[40px] hover:shadow-[0px_16px_42px_0px_rgba(0,0,0,0.07)]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54" fill="none">
+                          <circle cx="40.5" cy="13.5" r="13.5" fill="#434EC4"/>
+                          <rect y="27" width="27" height="27" rx="1" fill="#FFEE00"/>
+                          <path d="M54 53V29.4142C54 28.5233 52.9229 28.0771 52.2929 28.7071L28.7071 52.2929C28.0771 52.9229 28.5233 54 29.4142 54H53C53.5523 54 54 53.5523 54 53Z" fill="#FE672E"/>
+                        </svg>
+                        <h1 class="text-[18px] lg:text-[22px] font-bold leading-[32px] text-[#0B0D21] pt-[20px] pb-[12px]">Design sector </h1>
+                        <p class="text-[16px] font-normal leading-[26px]">123 Courses</p>
+                      </div>
+                      <div class="max-w-[270px] rounded-[12px] border border-[#E9EAF0] pl-[20px] py-[20px] lg:py-[40px] hover:shadow-[0px_16px_42px_0px_rgba(0,0,0,0.07)]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54" fill="none">
+                            <circle cx="13.5" cy="13.5" r="13.5" transform="matrix(1 0 0 -1 27 54)" fill="#434EC4"/>
+                            <rect width="27" height="27" rx="1" transform="matrix(1 0 0 -1 0 54)" fill="#FFEE00"/>
+                            <path d="M27 1.00001V24.5858C27 25.4767 25.9228 25.9229 25.2929 25.2929L1.70711 1.70712C1.07714 1.07716 1.52331 1.33514e-05 2.41421 1.33514e-05H26C26.5523 1.33514e-05 27 0.447727 27 1.00001Z" fill="#FE672E"/>
+                          </svg>
+                        <h1 class="text-[18px] lg:text-[22px] font-bold lg:leading-[32px] text-[#0B0D21] pt-[20px] pb-[12px]">Development sector </h1>
+                        <p class="text-[16px] font-normal leading-[26px]">123 Courses</p>
+                      </div>
+                      <div class="max-w-[270px] rounded-[12px] border border-[#E9EAF0] pl-[20px] py-[20px] lg:py-[40px] hover:shadow-[0px_16px_42px_0px_rgba(0,0,0,0.07)]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54" fill="none">
+                            <circle cx="13.5" cy="13.5" r="13.5" transform="matrix(1 0 0 -1 27 54)" fill="#434EC4"/>
+                            <rect opacity="0.8" width="27" height="27" rx="1" transform="matrix(1 0 0 -1 0 27)" fill="#FFEE00"/>
+                            <path d="M54 0.999998V24.5858C54 25.4767 52.9229 25.9229 52.2929 25.2929L28.7071 1.70711C28.0771 1.07714 28.5233 0 29.4142 0H53C53.5523 0 54 0.447714 54 0.999998Z" fill="#FE672E"/>
+                          </svg>
+                        <h1 class="text-[18px] lg:text-[22px] font-bold lg:leading-[32px] text-[#0B0D21] pt-[20px] pb-[12px]">Marketing sector </h1>
+                        <p class="text-[16px] font-normal leading-[26px]">123 Courses</p>
+                      </div>
+                      <div class="max-w-[270px] rounded-[12px] border border-[#E9EAF0] pl-[20px] py-[20px] lg:py-[40px] hover:shadow-[0px_16px_42px_0px_rgba(0,0,0,0.07)]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54" fill="none">
+                            <circle cx="13.5" cy="13.5" r="13.5" transform="matrix(1 0 0 -1 27 27.0001)" fill="#434EC4"/>
+                            <rect opacity="0.8" width="27" height="27" rx="1" transform="matrix(1 0 0 -1 0 53.9999)" fill="#FFEE00"/>
+                            <path d="M27 0.999876V24.5857C27 25.4766 25.9229 25.9227 25.2929 25.2928L1.70711 1.70699C1.07714 1.07702 1.52331 -0.00012207 2.41421 -0.00012207H26C26.5523 -0.00012207 27 0.447592 27 0.999876Z" fill="#FE672E"/>
+                          </svg>
+                        <h1 class="text-[18px] lg:text-[22px] font-bold lg:leading-[32px] text-[#0B0D21] pt-[20px] pb-[12px]">Others sector </h1>
+                        <p class="text-[16px] font-normal leading-[26px]">123 Courses</p>
+                      </div>
+                     </div>
+                  
+                 </div>
+                </div>
+            </div>
+        </div>
+  </section>
+
+<!-- PICK POPULAR COURSES  -->
+<section class="flex justify-center items-center mx-auto bg-[#FDF0DF] sm:py-[100px] py-[55px] px-5 ">
+    <div class="max-w-[1440px] mx-auto text-center">
+        <h1 class="max-w-[570px] mx-auto text-[26px] sm:text-[42px] font-extrabold leading-[36px] sm:leading-[52px] text-black text-center py-4">Providing the best solutions for your study</h1>
+                <p class="max-w-[570px] mx-auto pb-[40px] sm:pb-[84px] text-[18px] leading-[28px]  text-center font-normal text-[#686977]">You learn today and earn tomorrow. The roots of education are bitter but the fruits are sweet.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-[30px] max-w-[1170px]">
+
+              <div class="max-w-[370px]">
+            <div
+              class=" bg-white py-4 lg:py-[20px] px-[15px] lg:px-5 rounded-[12px] shadow-[0px_40px_150px_-35px_rgba(0,0,0,0.06)]"
+            >
+              <img
+                class="rounded-[15px] object-cover "
+                src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/nUJllIl5e4nrTZ6ZwsVm1692460751.webp"
+                alt="product"
+              />
+              <div class=" mt-[12px] text-left">
+                <h4 class="text-[#434EC4]">UI/UX DESIGN</h4>
+                <h2 class="text-[18px] font-bold">Become a UX designer in 2022</h2>
+              </div>
+              <div class="flex justify-start items-center mx-auto">
+                <img  src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/EGEUgBRqKI4WkCjUvINq1692461080.webp" alt="" /> <span class="text-[16px] font-normal text-[#83848C] pl-2 py-[12px]">by Eichiro D. Lucky</span>
+              </div>
+              <div class="flex justify-start items-center mx-auto pb-[20px]">
+                <!-- first --- -->
+                <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M9 3.1333V9.26663L12.4667 11.1333" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg></span><h1 class="text-[14px] sm:text-[16px] text-[#686977] pr-[18px]">8hr 39min</h1>
+                <!-- second --- -->
+                <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <path d="M11.1335 11.5333C11.1335 11.6394 11.0914 11.7411 11.0164 11.8162C10.9414 11.8912 10.8396 11.9333 10.7335 11.9333H4.6002C4.49411 11.9333 4.39237 11.8912 4.31735 11.8162C4.24234 11.7411 4.2002 11.6394 4.2002 11.5333V6.46665C4.2002 6.36056 4.24234 6.25882 4.31735 6.18381C4.39237 6.10879 4.49411 6.06665 4.6002 6.06665H10.7335C10.8396 6.06665 10.9414 6.10879 11.0164 6.18381C11.0914 6.25882 11.1335 6.36056 11.1335 6.46665V11.5333ZM14.3335 6.59998V11.4L11.1335 10.0667V7.93332L14.3335 6.59998Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M14.3333 1H3.66667C2.19391 1 1 2.19391 1 3.66667V14.3333C1 15.8061 2.19391 17 3.66667 17H14.3333C15.8061 17 17 15.8061 17 14.3333V3.66667C17 2.19391 15.8061 1 14.3333 1Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg></span><h1 class="text-[14px] sm:text-[16px] text-[#686977] pr-[18px]">18 classes</h1>
+                <!-- third --- -->
+                <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                  <path d="M8 0.999999V13M8 13L13 8M8 13L3 8" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M1 13V17H15V13" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg></span><h1 class="text-[14px] sm:text-[16px] text-[#686977]">572 sales</h1>
+
+              </div>
+              <div
+              class="flex justify-between items-center">
+              <p class="text-[16px] sm:text-[18px] font-bold text-[#0B0D21]">$134</p>
+                <div class="flex">
+                  <button class="text-[14px] sm:text-[18px] font-bold py-[10px] sm:py-[15px] px-[18px] sm:px-[35px] text-[#0B0D21] border  hover:bg-[#FFEE00] rounded-[6px]">Enroll</button>
+                </div>
+                
+              </div>
+            </div>
+              </div>
+              <div class="max-w-[370px]">
+            <div
+              class=" bg-white py-4 lg:py-[20px] px-[15px] lg:px-5 rounded-[12px] shadow-[0px_40px_150px_-35px_rgba(0,0,0,0.06)]"
+            >
+              <img
+                class="rounded-[15px] object-cover "
+                src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/400MIdo7f5GDuJh6dH821692463391.webp"
+                alt=""
+              />
+              <div class=" mt-[12px] text-left">
+                <h4 class="text-[#434EC4]">UI/UX DESIGN</h4>
+                <h2 class="text-[18px] font-bold">Become a UX designer in 2022</h2>
+              </div>
+              <div class="flex justify-start items-center mx-auto">
+                <img  src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/EGEUgBRqKI4WkCjUvINq1692461080.webp" alt="" /> <span class="text-[16px] font-normal text-[#83848C] pl-2 py-[12px]">by Eichiro D. Lucky</span>
+              </div>
+              <div class="flex justify-start items-center mx-auto pb-[20px]">
+                <!-- first --- -->
+                <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M9 3.1333V9.26663L12.4667 11.1333" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg></span><h1 class="text-[14px] sm:text-[16px] text-[#686977] pr-[18px]">8hr 39min</h1>
+                <!-- second --- -->
+                <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <path d="M11.1335 11.5333C11.1335 11.6394 11.0914 11.7411 11.0164 11.8162C10.9414 11.8912 10.8396 11.9333 10.7335 11.9333H4.6002C4.49411 11.9333 4.39237 11.8912 4.31735 11.8162C4.24234 11.7411 4.2002 11.6394 4.2002 11.5333V6.46665C4.2002 6.36056 4.24234 6.25882 4.31735 6.18381C4.39237 6.10879 4.49411 6.06665 4.6002 6.06665H10.7335C10.8396 6.06665 10.9414 6.10879 11.0164 6.18381C11.0914 6.25882 11.1335 6.36056 11.1335 6.46665V11.5333ZM14.3335 6.59998V11.4L11.1335 10.0667V7.93332L14.3335 6.59998Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M14.3333 1H3.66667C2.19391 1 1 2.19391 1 3.66667V14.3333C1 15.8061 2.19391 17 3.66667 17H14.3333C15.8061 17 17 15.8061 17 14.3333V3.66667C17 2.19391 15.8061 1 14.3333 1Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg></span><h1 class="text-[14px] sm:text-[16px] text-[#686977] pr-[18px]">18 classes</h1>
+                <!-- third --- -->
+                <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                  <path d="M8 0.999999V13M8 13L13 8M8 13L3 8" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M1 13V17H15V13" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg></span><h1 class="text-[14px] sm:text-[16px] text-[#686977]">572 sales</h1>
+
+              </div>
+              <div
+              class="flex justify-between items-center">
+              <p class="text-[16px] sm:text-[18px] font-bold text-[#0B0D21]">$134</p>
+                <div class="flex">
+                  <button class="text-[14px] sm:text-[18px] font-bold py-[10px] sm:py-[15px] px-[18px] sm:px-[35px] text-[#0B0D21] border  hover:bg-[#FFEE00] rounded-[6px]">Enroll</button>
+                </div>
+                
+              </div>
+            </div>
+              </div>
+              <div class="max-w-[370px]">
+                <div
+                  class=" bg-white py-4 lg:py-[20px] px-[15px] lg:px-5 rounded-[12px] shadow-[0px_40px_150px_-35px_rgba(0,0,0,0.06)]"
+                >
+                  <img
+                    class="rounded-[15px] object-cover "
+                    src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/W8p1osmeDGBDPi58UmRy1692463499.webp"
+                    alt="product"
+                  />
+                  <div class=" mt-[12px] text-left">
+                    <h4 class="text-[#434EC4]">UI/UX DESIGN</h4>
+                    <h2 class="text-[18px] font-bold">Become a UX designer in 2022</h2>
+                  </div>
+                  <div class="flex justify-start items-center mx-auto">
+                    <img  src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/EGEUgBRqKI4WkCjUvINq1692461080.webp" alt="" /> <span class="text-[16px] font-normal text-[#83848C] pl-2 py-[12px]">by Eichiro D. Lucky</span>
+                  </div>
+                  <div class="flex justify-start items-center mx-auto pb-[20px]">
+                    <!-- first --- -->
+                    <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                      <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M9 3.1333V9.26663L12.4667 11.1333" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></span><h1 class="text-[14px] sm:text-[16px] text-[#686977] pr-[18px]">8hr 39min</h1>
+                    <!-- second --- -->
+                    <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                      <path d="M11.1335 11.5333C11.1335 11.6394 11.0914 11.7411 11.0164 11.8162C10.9414 11.8912 10.8396 11.9333 10.7335 11.9333H4.6002C4.49411 11.9333 4.39237 11.8912 4.31735 11.8162C4.24234 11.7411 4.2002 11.6394 4.2002 11.5333V6.46665C4.2002 6.36056 4.24234 6.25882 4.31735 6.18381C4.39237 6.10879 4.49411 6.06665 4.6002 6.06665H10.7335C10.8396 6.06665 10.9414 6.10879 11.0164 6.18381C11.0914 6.25882 11.1335 6.36056 11.1335 6.46665V11.5333ZM14.3335 6.59998V11.4L11.1335 10.0667V7.93332L14.3335 6.59998Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M14.3333 1H3.66667C2.19391 1 1 2.19391 1 3.66667V14.3333C1 15.8061 2.19391 17 3.66667 17H14.3333C15.8061 17 17 15.8061 17 14.3333V3.66667C17 2.19391 15.8061 1 14.3333 1Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></span><h1 class="text-[14px] sm:text-[16px] text-[#686977] pr-[18px]">18 classes</h1>
+                    <!-- third --- -->
+                    <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                      <path d="M8 0.999999V13M8 13L13 8M8 13L3 8" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1 13V17H15V13" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></span><h1 class="text-[14px] sm:text-[16px] text-[#686977]">572 sales</h1>
+
+                  </div>
+                  <div
+                  class="flex justify-between items-center">
+                  <p class="text-[16px] sm:text-[18px] font-bold text-[#0B0D21]">$134</p>
+                    <div class="flex">
+                      <button class="text-[14px] sm:text-[18px] font-bold py-[10px] sm:py-[15px] px-[18px] sm:px-[35px] text-[#0B0D21] border  hover:bg-[#FFEE00] rounded-[6px]">Enroll</button>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="max-w-[370px]">
+                <div
+                  class=" bg-white py-4 lg:py-[20px] px-[15px] lg:px-5 rounded-[12px] shadow-[0px_40px_150px_-35px_rgba(0,0,0,0.06)]"
+                >
+                  <img
+                    class="rounded-[15px] object-cover "
+                    src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/01nprxRa9vvA6B5Icp7k1692463406.webp"
+                    alt="product"
+                  />
+                  <div class=" mt-[12px] text-left">
+                    <h4 class="text-[#434EC4]">UI/UX DESIGN</h4>
+                    <h2 class="text-[18px] font-bold">Become a UX designer in 2022</h2>
+                  </div>
+                  <div class="flex justify-start items-center mx-auto">
+                    <img  src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/EGEUgBRqKI4WkCjUvINq1692461080.webp" alt="" /> <span class="text-[16px] font-normal text-[#83848C] pl-2 py-[12px]">by Eichiro D. Lucky</span>
+                  </div>
+                  <div class="flex justify-start items-center mx-auto pb-[20px]">
+                    <!-- first --- -->
+                    <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                      <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M9 3.1333V9.26663L12.4667 11.1333" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></span><h1 class="text-[14px] sm:text-[16px] text-[#686977] pr-[18px]">8hr 39min</h1>
+                    <!-- second --- -->
+                    <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                      <path d="M11.1335 11.5333C11.1335 11.6394 11.0914 11.7411 11.0164 11.8162C10.9414 11.8912 10.8396 11.9333 10.7335 11.9333H4.6002C4.49411 11.9333 4.39237 11.8912 4.31735 11.8162C4.24234 11.7411 4.2002 11.6394 4.2002 11.5333V6.46665C4.2002 6.36056 4.24234 6.25882 4.31735 6.18381C4.39237 6.10879 4.49411 6.06665 4.6002 6.06665H10.7335C10.8396 6.06665 10.9414 6.10879 11.0164 6.18381C11.0914 6.25882 11.1335 6.36056 11.1335 6.46665V11.5333ZM14.3335 6.59998V11.4L11.1335 10.0667V7.93332L14.3335 6.59998Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M14.3333 1H3.66667C2.19391 1 1 2.19391 1 3.66667V14.3333C1 15.8061 2.19391 17 3.66667 17H14.3333C15.8061 17 17 15.8061 17 14.3333V3.66667C17 2.19391 15.8061 1 14.3333 1Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></span><h1 class="text-[14px] sm:text-[16px] text-[#686977] pr-[18px]">18 classes</h1>
+                    <!-- third --- -->
+                    <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                      <path d="M8 0.999999V13M8 13L13 8M8 13L3 8" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1 13V17H15V13" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></span><h1 class="text-[14px] sm:text-[16px] text-[#686977]">572 sales</h1>
+
+                  </div>
+                  <div
+                  class="flex justify-between items-center">
+                  <p class="text-[16px] sm:text-[18px] font-bold text-[#0B0D21]">$134</p>
+                    <div class="flex">
+                      <button class="text-[14px] sm:text-[18px] font-bold py-[10px] sm:py-[15px] px-[18px] sm:px-[35px] text-[#0B0D21] border  hover:bg-[#FFEE00] rounded-[6px]">Enroll</button>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="max-w-[370px]">
+                <div
+                  class=" bg-white py-4 lg:py-[20px] px-[15px] lg:px-5 rounded-[12px] shadow-[0px_40px_150px_-35px_rgba(0,0,0,0.06)]"
+                >
+                  <img
+                    class="rounded-[15px] object-cover "
+                    src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/SeLC26zKQrhIODbNxT0e1692463447.webp"
+                    alt="product"
+                  />
+                  <div class=" mt-[12px] text-left">
+                    <h4 class="text-[#434EC4]">UI/UX DESIGN</h4>
+                    <h2 class="text-[18px] font-bold">Become a UX designer in 2022</h2>
+                  </div>
+                  <div class="flex justify-start items-center mx-auto">
+                    <img  src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/EGEUgBRqKI4WkCjUvINq1692461080.webp" alt="" /> <span class="text-[16px] font-normal text-[#83848C] pl-2 py-[12px]">by Eichiro D. Lucky</span>
+                  </div>
+                  <div class="flex justify-start items-center mx-auto pb-[20px]">
+                    <!-- first --- -->
+                    <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                      <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M9 3.1333V9.26663L12.4667 11.1333" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></span><h1 class="text-[14px] sm:text-[16px] text-[#686977] pr-[18px]">8hr 39min</h1>
+                    <!-- second --- -->
+                    <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                      <path d="M11.1335 11.5333C11.1335 11.6394 11.0914 11.7411 11.0164 11.8162C10.9414 11.8912 10.8396 11.9333 10.7335 11.9333H4.6002C4.49411 11.9333 4.39237 11.8912 4.31735 11.8162C4.24234 11.7411 4.2002 11.6394 4.2002 11.5333V6.46665C4.2002 6.36056 4.24234 6.25882 4.31735 6.18381C4.39237 6.10879 4.49411 6.06665 4.6002 6.06665H10.7335C10.8396 6.06665 10.9414 6.10879 11.0164 6.18381C11.0914 6.25882 11.1335 6.36056 11.1335 6.46665V11.5333ZM14.3335 6.59998V11.4L11.1335 10.0667V7.93332L14.3335 6.59998Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M14.3333 1H3.66667C2.19391 1 1 2.19391 1 3.66667V14.3333C1 15.8061 2.19391 17 3.66667 17H14.3333C15.8061 17 17 15.8061 17 14.3333V3.66667C17 2.19391 15.8061 1 14.3333 1Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></span><h1 class="text-[14px] sm:text-[16px] text-[#686977] pr-[18px]">18 classes</h1>
+                    <!-- third --- -->
+                    <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                      <path d="M8 0.999999V13M8 13L13 8M8 13L3 8" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1 13V17H15V13" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></span><h1 class="text-[14px] sm:text-[16px] text-[#686977]">572 sales</h1>
+
+                  </div>
+                  <div
+                  class="flex justify-between items-center">
+                  <p class="text-[16px] sm:text-[18px] font-bold text-[#0B0D21]">$134</p>
+                    <div class="flex">
+                      <button class="text-[14px] sm:text-[18px] font-bold py-[10px] sm:py-[15px] px-[18px] sm:px-[35px] text-[#0B0D21] border  hover:bg-[#FFEE00] rounded-[6px]">Enroll</button>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="max-w-[370px]">
+                <div
+                  class=" bg-white py-4 lg:py-[20px] px-[15px] lg:px-5 rounded-[12px] shadow-[0px_40px_150px_-35px_rgba(0,0,0,0.06)]"
+                >
+                  <img
+                    class="rounded-[15px] object-cover "
+                    src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/nUJllIl5e4nrTZ6ZwsVm1692460751.webp"
+                    alt="product"
+                  />
+                  <div class=" mt-[12px] text-left">
+                    <h4 class="text-[#434EC4]">UI/UX DESIGN</h4>
+                    <h2 class="text-[18px] font-bold">Become a UX designer in 2022</h2>
+                  </div>
+                  <div class="flex justify-start items-center mx-auto">
+                    <img  src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/EGEUgBRqKI4WkCjUvINq1692461080.webp" alt="" /> <span class="text-[16px] font-normal text-[#83848C] pl-2 py-[12px]">by Eichiro D. Lucky</span>
+                  </div>
+                  <div class="flex justify-start items-center mx-auto pb-[20px]">
+                    <!-- first --- -->
+                    <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                      <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M9 3.1333V9.26663L12.4667 11.1333" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></span><h1 class="text-[14px] sm:text-[16px] text-[#686977] pr-[18px]">8hr 39min</h1>
+                    <!-- second --- -->
+                    <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                      <path d="M11.1335 11.5333C11.1335 11.6394 11.0914 11.7411 11.0164 11.8162C10.9414 11.8912 10.8396 11.9333 10.7335 11.9333H4.6002C4.49411 11.9333 4.39237 11.8912 4.31735 11.8162C4.24234 11.7411 4.2002 11.6394 4.2002 11.5333V6.46665C4.2002 6.36056 4.24234 6.25882 4.31735 6.18381C4.39237 6.10879 4.49411 6.06665 4.6002 6.06665H10.7335C10.8396 6.06665 10.9414 6.10879 11.0164 6.18381C11.0914 6.25882 11.1335 6.36056 11.1335 6.46665V11.5333ZM14.3335 6.59998V11.4L11.1335 10.0667V7.93332L14.3335 6.59998Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M14.3333 1H3.66667C2.19391 1 1 2.19391 1 3.66667V14.3333C1 15.8061 2.19391 17 3.66667 17H14.3333C15.8061 17 17 15.8061 17 14.3333V3.66667C17 2.19391 15.8061 1 14.3333 1Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></span><h1 class="text-[14px] sm:text-[16px] text-[#686977] pr-[18px]">18 classes</h1>
+                    <!-- third --- -->
+                    <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                      <path d="M8 0.999999V13M8 13L13 8M8 13L3 8" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1 13V17H15V13" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></span><h1 class="text-[14px] sm:text-[16px] text-[#686977]">572 sales</h1>
+    
+                  </div>
+                  <div
+                  class="flex justify-between items-center">
+                  <p class="text-[16px] sm:text-[18px] font-bold text-[#0B0D21]">$134</p>
+                    <div class="flex">
+                      <button class="text-[14px] sm:text-[18px] font-bold py-[10px] sm:py-[15px] px-[18px] sm:px-[35px] text-[#0B0D21] border  hover:bg-[#FFEE00] rounded-[6px]">Enroll</button>
+                    </div>
+                    
+                  </div>
+                </div>
+                </div>
+                
+        </div>
+        <button class=" px-[35px] py-[15px] mt-[40px] sm:mt-[50px] cursor-pointer  bg-[#FFEE00] hover:bg-[#f0e65c] rounded-[8px] font-bold text-[18px] text-[#0B0D21] mx-auto text-center">
+          Veiw All Course
+        </button>
+      </div>
+    </section>
+
+<!-- TESTIMONIAL  -->
+<section class=" bg-[#ffffff] py-[50px] sm:py-[150px] px-5">
+  <div class="grid grid-cols-1 md:grid-cols-2  w-full max-w-[1170px] gap-x-[99px] lg:px-8 mx-auto">
+    <!-- LEFT ----- -->
+    <div class=" max-w-[570px]">
+       <h1 class="text-[26px] sm:text-[42px] font-extrabold leading-[36px] sm:leading-[50px] pb-[12px] sm:pb-[70px]">What our students are saying about us</h1>
+    </div>
+    <!-- RIGHT ---- -->
+    <div class="">
+       <p class=" text-[14px] sm:text-[18px] text-[#686977] font-normal leading-[20px] sm:leading-[28px]  pb-[28px] sm:pb-[80px]">You learn today and earn tomorrow. The roots of education are bitter but the fruits are sweet. If you learn today you can lead tomorrow. Explore the best categories.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-[30px]">
+  </div>
+   
+  </div>
+ </div>
+  <!-- Swiper -->
+  <div class="swiper tips-and-tricks-slider max-w-[1170px] mx-auto pb-[50px]">
+  <div class="swiper-wrapper ">
+    <div class="swiper-slide hover:shadow-[0px_16px_42px_0px_rgba(0,0,0,0.07)] ">
+      <div
+      class="relative mx-auto rounded-[12px] shadow max-w-sm p-10 border border-[#E9EAF0] leading-snug flex flex-col justify-between ">
+      <div class="-ml-4">
+        <h1 class="text-[18px] font-bold leading-[28px] pb-[20px]">Great platform</h1>
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <circle cx="14" cy="14" r="14" fill="#FDF0DF"/>
+          <path d="M12.5865 10.1265C12.0401 10.7876 11.1636 11.8482 10.9721 13.1245C10.8975 13.6211 10.823 14.4987 11.883 14.6973C12.8524 14.8791 13.9533 16.5186 12.6283 18.2571C11.975 19.1143 9.45079 19.7472 8.32208 17.0981C7.68718 15.608 7.5602 11.9324 12.1314 9.15083C12.6211 8.85284 13.3828 8.98529 12.9596 9.64753C12.8822 9.76865 12.7489 9.92991 12.5865 10.1265Z" fill="#0B0D21"/>
+          <path d="M19.347 10.1265C18.8006 10.7876 17.9241 11.8482 17.7326 13.1245C17.6581 13.6211 17.5836 14.4987 18.6436 14.6973C19.613 14.8791 20.7139 16.5186 19.3889 18.2571C18.7356 19.1143 16.2113 19.7472 15.0826 17.0981C14.4477 15.608 14.3208 11.9324 18.892 9.15083C19.3817 8.85284 20.1434 8.98529 19.7201 9.64753C19.6427 9.76865 19.5095 9.92991 19.347 10.1265Z" fill="#0B0D21"/>
+        </svg>
+      </div>
+      <div class="mt-2">
+        <p class="text-[14px] sm:text-[16px] font-normal text-[#686977] leading-[26px]">Circuit has helped me expand my knowledge through several important courses that are extremely impactful and helpful for my career. For the first time, finishing my degree seemed realistic. It was online flexible schedule</p>
+      </div>
+      <div>
+        <div class="mx-auto w-full border border-[#E9EAF0] my-[20px]"></div>
+        <div class="flex items-center">
+          <div>
+            <img class="w-12 h-12 rounded-full border-2 border-indigo-400"
+              src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/R1UZjbnc1Gg9ZQe2DDHD1692713024.webp">
+          </div>
+          <div class="ml-4">
+            <div class="font-bold text-[16px] sm:text-[18px] leading-[28px]">DJoe Root</div>
+            <div class="text-sm text-gray-600 mt-1"><svg xmlns="http://www.w3.org/2000/svg" width="128" height="20" viewBox="0 0 128 20" fill="none">
+              <path d="M9.80979 0.58541C9.86966 0.401148 10.1303 0.401148 10.1902 0.58541L12.2002 6.77163C12.227 6.85404 12.3038 6.90983 12.3904 6.90983H18.895C19.0888 6.90983 19.1693 7.15775 19.0126 7.27163L13.7503 11.0949C13.6802 11.1459 13.6508 11.2361 13.6776 11.3185L15.6876 17.5048C15.7475 17.689 15.5366 17.8422 15.3799 17.7284L10.1176 13.9051C10.0475 13.8541 9.95254 13.8541 9.88244 13.9051L4.62013 17.7284C4.46338 17.8422 4.25249 17.689 4.31236 17.5048L6.32238 11.3185C6.34916 11.2361 6.31983 11.1459 6.24973 11.0949L0.987415 7.27163C0.830672 7.15775 0.911227 6.90983 1.10497 6.90983H7.60955C7.6962 6.90983 7.77299 6.85404 7.79976 6.77163L9.80979 0.58541Z" fill="#FFC400"/>
+              <path d="M36.8098 0.58541C36.8697 0.401148 37.1303 0.401148 37.1902 0.58541L39.2002 6.77163C39.227 6.85404 39.3038 6.90983 39.3904 6.90983H45.895C46.0888 6.90983 46.1693 7.15775 46.0126 7.27163L40.7503 11.0949C40.6802 11.1459 40.6508 11.2361 40.6776 11.3185L42.6876 17.5048C42.7475 17.689 42.5366 17.8422 42.3799 17.7284L37.1176 13.9051C37.0475 13.8541 36.9525 13.8541 36.8824 13.9051L31.6201 17.7284C31.4634 17.8422 31.2525 17.689 31.3124 17.5048L33.3224 11.3185C33.3492 11.2361 33.3198 11.1459 33.2497 11.0949L27.9874 7.27163C27.8307 7.15775 27.9112 6.90983 28.105 6.90983H34.6096C34.6962 6.90983 34.773 6.85404 34.7998 6.77163L36.8098 0.58541Z" fill="#FFC400"/>
+              <path d="M63.8098 0.58541C63.8697 0.401148 64.1303 0.401148 64.1902 0.58541L66.2002 6.77163C66.227 6.85404 66.3038 6.90983 66.3904 6.90983H72.895C73.0888 6.90983 73.1693 7.15775 73.0126 7.27163L67.7503 11.0949C67.6802 11.1459 67.6508 11.2361 67.6776 11.3185L69.6876 17.5048C69.7475 17.689 69.5366 17.8422 69.3799 17.7284L64.1176 13.9051C64.0475 13.8541 63.9525 13.8541 63.8824 13.9051L58.6201 17.7284C58.4634 17.8422 58.2525 17.689 58.3124 17.5048L60.3224 11.3185C60.3492 11.2361 60.3198 11.1459 60.2497 11.0949L54.9874 7.27163C54.8307 7.15775 54.9112 6.90983 55.105 6.90983H61.6096C61.6962 6.90983 61.773 6.85404 61.7998 6.77163L63.8098 0.58541Z" fill="#FFC400"/>
+              <path d="M90.8098 0.58541C90.8697 0.401148 91.1303 0.401148 91.1902 0.58541L93.2002 6.77163C93.227 6.85404 93.3038 6.90983 93.3904 6.90983H99.895C100.089 6.90983 100.169 7.15775 100.013 7.27163L94.7503 11.0949C94.6802 11.1459 94.6508 11.2361 94.6776 11.3185L96.6876 17.5048C96.7475 17.689 96.5366 17.8422 96.3799 17.7284L91.1176 13.9051C91.0475 13.8541 90.9525 13.8541 90.8824 13.9051L85.6201 17.7284C85.4634 17.8422 85.2525 17.689 85.3124 17.5048L87.3224 11.3185C87.3492 11.2361 87.3198 11.1459 87.2497 11.0949L81.9874 7.27163C81.8307 7.15775 81.9112 6.90983 82.105 6.90983H88.6096C88.6962 6.90983 88.773 6.85404 88.7998 6.77163L90.8098 0.58541Z" fill="#FFC400"/>
+              <path d="M117.81 0.58541C117.87 0.401148 118.13 0.401148 118.19 0.58541L120.2 6.77163C120.227 6.85404 120.304 6.90983 120.39 6.90983H126.895C127.089 6.90983 127.169 7.15775 127.013 7.27163L121.75 11.0949C121.68 11.1459 121.651 11.2361 121.678 11.3185L123.688 17.5048C123.748 17.689 123.537 17.8422 123.38 17.7284L118.118 13.9051C118.047 13.8541 117.953 13.8541 117.882 13.9051L112.62 17.7284C112.463 17.8422 112.252 17.689 112.312 17.5048L114.322 11.3185C114.349 11.2361 114.32 11.1459 114.25 11.0949L108.987 7.27163C108.831 7.15775 108.911 6.90983 109.105 6.90983H115.61C115.696 6.90983 115.773 6.85404 115.8 6.77163L117.81 0.58541Z" fill="#FFC400"/>
+            </svg></div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="swiper-slide hover:shadow-[0px_16px_42px_0px_rgba(0,0,0,0.07)]">
+      <div
+      class="relative mx-auto  rounded-[12px] shadow max-w-sm p-10 border border-[#E9EAF0] leading-snug flex flex-col justify-between">
+      <div class="-ml-4">
+        <h1 class="text-[18px] font-bold leading-[28px] pb-[20px]">Great platform</h1>
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <circle cx="14" cy="14" r="14" fill="#FDF0DF"/>
+          <path d="M12.5865 10.1265C12.0401 10.7876 11.1636 11.8482 10.9721 13.1245C10.8975 13.6211 10.823 14.4987 11.883 14.6973C12.8524 14.8791 13.9533 16.5186 12.6283 18.2571C11.975 19.1143 9.45079 19.7472 8.32208 17.0981C7.68718 15.608 7.5602 11.9324 12.1314 9.15083C12.6211 8.85284 13.3828 8.98529 12.9596 9.64753C12.8822 9.76865 12.7489 9.92991 12.5865 10.1265Z" fill="#0B0D21"/>
+          <path d="M19.347 10.1265C18.8006 10.7876 17.9241 11.8482 17.7326 13.1245C17.6581 13.6211 17.5836 14.4987 18.6436 14.6973C19.613 14.8791 20.7139 16.5186 19.3889 18.2571C18.7356 19.1143 16.2113 19.7472 15.0826 17.0981C14.4477 15.608 14.3208 11.9324 18.892 9.15083C19.3817 8.85284 20.1434 8.98529 19.7201 9.64753C19.6427 9.76865 19.5095 9.92991 19.347 10.1265Z" fill="#0B0D21"/>
+        </svg>
+      </div>
+      <div class="mt-2">
+        <p class="text-[14px] sm:text-[16px] font-normal text-[#686977] leading-[26px]">I'm so grateful for this online platform! It has transformed the way I shop for clothes. The virtual fitting room feature is amazing – I can try on different outfits from the comfort of my home. No more crowded malls for me!</p>
+      </div>
+      <div>
+        <div class="mx-auto w-full border border-[#E9EAF0] my-[20px]"></div>
+        <div class="flex items-center">
+          <div>
+            <img class="w-12 h-12 rounded-full border-2 border-indigo-400"
+              src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/ZnZf2s8NuqoyPBpYurpd1692713045.webp">
+          </div>
+          <div class="ml-4">
+            <div class="text-[16px] sm:text-[18px] font-bold leading-[28px]">Kyle Mayars</div>
+            <div class="text-sm  mt-1"><svg xmlns="http://www.w3.org/2000/svg" width="128" height="20" viewBox="0 0 128 20" fill="none">
+              <path d="M9.80979 0.58541C9.86966 0.401148 10.1303 0.401148 10.1902 0.58541L12.2002 6.77163C12.227 6.85404 12.3038 6.90983 12.3904 6.90983H18.895C19.0888 6.90983 19.1693 7.15775 19.0126 7.27163L13.7503 11.0949C13.6802 11.1459 13.6508 11.2361 13.6776 11.3185L15.6876 17.5048C15.7475 17.689 15.5366 17.8422 15.3799 17.7284L10.1176 13.9051C10.0475 13.8541 9.95254 13.8541 9.88244 13.9051L4.62013 17.7284C4.46338 17.8422 4.25249 17.689 4.31236 17.5048L6.32238 11.3185C6.34916 11.2361 6.31983 11.1459 6.24973 11.0949L0.987415 7.27163C0.830672 7.15775 0.911227 6.90983 1.10497 6.90983H7.60955C7.6962 6.90983 7.77299 6.85404 7.79976 6.77163L9.80979 0.58541Z" fill="#FFC400"/>
+              <path d="M36.8098 0.58541C36.8697 0.401148 37.1303 0.401148 37.1902 0.58541L39.2002 6.77163C39.227 6.85404 39.3038 6.90983 39.3904 6.90983H45.895C46.0888 6.90983 46.1693 7.15775 46.0126 7.27163L40.7503 11.0949C40.6802 11.1459 40.6508 11.2361 40.6776 11.3185L42.6876 17.5048C42.7475 17.689 42.5366 17.8422 42.3799 17.7284L37.1176 13.9051C37.0475 13.8541 36.9525 13.8541 36.8824 13.9051L31.6201 17.7284C31.4634 17.8422 31.2525 17.689 31.3124 17.5048L33.3224 11.3185C33.3492 11.2361 33.3198 11.1459 33.2497 11.0949L27.9874 7.27163C27.8307 7.15775 27.9112 6.90983 28.105 6.90983H34.6096C34.6962 6.90983 34.773 6.85404 34.7998 6.77163L36.8098 0.58541Z" fill="#FFC400"/>
+              <path d="M63.8098 0.58541C63.8697 0.401148 64.1303 0.401148 64.1902 0.58541L66.2002 6.77163C66.227 6.85404 66.3038 6.90983 66.3904 6.90983H72.895C73.0888 6.90983 73.1693 7.15775 73.0126 7.27163L67.7503 11.0949C67.6802 11.1459 67.6508 11.2361 67.6776 11.3185L69.6876 17.5048C69.7475 17.689 69.5366 17.8422 69.3799 17.7284L64.1176 13.9051C64.0475 13.8541 63.9525 13.8541 63.8824 13.9051L58.6201 17.7284C58.4634 17.8422 58.2525 17.689 58.3124 17.5048L60.3224 11.3185C60.3492 11.2361 60.3198 11.1459 60.2497 11.0949L54.9874 7.27163C54.8307 7.15775 54.9112 6.90983 55.105 6.90983H61.6096C61.6962 6.90983 61.773 6.85404 61.7998 6.77163L63.8098 0.58541Z" fill="#FFC400"/>
+              <path d="M90.8098 0.58541C90.8697 0.401148 91.1303 0.401148 91.1902 0.58541L93.2002 6.77163C93.227 6.85404 93.3038 6.90983 93.3904 6.90983H99.895C100.089 6.90983 100.169 7.15775 100.013 7.27163L94.7503 11.0949C94.6802 11.1459 94.6508 11.2361 94.6776 11.3185L96.6876 17.5048C96.7475 17.689 96.5366 17.8422 96.3799 17.7284L91.1176 13.9051C91.0475 13.8541 90.9525 13.8541 90.8824 13.9051L85.6201 17.7284C85.4634 17.8422 85.2525 17.689 85.3124 17.5048L87.3224 11.3185C87.3492 11.2361 87.3198 11.1459 87.2497 11.0949L81.9874 7.27163C81.8307 7.15775 81.9112 6.90983 82.105 6.90983H88.6096C88.6962 6.90983 88.773 6.85404 88.7998 6.77163L90.8098 0.58541Z" fill="#FFC400"/>
+              <path d="M117.81 0.58541C117.87 0.401148 118.13 0.401148 118.19 0.58541L120.2 6.77163C120.227 6.85404 120.304 6.90983 120.39 6.90983H126.895C127.089 6.90983 127.169 7.15775 127.013 7.27163L121.75 11.0949C121.68 11.1459 121.651 11.2361 121.678 11.3185L123.688 17.5048C123.748 17.689 123.537 17.8422 123.38 17.7284L118.118 13.9051C118.047 13.8541 117.953 13.8541 117.882 13.9051L112.62 17.7284C112.463 17.8422 112.252 17.689 112.312 17.5048L114.322 11.3185C114.349 11.2361 114.32 11.1459 114.25 11.0949L108.987 7.27163C108.831 7.15775 108.911 6.90983 109.105 6.90983H115.61C115.696 6.90983 115.773 6.85404 115.8 6.77163L117.81 0.58541Z" fill="#FFC400"/>
+            </svg></div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="swiper-slide hover:shadow-[0px_16px_42px_0px_rgba(0,0,0,0.07)]">
+      <div
+      class="relative mx-auto  rounded-[12px] shadow max-w-sm p-10 border border-[#E9EAF0] leading-snug flex flex-col justify-between">
+      <div class="-ml-4">
+        <h1 class="text-[18px] font-bold leading-[28px] pb-[20px]">Great platform</h1>
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <circle cx="14" cy="14" r="14" fill="#FDF0DF"/>
+          <path d="M12.5865 10.1265C12.0401 10.7876 11.1636 11.8482 10.9721 13.1245C10.8975 13.6211 10.823 14.4987 11.883 14.6973C12.8524 14.8791 13.9533 16.5186 12.6283 18.2571C11.975 19.1143 9.45079 19.7472 8.32208 17.0981C7.68718 15.608 7.5602 11.9324 12.1314 9.15083C12.6211 8.85284 13.3828 8.98529 12.9596 9.64753C12.8822 9.76865 12.7489 9.92991 12.5865 10.1265Z" fill="#0B0D21"/>
+          <path d="M19.347 10.1265C18.8006 10.7876 17.9241 11.8482 17.7326 13.1245C17.6581 13.6211 17.5836 14.4987 18.6436 14.6973C19.613 14.8791 20.7139 16.5186 19.3889 18.2571C18.7356 19.1143 16.2113 19.7472 15.0826 17.0981C14.4477 15.608 14.3208 11.9324 18.892 9.15083C19.3817 8.85284 20.1434 8.98529 19.7201 9.64753C19.6427 9.76865 19.5095 9.92991 19.347 10.1265Z" fill="#0B0D21"/>
+        </svg>
+      </div>
+      <div class="mt-2">
+        <p class="text-[14px] sm:text-[16px] font-normal text-[#686977] leading-[26px]">Managing my finances has become a breeze with this online platform. I can track my expenses, set budgets, and even get insights into my spending habits. It's like having a personal finance advisor at my fingertips</p>
+      </div>
+      <div>
+        <div class="mx-auto w-full border border-[#E9EAF0] my-[20px]"></div>
+        <div class="flex items-center">
+          <div>
+            <img class="w-12 h-12 rounded-full border-2 border-indigo-400"
+              src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/uXfP1qEkbAh1yzx2qmx51692713059.webp">
+          </div>
+          <div class="ml-4">
+            <div class="text-[16px] sm:text-[18px] font-bold leading-[28px]">Gudukesh Motie</div>
+            <div class="text-sm text-gray-600 mt-1"><svg xmlns="http://www.w3.org/2000/svg" width="128" height="20" viewBox="0 0 128 20" fill="none">
+              <path d="M9.80979 0.58541C9.86966 0.401148 10.1303 0.401148 10.1902 0.58541L12.2002 6.77163C12.227 6.85404 12.3038 6.90983 12.3904 6.90983H18.895C19.0888 6.90983 19.1693 7.15775 19.0126 7.27163L13.7503 11.0949C13.6802 11.1459 13.6508 11.2361 13.6776 11.3185L15.6876 17.5048C15.7475 17.689 15.5366 17.8422 15.3799 17.7284L10.1176 13.9051C10.0475 13.8541 9.95254 13.8541 9.88244 13.9051L4.62013 17.7284C4.46338 17.8422 4.25249 17.689 4.31236 17.5048L6.32238 11.3185C6.34916 11.2361 6.31983 11.1459 6.24973 11.0949L0.987415 7.27163C0.830672 7.15775 0.911227 6.90983 1.10497 6.90983H7.60955C7.6962 6.90983 7.77299 6.85404 7.79976 6.77163L9.80979 0.58541Z" fill="#FFC400"/>
+              <path d="M36.8098 0.58541C36.8697 0.401148 37.1303 0.401148 37.1902 0.58541L39.2002 6.77163C39.227 6.85404 39.3038 6.90983 39.3904 6.90983H45.895C46.0888 6.90983 46.1693 7.15775 46.0126 7.27163L40.7503 11.0949C40.6802 11.1459 40.6508 11.2361 40.6776 11.3185L42.6876 17.5048C42.7475 17.689 42.5366 17.8422 42.3799 17.7284L37.1176 13.9051C37.0475 13.8541 36.9525 13.8541 36.8824 13.9051L31.6201 17.7284C31.4634 17.8422 31.2525 17.689 31.3124 17.5048L33.3224 11.3185C33.3492 11.2361 33.3198 11.1459 33.2497 11.0949L27.9874 7.27163C27.8307 7.15775 27.9112 6.90983 28.105 6.90983H34.6096C34.6962 6.90983 34.773 6.85404 34.7998 6.77163L36.8098 0.58541Z" fill="#FFC400"/>
+              <path d="M63.8098 0.58541C63.8697 0.401148 64.1303 0.401148 64.1902 0.58541L66.2002 6.77163C66.227 6.85404 66.3038 6.90983 66.3904 6.90983H72.895C73.0888 6.90983 73.1693 7.15775 73.0126 7.27163L67.7503 11.0949C67.6802 11.1459 67.6508 11.2361 67.6776 11.3185L69.6876 17.5048C69.7475 17.689 69.5366 17.8422 69.3799 17.7284L64.1176 13.9051C64.0475 13.8541 63.9525 13.8541 63.8824 13.9051L58.6201 17.7284C58.4634 17.8422 58.2525 17.689 58.3124 17.5048L60.3224 11.3185C60.3492 11.2361 60.3198 11.1459 60.2497 11.0949L54.9874 7.27163C54.8307 7.15775 54.9112 6.90983 55.105 6.90983H61.6096C61.6962 6.90983 61.773 6.85404 61.7998 6.77163L63.8098 0.58541Z" fill="#FFC400"/>
+              <path d="M90.8098 0.58541C90.8697 0.401148 91.1303 0.401148 91.1902 0.58541L93.2002 6.77163C93.227 6.85404 93.3038 6.90983 93.3904 6.90983H99.895C100.089 6.90983 100.169 7.15775 100.013 7.27163L94.7503 11.0949C94.6802 11.1459 94.6508 11.2361 94.6776 11.3185L96.6876 17.5048C96.7475 17.689 96.5366 17.8422 96.3799 17.7284L91.1176 13.9051C91.0475 13.8541 90.9525 13.8541 90.8824 13.9051L85.6201 17.7284C85.4634 17.8422 85.2525 17.689 85.3124 17.5048L87.3224 11.3185C87.3492 11.2361 87.3198 11.1459 87.2497 11.0949L81.9874 7.27163C81.8307 7.15775 81.9112 6.90983 82.105 6.90983H88.6096C88.6962 6.90983 88.773 6.85404 88.7998 6.77163L90.8098 0.58541Z" fill="#FFC400"/>
+              <path d="M117.81 0.58541C117.87 0.401148 118.13 0.401148 118.19 0.58541L120.2 6.77163C120.227 6.85404 120.304 6.90983 120.39 6.90983H126.895C127.089 6.90983 127.169 7.15775 127.013 7.27163L121.75 11.0949C121.68 11.1459 121.651 11.2361 121.678 11.3185L123.688 17.5048C123.748 17.689 123.537 17.8422 123.38 17.7284L118.118 13.9051C118.047 13.8541 117.953 13.8541 117.882 13.9051L112.62 17.7284C112.463 17.8422 112.252 17.689 112.312 17.5048L114.322 11.3185C114.349 11.2361 114.32 11.1459 114.25 11.0949L108.987 7.27163C108.831 7.15775 108.911 6.90983 109.105 6.90983H115.61C115.696 6.90983 115.773 6.85404 115.8 6.77163L117.81 0.58541Z" fill="#FFC400"/>
+            </svg></div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="swiper-slide hover:shadow-[0px_16px_42px_0px_rgba(0,0,0,0.07)]">
+      <div
+      class="relative mx-auto  rounded-[12px] shadow max-w-sm p-10 border border-[#E9EAF0] leading-snug flex flex-col justify-between">
+      <div class="-ml-4">
+        <h1 class="text-[18px] font-bold leading-[28px] pb-[20px]">Great platform</h1>
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <circle cx="14" cy="14" r="14" fill="#FDF0DF"/>
+          <path d="M12.5865 10.1265C12.0401 10.7876 11.1636 11.8482 10.9721 13.1245C10.8975 13.6211 10.823 14.4987 11.883 14.6973C12.8524 14.8791 13.9533 16.5186 12.6283 18.2571C11.975 19.1143 9.45079 19.7472 8.32208 17.0981C7.68718 15.608 7.5602 11.9324 12.1314 9.15083C12.6211 8.85284 13.3828 8.98529 12.9596 9.64753C12.8822 9.76865 12.7489 9.92991 12.5865 10.1265Z" fill="#0B0D21"/>
+          <path d="M19.347 10.1265C18.8006 10.7876 17.9241 11.8482 17.7326 13.1245C17.6581 13.6211 17.5836 14.4987 18.6436 14.6973C19.613 14.8791 20.7139 16.5186 19.3889 18.2571C18.7356 19.1143 16.2113 19.7472 15.0826 17.0981C14.4477 15.608 14.3208 11.9324 18.892 9.15083C19.3817 8.85284 20.1434 8.98529 19.7201 9.64753C19.6427 9.76865 19.5095 9.92991 19.347 10.1265Z" fill="#0B0D21"/>
+        </svg>
+      </div>
+      <div class="mt-2">
+        <p class="text-[14px] sm:text-[16px] font-normal text-[#686977] leading-[26px]">Circuit has helped me expand my knowledge through several important courses that are extremely impactful and helpful for my career. For the first time, finishing my degree seemed realistic. It was online with a flexible schedule</p>
+      </div>
+      <div>
+        <div class="mx-auto w-full border border-[#E9EAF0] my-[20px]"></div>
+        <div class="flex items-center">
+          <div>
+            <img class="w-12 h-12 rounded-full border-2 border-indigo-400"
+              src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/R1UZjbnc1Gg9ZQe2DDHD1692713024.webp">
+          </div>
+          <div class="ml-4">
+            <div class="font-bold text-[16px] sm:text-[18px]">DJoe Root</div>
+            <div class="text-sm text-gray-600 mt-1"><svg xmlns="http://www.w3.org/2000/svg" width="128" height="20" viewBox="0 0 128 20" fill="none">
+              <path d="M9.80979 0.58541C9.86966 0.401148 10.1303 0.401148 10.1902 0.58541L12.2002 6.77163C12.227 6.85404 12.3038 6.90983 12.3904 6.90983H18.895C19.0888 6.90983 19.1693 7.15775 19.0126 7.27163L13.7503 11.0949C13.6802 11.1459 13.6508 11.2361 13.6776 11.3185L15.6876 17.5048C15.7475 17.689 15.5366 17.8422 15.3799 17.7284L10.1176 13.9051C10.0475 13.8541 9.95254 13.8541 9.88244 13.9051L4.62013 17.7284C4.46338 17.8422 4.25249 17.689 4.31236 17.5048L6.32238 11.3185C6.34916 11.2361 6.31983 11.1459 6.24973 11.0949L0.987415 7.27163C0.830672 7.15775 0.911227 6.90983 1.10497 6.90983H7.60955C7.6962 6.90983 7.77299 6.85404 7.79976 6.77163L9.80979 0.58541Z" fill="#FFC400"/>
+              <path d="M36.8098 0.58541C36.8697 0.401148 37.1303 0.401148 37.1902 0.58541L39.2002 6.77163C39.227 6.85404 39.3038 6.90983 39.3904 6.90983H45.895C46.0888 6.90983 46.1693 7.15775 46.0126 7.27163L40.7503 11.0949C40.6802 11.1459 40.6508 11.2361 40.6776 11.3185L42.6876 17.5048C42.7475 17.689 42.5366 17.8422 42.3799 17.7284L37.1176 13.9051C37.0475 13.8541 36.9525 13.8541 36.8824 13.9051L31.6201 17.7284C31.4634 17.8422 31.2525 17.689 31.3124 17.5048L33.3224 11.3185C33.3492 11.2361 33.3198 11.1459 33.2497 11.0949L27.9874 7.27163C27.8307 7.15775 27.9112 6.90983 28.105 6.90983H34.6096C34.6962 6.90983 34.773 6.85404 34.7998 6.77163L36.8098 0.58541Z" fill="#FFC400"/>
+              <path d="M63.8098 0.58541C63.8697 0.401148 64.1303 0.401148 64.1902 0.58541L66.2002 6.77163C66.227 6.85404 66.3038 6.90983 66.3904 6.90983H72.895C73.0888 6.90983 73.1693 7.15775 73.0126 7.27163L67.7503 11.0949C67.6802 11.1459 67.6508 11.2361 67.6776 11.3185L69.6876 17.5048C69.7475 17.689 69.5366 17.8422 69.3799 17.7284L64.1176 13.9051C64.0475 13.8541 63.9525 13.8541 63.8824 13.9051L58.6201 17.7284C58.4634 17.8422 58.2525 17.689 58.3124 17.5048L60.3224 11.3185C60.3492 11.2361 60.3198 11.1459 60.2497 11.0949L54.9874 7.27163C54.8307 7.15775 54.9112 6.90983 55.105 6.90983H61.6096C61.6962 6.90983 61.773 6.85404 61.7998 6.77163L63.8098 0.58541Z" fill="#FFC400"/>
+              <path d="M90.8098 0.58541C90.8697 0.401148 91.1303 0.401148 91.1902 0.58541L93.2002 6.77163C93.227 6.85404 93.3038 6.90983 93.3904 6.90983H99.895C100.089 6.90983 100.169 7.15775 100.013 7.27163L94.7503 11.0949C94.6802 11.1459 94.6508 11.2361 94.6776 11.3185L96.6876 17.5048C96.7475 17.689 96.5366 17.8422 96.3799 17.7284L91.1176 13.9051C91.0475 13.8541 90.9525 13.8541 90.8824 13.9051L85.6201 17.7284C85.4634 17.8422 85.2525 17.689 85.3124 17.5048L87.3224 11.3185C87.3492 11.2361 87.3198 11.1459 87.2497 11.0949L81.9874 7.27163C81.8307 7.15775 81.9112 6.90983 82.105 6.90983H88.6096C88.6962 6.90983 88.773 6.85404 88.7998 6.77163L90.8098 0.58541Z" fill="#FFC400"/>
+              <path d="M117.81 0.58541C117.87 0.401148 118.13 0.401148 118.19 0.58541L120.2 6.77163C120.227 6.85404 120.304 6.90983 120.39 6.90983H126.895C127.089 6.90983 127.169 7.15775 127.013 7.27163L121.75 11.0949C121.68 11.1459 121.651 11.2361 121.678 11.3185L123.688 17.5048C123.748 17.689 123.537 17.8422 123.38 17.7284L118.118 13.9051C118.047 13.8541 117.953 13.8541 117.882 13.9051L112.62 17.7284C112.463 17.8422 112.252 17.689 112.312 17.5048L114.322 11.3185C114.349 11.2361 114.32 11.1459 114.25 11.0949L108.987 7.27163C108.831 7.15775 108.911 6.90983 109.105 6.90983H115.61C115.696 6.90983 115.773 6.85404 115.8 6.77163L117.81 0.58541Z" fill="#FFC400"/>
+            </svg></div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="swiper-slide hover:shadow-[0px_16px_42px_0px_rgba(0,0,0,0.07)]">
+      <div
+      class="relative mx-auto  rounded-[12px] shadow max-w-sm p-10 border border-[#E9EAF0] leading-snug flex flex-col justify-between">
+      <div class="-ml-4">
+        <h1 class="text-[18px] font-bold leading-[28px] pb-[20px]">Great platform</h1>
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <circle cx="14" cy="14" r="14" fill="#FDF0DF"/>
+          <path d="M12.5865 10.1265C12.0401 10.7876 11.1636 11.8482 10.9721 13.1245C10.8975 13.6211 10.823 14.4987 11.883 14.6973C12.8524 14.8791 13.9533 16.5186 12.6283 18.2571C11.975 19.1143 9.45079 19.7472 8.32208 17.0981C7.68718 15.608 7.5602 11.9324 12.1314 9.15083C12.6211 8.85284 13.3828 8.98529 12.9596 9.64753C12.8822 9.76865 12.7489 9.92991 12.5865 10.1265Z" fill="#0B0D21"/>
+          <path d="M19.347 10.1265C18.8006 10.7876 17.9241 11.8482 17.7326 13.1245C17.6581 13.6211 17.5836 14.4987 18.6436 14.6973C19.613 14.8791 20.7139 16.5186 19.3889 18.2571C18.7356 19.1143 16.2113 19.7472 15.0826 17.0981C14.4477 15.608 14.3208 11.9324 18.892 9.15083C19.3817 8.85284 20.1434 8.98529 19.7201 9.64753C19.6427 9.76865 19.5095 9.92991 19.347 10.1265Z" fill="#0B0D21"/>
+        </svg>
+      </div>
+      <div class="mt-2">
+        <p class="text-[14px] sm:text-[16px] font-normal text-[#686977] leading-[26px]">Circuit has helped me expand my knowledge through several important courses that are extremely impactful and helpful for my career. For the first time, finishing my degree seemed realistic. It was online with a flexible schedule</p>
+      </div>
+      <div>
+        <div class="mx-auto w-full border border-[#E9EAF0] my-[20px]"></div>
+        <div class="flex items-center">
+          <div>
+            <img class="w-12 h-12 rounded-full border-2 border-indigo-400"
+              src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/R1UZjbnc1Gg9ZQe2DDHD1692713024.webp">
+          </div>
+          <div class="ml-4">
+            <div class="font-bold text-[16px] sm:text-[18px]">Jhon Alex</div>
+            <div class="text-sm text-gray-600 mt-1"><svg xmlns="http://www.w3.org/2000/svg" width="128" height="20" viewBox="0 0 128 20" fill="none">
+              <path d="M9.80979 0.58541C9.86966 0.401148 10.1303 0.401148 10.1902 0.58541L12.2002 6.77163C12.227 6.85404 12.3038 6.90983 12.3904 6.90983H18.895C19.0888 6.90983 19.1693 7.15775 19.0126 7.27163L13.7503 11.0949C13.6802 11.1459 13.6508 11.2361 13.6776 11.3185L15.6876 17.5048C15.7475 17.689 15.5366 17.8422 15.3799 17.7284L10.1176 13.9051C10.0475 13.8541 9.95254 13.8541 9.88244 13.9051L4.62013 17.7284C4.46338 17.8422 4.25249 17.689 4.31236 17.5048L6.32238 11.3185C6.34916 11.2361 6.31983 11.1459 6.24973 11.0949L0.987415 7.27163C0.830672 7.15775 0.911227 6.90983 1.10497 6.90983H7.60955C7.6962 6.90983 7.77299 6.85404 7.79976 6.77163L9.80979 0.58541Z" fill="#FFC400"/>
+              <path d="M36.8098 0.58541C36.8697 0.401148 37.1303 0.401148 37.1902 0.58541L39.2002 6.77163C39.227 6.85404 39.3038 6.90983 39.3904 6.90983H45.895C46.0888 6.90983 46.1693 7.15775 46.0126 7.27163L40.7503 11.0949C40.6802 11.1459 40.6508 11.2361 40.6776 11.3185L42.6876 17.5048C42.7475 17.689 42.5366 17.8422 42.3799 17.7284L37.1176 13.9051C37.0475 13.8541 36.9525 13.8541 36.8824 13.9051L31.6201 17.7284C31.4634 17.8422 31.2525 17.689 31.3124 17.5048L33.3224 11.3185C33.3492 11.2361 33.3198 11.1459 33.2497 11.0949L27.9874 7.27163C27.8307 7.15775 27.9112 6.90983 28.105 6.90983H34.6096C34.6962 6.90983 34.773 6.85404 34.7998 6.77163L36.8098 0.58541Z" fill="#FFC400"/>
+              <path d="M63.8098 0.58541C63.8697 0.401148 64.1303 0.401148 64.1902 0.58541L66.2002 6.77163C66.227 6.85404 66.3038 6.90983 66.3904 6.90983H72.895C73.0888 6.90983 73.1693 7.15775 73.0126 7.27163L67.7503 11.0949C67.6802 11.1459 67.6508 11.2361 67.6776 11.3185L69.6876 17.5048C69.7475 17.689 69.5366 17.8422 69.3799 17.7284L64.1176 13.9051C64.0475 13.8541 63.9525 13.8541 63.8824 13.9051L58.6201 17.7284C58.4634 17.8422 58.2525 17.689 58.3124 17.5048L60.3224 11.3185C60.3492 11.2361 60.3198 11.1459 60.2497 11.0949L54.9874 7.27163C54.8307 7.15775 54.9112 6.90983 55.105 6.90983H61.6096C61.6962 6.90983 61.773 6.85404 61.7998 6.77163L63.8098 0.58541Z" fill="#FFC400"/>
+              <path d="M90.8098 0.58541C90.8697 0.401148 91.1303 0.401148 91.1902 0.58541L93.2002 6.77163C93.227 6.85404 93.3038 6.90983 93.3904 6.90983H99.895C100.089 6.90983 100.169 7.15775 100.013 7.27163L94.7503 11.0949C94.6802 11.1459 94.6508 11.2361 94.6776 11.3185L96.6876 17.5048C96.7475 17.689 96.5366 17.8422 96.3799 17.7284L91.1176 13.9051C91.0475 13.8541 90.9525 13.8541 90.8824 13.9051L85.6201 17.7284C85.4634 17.8422 85.2525 17.689 85.3124 17.5048L87.3224 11.3185C87.3492 11.2361 87.3198 11.1459 87.2497 11.0949L81.9874 7.27163C81.8307 7.15775 81.9112 6.90983 82.105 6.90983H88.6096C88.6962 6.90983 88.773 6.85404 88.7998 6.77163L90.8098 0.58541Z" fill="#FFC400"/>
+              <path d="M117.81 0.58541C117.87 0.401148 118.13 0.401148 118.19 0.58541L120.2 6.77163C120.227 6.85404 120.304 6.90983 120.39 6.90983H126.895C127.089 6.90983 127.169 7.15775 127.013 7.27163L121.75 11.0949C121.68 11.1459 121.651 11.2361 121.678 11.3185L123.688 17.5048C123.748 17.689 123.537 17.8422 123.38 17.7284L118.118 13.9051C118.047 13.8541 117.953 13.8541 117.882 13.9051L112.62 17.7284C112.463 17.8422 112.252 17.689 112.312 17.5048L114.322 11.3185C114.349 11.2361 114.32 11.1459 114.25 11.0949L108.987 7.27163C108.831 7.15775 108.911 6.90983 109.105 6.90983H115.61C115.696 6.90983 115.773 6.85404 115.8 6.77163L117.81 0.58541Z" fill="#FFC400"/>
+            </svg></div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="swiper-slide hover:shadow-[0px_16px_42px_0px_rgba(0,0,0,0.07)]">
+      <div
+      class="relative mx-auto  rounded-[12px] shadow max-w-sm p-10 border border-[#E9EAF0] leading-snug flex flex-col justify-between">
+      <div class="-ml-4">
+        <h1 class="text-[18px] font-bold leading-[28px] pb-[20px]">Great platform</h1>
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <circle cx="14" cy="14" r="14" fill="#FDF0DF"/>
+          <path d="M12.5865 10.1265C12.0401 10.7876 11.1636 11.8482 10.9721 13.1245C10.8975 13.6211 10.823 14.4987 11.883 14.6973C12.8524 14.8791 13.9533 16.5186 12.6283 18.2571C11.975 19.1143 9.45079 19.7472 8.32208 17.0981C7.68718 15.608 7.5602 11.9324 12.1314 9.15083C12.6211 8.85284 13.3828 8.98529 12.9596 9.64753C12.8822 9.76865 12.7489 9.92991 12.5865 10.1265Z" fill="#0B0D21"/>
+          <path d="M19.347 10.1265C18.8006 10.7876 17.9241 11.8482 17.7326 13.1245C17.6581 13.6211 17.5836 14.4987 18.6436 14.6973C19.613 14.8791 20.7139 16.5186 19.3889 18.2571C18.7356 19.1143 16.2113 19.7472 15.0826 17.0981C14.4477 15.608 14.3208 11.9324 18.892 9.15083C19.3817 8.85284 20.1434 8.98529 19.7201 9.64753C19.6427 9.76865 19.5095 9.92991 19.347 10.1265Z" fill="#0B0D21"/>
+        </svg>
+      </div>
+      <div class="mt-2">
+        <p class="text-[14px] sm:text-[16px] font-normal text-[#686977] leading-[26px]">Circuit has helped me expand my knowledge through several important courses that are extremely impactful and helpful for my career. For the first time, finishing my degree seemed realistic. It was online with a flexible schedule</p>
+      </div>
+      <div>
+        <div class="mx-auto w-full border border-[#E9EAF0] my-[20px]"></div>
+        <div class="flex items-center">
+          <div>
+            <img class="w-12 h-12 rounded-full border-2 border-indigo-400"
+              src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/R1UZjbnc1Gg9ZQe2DDHD1692713024.webp">
+          </div>
+          <div class="ml-4">
+            <div class="font-bold text-[16px] sm:text-[18px]">Tony Stark</div>
+            <div class="text-sm text-gray-600 mt-1"><svg xmlns="http://www.w3.org/2000/svg" width="128" height="20" viewBox="0 0 128 20" fill="none">
+              <path d="M9.80979 0.58541C9.86966 0.401148 10.1303 0.401148 10.1902 0.58541L12.2002 6.77163C12.227 6.85404 12.3038 6.90983 12.3904 6.90983H18.895C19.0888 6.90983 19.1693 7.15775 19.0126 7.27163L13.7503 11.0949C13.6802 11.1459 13.6508 11.2361 13.6776 11.3185L15.6876 17.5048C15.7475 17.689 15.5366 17.8422 15.3799 17.7284L10.1176 13.9051C10.0475 13.8541 9.95254 13.8541 9.88244 13.9051L4.62013 17.7284C4.46338 17.8422 4.25249 17.689 4.31236 17.5048L6.32238 11.3185C6.34916 11.2361 6.31983 11.1459 6.24973 11.0949L0.987415 7.27163C0.830672 7.15775 0.911227 6.90983 1.10497 6.90983H7.60955C7.6962 6.90983 7.77299 6.85404 7.79976 6.77163L9.80979 0.58541Z" fill="#FFC400"/>
+              <path d="M36.8098 0.58541C36.8697 0.401148 37.1303 0.401148 37.1902 0.58541L39.2002 6.77163C39.227 6.85404 39.3038 6.90983 39.3904 6.90983H45.895C46.0888 6.90983 46.1693 7.15775 46.0126 7.27163L40.7503 11.0949C40.6802 11.1459 40.6508 11.2361 40.6776 11.3185L42.6876 17.5048C42.7475 17.689 42.5366 17.8422 42.3799 17.7284L37.1176 13.9051C37.0475 13.8541 36.9525 13.8541 36.8824 13.9051L31.6201 17.7284C31.4634 17.8422 31.2525 17.689 31.3124 17.5048L33.3224 11.3185C33.3492 11.2361 33.3198 11.1459 33.2497 11.0949L27.9874 7.27163C27.8307 7.15775 27.9112 6.90983 28.105 6.90983H34.6096C34.6962 6.90983 34.773 6.85404 34.7998 6.77163L36.8098 0.58541Z" fill="#FFC400"/>
+              <path d="M63.8098 0.58541C63.8697 0.401148 64.1303 0.401148 64.1902 0.58541L66.2002 6.77163C66.227 6.85404 66.3038 6.90983 66.3904 6.90983H72.895C73.0888 6.90983 73.1693 7.15775 73.0126 7.27163L67.7503 11.0949C67.6802 11.1459 67.6508 11.2361 67.6776 11.3185L69.6876 17.5048C69.7475 17.689 69.5366 17.8422 69.3799 17.7284L64.1176 13.9051C64.0475 13.8541 63.9525 13.8541 63.8824 13.9051L58.6201 17.7284C58.4634 17.8422 58.2525 17.689 58.3124 17.5048L60.3224 11.3185C60.3492 11.2361 60.3198 11.1459 60.2497 11.0949L54.9874 7.27163C54.8307 7.15775 54.9112 6.90983 55.105 6.90983H61.6096C61.6962 6.90983 61.773 6.85404 61.7998 6.77163L63.8098 0.58541Z" fill="#FFC400"/>
+              <path d="M90.8098 0.58541C90.8697 0.401148 91.1303 0.401148 91.1902 0.58541L93.2002 6.77163C93.227 6.85404 93.3038 6.90983 93.3904 6.90983H99.895C100.089 6.90983 100.169 7.15775 100.013 7.27163L94.7503 11.0949C94.6802 11.1459 94.6508 11.2361 94.6776 11.3185L96.6876 17.5048C96.7475 17.689 96.5366 17.8422 96.3799 17.7284L91.1176 13.9051C91.0475 13.8541 90.9525 13.8541 90.8824 13.9051L85.6201 17.7284C85.4634 17.8422 85.2525 17.689 85.3124 17.5048L87.3224 11.3185C87.3492 11.2361 87.3198 11.1459 87.2497 11.0949L81.9874 7.27163C81.8307 7.15775 81.9112 6.90983 82.105 6.90983H88.6096C88.6962 6.90983 88.773 6.85404 88.7998 6.77163L90.8098 0.58541Z" fill="#FFC400"/>
+              <path d="M117.81 0.58541C117.87 0.401148 118.13 0.401148 118.19 0.58541L120.2 6.77163C120.227 6.85404 120.304 6.90983 120.39 6.90983H126.895C127.089 6.90983 127.169 7.15775 127.013 7.27163L121.75 11.0949C121.68 11.1459 121.651 11.2361 121.678 11.3185L123.688 17.5048C123.748 17.689 123.537 17.8422 123.38 17.7284L118.118 13.9051C118.047 13.8541 117.953 13.8541 117.882 13.9051L112.62 17.7284C112.463 17.8422 112.252 17.689 112.312 17.5048L114.322 11.3185C114.349 11.2361 114.32 11.1459 114.25 11.0949L108.987 7.27163C108.831 7.15775 108.911 6.90983 109.105 6.90983H115.61C115.696 6.90983 115.773 6.85404 115.8 6.77163L117.81 0.58541Z" fill="#FFC400"/>
+            </svg></div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="swiper-pagination "></div>
+  </div>
+  </section>
+
+
+<!-- SUBSCRIBE SECTION  -->
+<section class="relative flex justify-center mx-auto bg-[#FFEE00] px-5 py-[50px] sm:py-[100px] ">
+  <!-- <div class="absolute left-[400px] top-[146px]">
+    <svg xmlns="http://www.w3.org/2000/svg" width="144" height="145" viewBox="0 0 144 145" fill="none">
+      <path d="M89.9904 54.259L42.1332 102.116M89.9904 54.259C90.9902 53.2581 91.6915 51.9985 92.0157 50.6211C92.3398 49.2437 92.2741 47.8031 91.8258 46.4605L90.5039 42.4877C87.0695 32.1911 80.5778 23.1845 71.8948 16.6693L67.1344 13.0942C64.8211 11.3608 62.6338 9.46522 60.5891 7.42183L55.5749 2.40756L1.69372 56.2887L3.74257 58.3375C7.74976 62.3433 12.2952 65.7716 17.2477 68.5235L21.0806 70.6538C29.418 75.2887 35.717 82.8796 38.7342 91.9282L42.1332 102.116M89.9904 54.259C90.9913 53.2592 92.251 52.5579 93.6283 52.2338C95.0057 51.9096 96.4464 51.9754 97.789 52.4237L101.762 53.7455C112.058 57.1799 121.065 63.6716 127.58 72.3546L131.155 77.1151C132.886 79.4279 134.779 81.6115 136.817 83.6495L141.842 88.6746L87.9608 142.556L85.9119 140.507C81.9062 136.5 78.4779 131.954 75.7259 127.002L73.5956 123.169C68.9608 114.831 61.3698 108.532 52.3212 105.515L42.1332 102.116" stroke="#E1D200" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div> -->
+  <div class="max-w-[1170px] mx-auto rounded-[20px]  text-center">
+      <h1 class="w-[349px] sm:w-[570px] mx-auto text-[24px] sm:text-[42px] font-extrabold leading-[30px] sm:leading-[52px] pb-[20px] text-black text-center ">Subscribe to get update every new course</h1>
+      <p class="w-[349px] sm:w-[570px] text-[18px] font-normal leading-[28px] pb-[40px] text-center mx-auto">You learn today and earn tomorrow. The roots of education are bitter but the fruits are sweet.</p>
+      <div class="sm:flex justify-center items-center mx-auto">
+        <input type="email" name="" placeholder="Enter your email address" id="" class="w-[339px] sm:w-[393px] bg-transparent border border-[#0B0D21] rounded-[8px] text-[#0B0D21] text-[14px] sm:text-[18px] font-normal leading-[28px] py-[15px] pl-[15px] pr-[170px] mr-[18px] mb-[40px] sm:mb-0">
+          <a href="#"
+          class=" px-[35px] py-[15px] cursor-pointer text-center rounded-[8px]  font-bold text-[18px] text-white hover:text-black bg-black hover:bg-transparent border border-[#000]">Subscribe</a>
+
+      </div>
+  </div>
+  <!-- <div class="absolute right-0">
+    <svg xmlns="http://www.w3.org/2000/svg" width="145" height="145" viewBox="0 0 145 145" fill="none">
+      <path d="M54.259 54.2591L102.116 102.116M54.259 54.2591C53.2581 53.2593 51.9985 52.558 50.6211 52.2338C49.2437 51.9097 47.8031 51.9754 46.4605 52.4237L42.4877 53.7456C32.1911 57.18 23.1845 63.6717 16.6693 72.3547L13.0942 77.1152C11.3608 79.4284 9.46522 81.6157 7.42183 83.6604L2.40756 88.6746L56.2887 142.556L58.3375 140.507C62.3433 136.5 65.7716 131.954 68.5235 127.002L70.6538 123.169C75.2887 114.831 82.8796 108.532 91.9282 105.515L102.116 102.116M54.259 54.2591C53.2592 53.2582 52.5579 51.9985 52.2338 50.6212C51.9096 49.2438 51.9754 47.8031 52.4237 46.4605L53.7455 42.4877C57.1799 32.1912 63.6716 23.1845 72.3546 16.6693L77.1151 13.0942C79.4279 11.3633 81.6115 9.47073 83.6495 7.43267L88.6746 2.40762L142.556 56.2888L140.507 58.3376C136.5 62.3434 131.954 65.7716 127.002 68.5236L123.169 70.6539C114.831 75.2887 108.532 82.8797 105.515 91.9283L102.116 102.116" stroke="#E1D200" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div> -->
+</section>
+
+</main>
+<!-- FOOTER SECTION ------ -->
+<footer class="bg-[#FDF0DF] pt-14 px-5">
+      <div class="container mx-auto px-4 pb-[50px]">
+        <div class="flex flex-wrap justify-between items-top max-w-[1170px] mx-auto">
+        <!-- Column 1 -->
+        <div class="w-full md:w-1/5 px-4">
+          <span class="block pb-4 text-[#0B0D21] text-lg font-bold">Courses</span>
+          <ul class="list-none">
+          <li>
+            <a class="text-[#686977] font-normal block pb-2 text-[16px] hover:text-black" href="#">Classroom Courses</a>
+          </li>
+          <li>
+            <a class="text-[#686977] font-normal block pb-2 text-lg hover:text-black" href="#">Virtual Classroom Courses</a>
+          </li>
+          <li>
+            <a class="text-[#686977] font-normal block pb-2 text-lg hover:text-black" href="#">E-Learning Courses</a>
+          </li>
+          <li>
+            <a class="text-[#686977] font-normal block pb-2 text-lg hover:text-black" href="#">University Courses</a>
+          </li>
+          <li>
+            <a class="text-[#686977] font-normal block pb-2 text-lg hover:text-black" href="#">University Degree</a>
+          </li>
+          </ul>
+        </div>
+        <!-- Column 2 -->
+        <div class="w-full md:w-1/5 px-4">
+          <span class="block pb-4 text-[#0B0D21] text-lg font-bold">Tutelage</span>
+          <ul class="list-none">
+          <li>
+            <a class="text-[#686977] font-normal block pb-2 text-lg hover:text-black" href="#">About us</a>
+          </li>
+          <li>
+            <a class="text-[#686977] font-normal block pb-2 text-lg hover:text-black" href="#">Testimonials</a>
+          </li>
+          <li>
+            <a class="text-[#686977] font-normal block pb-2 text-lg hover:text-black" href="#">Promotions</a>
+          </li>
+          <li>
+            <a class="text-[#686977] font-normal block pb-2 text-lg hover:text-black" href="#">Why Circuit</a>
+          </li>
+          <li>
+            <a class="text-[#686977] font-normal block pb-2 text-lg hover:text-black" href="#">Forum</a>
+          </li>
+          <li>
+            <a class="text-[#686977] font-normal block pb-2 text-lg hover:text-black" href="#">Podcasts</a>
+          </li>
+          </ul>
+        </div>
+        <!-- Column 3 -->
+        <div class="w-full md:w-1/5 px-4">
+          <span class="block pb-4 text-[#0B0D21] text-lg font-bold">Service</span>
+          <ul class="list-none">
+          <li>
+            <a class="text-[#686977] font-normal block pb-2 text-lg hover:text-black" href="#">Blog</a>
+          </li>
+          <li>
+            <a class="text-[#696B76] font-normal block pb-2 text-lg hover:text-white" href="#">Road Map</a>
+          </li>
+          <li>
+            <a class="text-[#696B76] font-normal block pb-2 text-lg hover:text-white" href="#">Testimonials</a>
+          </li>
+          <li>
+            <a class="text-[#696B76] font-normal block pb-2 text-lg hover:text-white" href="#">Good Tear</a>
+          </li>
+          </ul>
+        </div>
+        <!-- Column 4 -->
+        <div class="w-full md:w-1/5 px-4">
+          <h4 class=" text-[#686977]">Email us</h4>
+          <p class=" text-2xl font-bold text-[#0B0D21] py-[18px]">
+            email@gmail.com
+          </p>
+          <div class="flex pt-4">
+          <button class="bg-[#0B0D21] hover:bg-[#FFEE00] shadow-lg font-normal h-10 w-10 flex items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+            <i class="fab fa-twitter"></i>
+          </button>
+          <button class="bg-[#0B0D21] hover:bg-[#FFEE00] shadow-lg font-normal h-10 w-10 flex items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+            <i class="fab fa-facebook-square"></i>
+          </button>
+          <button class="bg-[#0B0D21] hover:bg-[#FFEE00] shadow-lg font-normal h-10 w-10 flex items-center justify-center align-center rounded-full outline-none focus:outline-none" type="button">
+            <i class="fab fa-instagram"></i>
+          </button>
+          </div>
+        </div>
+        <!-- column 5 -->
+        <div class="w-full md:w-1/5 px-4">
+          <h4 class=" text-[#686977]">Call us</h4>
+          <p class=" text-2xl font-bold text-[#0B0D21] py-[18px]">
+            000 1234 5678
+          </p>
+        </div>
+        </div>
+      </div>
+      <hr class="max-w-[1170px] bg-[#5a5b65] mx-auto ">
+      <div class="max-w-[1170px] bg-[#FDF0DF] mx-auto py-[12px] ">
+        <div class="flex flex-wrap justify-between items-center mx-auto">
+        <div class="py-4 ">
+          <a  href="#" rel="noopener noreferrer"
+          ><img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/Vq6zqT8zg9FnTVqvgvtE1692285732.webp" alt="logo"
+          /></a>
+        </div>
+        <div class="flex juctify-center items-center gap-x-[36px] w-[222px] mx-auto ">
+                     <img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/MFUhCQLfrAePMsKj9kWm1690466576.webp" alt="">
+                     <img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/8F3f6VWGMZanRthhS9EN1690466596.webp" alt="">
+                     <img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/jreaHzI5ODDaWL5oEoqf1690466621.webp" alt="">
+                     </div>
+        <div class="py-4 text-center text-sm font-normal">
+          <p>
+          <a href="#" class="text-black">&copy; Copyright 2021 by UIHUT. All rights reserved.</a>
+          </p>
+        </div>
+        </div>
+      </div>
+</footer>
+
+
+<script>
+    // COUNTER .....
+function animation() {
+return {
+counter: 0,
+animate(finalCount) {
+  let time = 1500 /* Time in milliseconds */
+  let interval = 9
+  let step = Math.floor(finalCount*interval/time)
+  let timer = setInterval(() => {
+    this.counter = this.counter + step;
+    if (this.counter >= finalCount + step) {
+      this.counter = finalCount
+      clearInterval(timer);
+      timer = null;
+      return;
+    }
+  }, interval);
+}
+};
+}
+
+    // PROVIDING THE BEST ......
+    document.addEventListener('DOMContentLoaded', () => {
+      const page1 = document.getElementById('page1');
+      const page2 = document.getElementById('page2');
+	  const page3 = document.getElementById('page3');
+      const showFounder = document.getElementById('showRecorded');
+      const showBlogger = document.getElementById('showLive');
+	  const showMerketer = document.getElementById('showLifetime');
+
+      showFounder.addEventListener('click', () => {
+        page1.style.display = 'flex';
+        page2.style.display = 'none';
+		page3.style.display = 'none';
+      });
+	  showBlogger.addEventListener('click', () => {
+        page1.style.display = 'none';
+        page2.style.display = 'flex';
+		page3.style.display = 'none';
+      });
+	  showMerketer.addEventListener('click', () => {
+        page1.style.display = 'none';
+        page2.style.display = 'none';
+		page3.style.display = 'flex';
+      });
+      
+    });
+
+</script>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+var swiper = new Swiper(".tips-and-tricks-slider", {
+slidesPerView: 1,
+spaceBetween: 10,
+pagination: {
+el: ".swiper-pagination",
+clickable: true,
+},
+breakpoints:{
+640:{
+  slidesPerView: 2,
+spaceBetween: 30,
+},
+1280:{
+  slidesPerView: 3,
+spaceBetween: 40,
+},
+},
+navigation: {
+nextEl: ".swiper-button-next",
+prevEl: ".swiper-button-prev",
+},
+});
+</script>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="./include-html.js"></script>
+<script src="./app.js"></script>
+
+
+</body>
+</html>

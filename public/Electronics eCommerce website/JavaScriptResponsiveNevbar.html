@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="https://i.ibb.co/64ttTVx/image.png"
+      type="image/x-icon"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* start nav */
+      .mobile-menu {
+        left: -150%;
+        transition: 0.5s;
+      }
+
+      .mobile-menu.active {
+        left: 0;
+      }
+    </style>
+    <title>JavaScript Responsive Nevbar</title>
+  </head>
+  <body class="font-satoshi">
+    <nav class="relative z-[999] bg-slate-950 text-white py-5">
+      <div class="max-w-[1170px] mx-auto px-5">
+        <div class="flex justify-between items-center">
+          <a href="/" rel="noopener noreferrer"
+            ><img src="https://i.ibb.co/64ttTVx/image.png" alt="logo"
+          /></a>
+          <ul class="hidden md:flex space-x-6 py-5">
+            <li>Home</li>
+            <li>Service</li>
+            <li>About Us</li>
+          </ul>
+
+          <a
+            href="https://besnik.net/"
+            target="_blank"
+            class="px-[25px] cursor-pointer py-3 bg-blue-700 hover:bg-blue-800 rounded-full font-bold text-base text-white hidden md:block"
+            >Contact us</a
+          >
+          <!-- Mobile menu icon -->
+
+          <div id="openMenuIcon" class="md:hidden inline-block">
+            <svg
+              width="38"
+              height="31"
+              viewBox="0 0 38 31"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M0 2C0 0.895431 0.895431 0 2 0H35.9478C37.0524 0 37.9478 0.895431 37.9478 2C37.9478 3.10457 37.0524 4 35.9478 4H2C0.895431 4 0 3.10457 0 2Z"
+                fill="#ffffff"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M0 15.0233C0 13.9187 0.895431 13.0233 2 13.0233H35.9478C37.0524 13.0233 37.9478 13.9187 37.9478 15.0233C37.9478 16.1278 37.0524 17.0233 35.9478 17.0233H2C0.895431 17.0233 0 16.1278 0 15.0233Z"
+                fill="#ffffff"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M0 28.0465C0 26.9419 0.895431 26.0465 2 26.0465H35.9478C37.0524 26.0465 37.9478 26.9419 37.9478 28.0465C37.9478 29.1511 37.0524 30.0465 35.9478 30.0465H2C0.895431 30.0465 0 29.1511 0 28.0465Z"
+                fill="#ffffff"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="md:hidden flex justify-center w-full">
+          <div
+            id="mobile-content"
+            class="mobile-menu absolute top-0 w-full bg-[#23272C] px-5 pt-5"
+          >
+            <!-- add hidden here later -->
+            <div class="flex justify-between items-center">
+              <a href="/" rel="noopener noreferrer"
+                ><img src="https://i.ibb.co/64ttTVx/image.png" alt="logo"
+              /></a>
+              <div id="closeMenuIcon" class="md:hidden inline-block">
+                <svg
+                  width="31"
+                  height="30"
+                  viewBox="0 0 31 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M1.42367 27.8804C0.6374 27.1046 0.6374 25.8468 1.42367 25.071L25.4095 1.40504C26.1958 0.629247 27.4706 0.629246 28.2568 1.40503C29.0431 2.18082 29.0431 3.43863 28.2568 4.21442L4.27102 27.8804C3.48475 28.6562 2.20995 28.6562 1.42367 27.8804Z"
+                    fill="#ffffff"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M1.93793 1.40469C2.7242 0.628901 3.999 0.628901 4.78528 1.40469L28.7711 25.0707C29.5574 25.8465 29.5574 27.1043 28.7711 27.8801C27.9848 28.6559 26.71 28.6559 25.9238 27.8801L1.93793 4.21407C1.15166 3.43828 1.15166 2.18048 1.93793 1.40469Z"
+                    fill="#ffffff"
+                  />
+                </svg>
+              </div>
+            </div>
+            <ul class="mt-4 leading-9 font-bold h-screen pt-5 relative">
+              <li>Home</li>
+              <li>Service</li>
+              <li>About Us</li>
+
+              <li>
+                <a
+                  href="https://besnik.net/"
+                  target="_blank"
+                  class="px-[25px] cursor-pointer py-3 bg-blue-700 hover:bg-blue-800 rounded-full font-bold text-base text-white absolute bottom-32 left-0"
+                  >Contact us</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="bg-slate-100 py-16 lg:py-24">
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:gap-8 lg:grid-cols-3 max-w-[1170px] mx-auto px-5"
+      >
+        <a
+          class="cursor-pointer"
+          href="https://uihut.com/feature/multi-purpose-business-theme-ui-kit/25225"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            class="w-full rounded-lg"
+            src="https://uihut-cdn.fra1.cdn.digitaloceanspaces.com/v1/web-template/themes/thumbnail/bXXxtlwy3uyzZI4vcQhV1681637923.png"
+            alt="ui design"
+          />
+        </a>
+        <a
+          class="cursor-pointer"
+          href="https://uihut.com/feature/multiple-business-theme-design/25723"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            class="w-full rounded-lg"
+            src="https://uihut-cdn.fra1.cdn.digitaloceanspaces.com/v1/web-template/themes/thumbnail/JZROoy5DX0nlCE1AwI6S1685617812.webp"
+            alt="ui design"
+          />
+        </a>
+        <a
+          class="cursor-pointer"
+          href="https://uihut.com/feature/job-portal-website-theme/25722"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            class="w-full rounded-lg"
+            src="https://uihut-cdn.fra1.cdn.digitaloceanspaces.com/v1/web-template/themes/thumbnail/M8crsep6dbdpPSXLjc0D1685616408.webp"
+            alt="ui design"
+          />
+        </a>
+        <a
+          class="cursor-pointer"
+          href="https://uihut.com/feature/restaurant-website-template-ui-kit/25724"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            class="w-full rounded-lg"
+            src="https://uihut-cdn.fra1.cdn.digitaloceanspaces.com/v1/web-template/themes/thumbnail/jFxiloPi6anQmUQbPQA11685624812.webp"
+            alt="ui design"
+          />
+        </a>
+        <a
+          class="cursor-pointer"
+          href="https://uihut-cdn.fra1.cdn.digitaloceanspaces.com/v1/web-template/themes/thumbnail/zZomPnksBbqfRUP1n1wP1681535930.jpg"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            class="w-full rounded-lg"
+            src="https://uihut-cdn.fra1.cdn.digitaloceanspaces.com/v1/web-template/themes/thumbnail/zZomPnksBbqfRUP1n1wP1681535930.jpg"
+            alt="ui design"
+          />
+        </a>
+        <a
+          class="cursor-pointer"
+          href="https://uihut-cdn.fra1.cdn.digitaloceanspaces.com/v1/web-template/themes/thumbnail/Zb84GaZcWmvfJ4qeiHoV1681536393.png"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            class="w-full rounded-lg"
+            src="https://uihut-cdn.fra1.cdn.digitaloceanspaces.com/v1/web-template/themes/thumbnail/Zb84GaZcWmvfJ4qeiHoV1681536393.png"
+            alt="ui design"
+          />
+        </a>
+        <a
+          class="cursor-pointer"
+          href="https://uihut-cdn.fra1.cdn.digitaloceanspaces.com/v1/web-template/themes/thumbnail/LwKDiDmbOtSYmklHbS4l1681548663.png"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            class="w-full rounded-lg"
+            src="https://uihut-cdn.fra1.cdn.digitaloceanspaces.com/v1/web-template/themes/thumbnail/LwKDiDmbOtSYmklHbS4l1681548663.png"
+            alt="ui design"
+          />
+        </a>
+        <a
+          class="cursor-pointer"
+          href="https://uihut-cdn.fra1.cdn.digitaloceanspaces.com/v1/web-template/themes/thumbnail/dbfQngmV79viEdSetVbL1681618737.jpg"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            class="w-full rounded-lg"
+            src="https://uihut-cdn.fra1.cdn.digitaloceanspaces.com/v1/web-template/themes/thumbnail/dbfQngmV79viEdSetVbL1681618737.jpg"
+            alt="ui design"
+          />
+        </a>
+        <a
+          class="cursor-pointer"
+          href="https://uihut-cdn.fra1.cdn.digitaloceanspaces.com/v1/web-template/themes/thumbnail/dbfQngmV79viEdSetVbL1681618737.jpg"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            class="w-full rounded-lg"
+            src="https://uihut-cdn.fra1.cdn.digitaloceanspaces.com/v1/web-template/themes/thumbnail/r7tgPTUSVP1KCuBXrR6S1681548583.png"
+            alt="ui design"
+          />
+        </a>
+      </div>
+    </main>
+
+    <footer
+      class="pt-[62px] lg:pt-[100px] pb-[60px] bg-[url('https://i.ibb.co/sqp2Bs3/Cube-Illustration.png')] bg-no-repeat object-cover bg-[length:100%_100%]"
+    >
+      <div class="max-w-[1170px] mx-auto px-5">
+        <div class="flex flex-wrap justify-center items-center md:justify-between gap-8">
+          
+            <h4
+              class="text-[36px] leading-[46px] lg:text-[44px] lg:leading-[58px] font-bold text-white mb-10 lg:mb-[50px] max-w-[623px]"
+            >
+              Golden business opportunity let's start now
+            </h4>
+         
+          <div>
+            <a
+              href="https://uihut.com/"
+              target="_blank"
+              class="px-[50px] cursor-pointer py-[20px] inline-block bg-blue-700 hover:bg-blue-800 rounded-full text-white text-[20px] leading-[30px] font-bold"
+              >Start New</a
+            >
+          </div>
+        </div>
+        <div class="flex flex-wrap justify-center items-center md:justify-between mt-20 lg:mt-[124px] gap-[30px]">
+          <div
+            class="flex justify-center items-center gap-[15px] sm:gap-[30px]"
+          >
+            <a
+              href="https://www.facebook.com/HafezFarukBD/"
+              class="text-[20px] leading-[30px] font-medium text-white border-b-2 inline-block"
+            >
+              Facebook
+            </a>
+            <a
+              href="https://www.linkedin.com/in/hafez-faruk/"
+              class="text-[20px] leading-[30px] font-medium text-white border-b-2 inline-block"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://twitter.com/HafezFaruk5"
+              class="text-[20px] leading-[30px] font-medium text-white border-b-2 inline-block"
+            >
+              Twitter
+            </a>
+          </div>
+
+          <p class="text-white">hmomarfaruk1454@gmail.com</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.querySelector("body").setAttribute("class", "");
+
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("closeMenuIcon")
+          .addEventListener("click", openCloseMenu);
+        document
+          .getElementById("openMenuIcon")
+          .addEventListener("click", openCloseMenu);
+        document.querySelector("body").setAttribute("class", "");
+      });
+
+      const openMenu = {
+        value: false,
+      };
+
+      const openCloseMenu = () => {
+        openMenu.value = !openMenu.value;
+        if (openMenu.value) {
+          document.getElementById("mobile-content").classList.toggle("block");
+          document.getElementById("mobile-content").classList.toggle("active");
+          if (
+            document
+              .getElementById("mobile-content")
+              .classList.contains("active")
+          ) {
+            document
+              .querySelector("body")
+              .setAttribute("class", "overflow-hidden");
+          } else {
+            document.querySelector("body").setAttribute("class", "");
+          }
+        } else {
+          document.getElementById("mobile-content").classList.toggle("block");
+          document.getElementById("mobile-content").classList.toggle("active");
+          document.querySelector("body").setAttribute("class", "");
+        }
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page</title>
+    <link rel="stylesheet" href="./output.css">
+
+
+    <style>
+/* Marquee  */
+li {
+  list-style-type: none;
+}
+/* / Marquee styles / */
+.marquee {
+  --gap: 0rem;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+  width: 100%;
+}
+
+.marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: var(--gap);
+  min-width: fit-content;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+/* / Enable animation / */
+.enable-animation .marquee__content {
+  animation: scroll 15s linear infinite;
+}
+/* / Other page demo styles / */
+.marquee__content > * {
+  flex: 0 0 auto;
+  color: #1f1f1f;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 2px;
+  padding: 1rem 2rem;
+  border-radius: 0.25rem;
+  text-align: center;
+}
+
+
+  .mobile-menu {
+    left: -150%;
+    transition: 0.5s;
+  }
+
+  .mobile-menu.active {
+    left: 0;
+  }
+    </style>
+</head>
+<body>
+  <!-- MARQUEE  -->
+<section class="enable-animation">
+  <div class="marquee bg-[#FFEE00]">
+    <ul class="marquee__content">
+      <li>・Get Discount Of 10% On All our Video Courses For a Limited Time </li>      
+      <li>・Get Discount Of 10% On All our Video Courses For a Limited Time </li>      
+      <li>・Get Discount Of 10% On All our Video Courses For a Limited Time </li> 
+    </ul>
+    <ul class="marquee__content">
+      <li>・Get Discount Of 10% On All our Video Courses For a Limited Time </li>      
+      <li>・Get Discount Of 10% On All our Video Courses For a Limited Time </li>      
+      <li>・Get Discount Of 10% On All our Video Courses For a Limited Time </li> 
+    </ul>
+  </div>
+</section>
+
+  <!-- NAVBAR START  -->
+  <nav class="relative z-[999] bg-[#FDF0DF] text-black py-5">
+    <div class="max-w-[1170px] mx-auto px-5 ">
+      <div class="flex justify-between items-center">
+        <div>
+          <a  href="./index.html" rel="noopener noreferrer"
+          ><img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/Vq6zqT8zg9FnTVqvgvtE1692285732.webp" alt="logo"
+        /></a>
+        </div>
+        
+        <div class="flex  items-center ">
+          <ul class="hidden md:flex  py-5 justify-end">
+            <li><a class="px-[14px] lg:px-[30px] cursor-pointer py-2 hover:bg-[#FFEE00] rounded-[4px] font-normal text-[16px] sm:text-[18px] text-black hover:text-black" href="./index.html">Home</a></li>
+            <li><a class="px-[14px] lg:px-[30px] cursor-pointer py-2 hover:bg-[#FFEE00] rounded-[4px] font-normal text-[16px] sm:text-[18px] text-black hover:text-black" href="./all-courses.html">Courses</a></li>
+            <li><a class="px-[14px] lg:px-[30px] cursor-pointer py-2 hover:bg-[#FFEE00] rounded-[4px] font-normal text-[16px] sm:text-[18px] text-black hover:text-black" href="./mentors.html">Mentors</a></li>
+            <li><a class="px-[14px] lg:px-[30px] cursor-pointer py-2 hover:bg-[#FFEE00] rounded-[4px] font-normal text-[16px] sm:text-[18px] text-black hover:text-black" href="./about.html">About</a></li>
+            <li><a class="px-[14px] lg:px-[30px] cursor-pointer py-2 hover:bg-[#FFEE00] rounded-[4px] font-normal text-[16px] sm:text-[18px] text-black hover:text-black" href="./blog.html">Blog</a></li>
+          </ul>
+          <a
+            href=""
+            target="_blank"
+            class="ml-[54px] px-[25px] cursor-pointer py-2 bg-[#0B0D21] hover:bg-[#FFEE00] rounded-[4px] font-bold text-[18px] text-white hover:text-black hidden md:block"
+            >Log In</a>
+        </div>
+        <!-- Mobile menu icon -->
+    
+        <div id="openMenuIcon" class="md:hidden inline-block cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none">
+            <rect width="18" height="2" fill="#0B0D21"/>
+            <rect y="7" width="18" height="2" fill="#0B0D21"/>
+            <rect y="14" width="18" height="2" fill="#0B0D21"/>
+          </svg>
+        </div>
+        
+      </div>
+    
+      <!-- Mobile menu -->
+      <div class="md:hidden flex justify-center w-full ">
+        <div id="mobile-content" class="mobile-menu absolute top-0 w-full bg-[#FDF0DF] px-5 pt-5">
+          <!-- add hidden here later -->
+          <div class="flex justify-between items-center">
+              <a  href="/" rel="noopener noreferrer"
+              ><img class="hidden md:block" src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/Vq6zqT8zg9FnTVqvgvtE1692285732.webp" alt="logo"
+            /></a>
+              <div id="closeMenuIcon" class="md:hidden inline-block cursor-pointer">
+                  <svg
+                    width="31"
+                    height="30"
+                    viewBox="0 0 31 30"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                    class="fill-black"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M1.42367 27.8804C0.6374 27.1046 0.6374 25.8468 1.42367 25.071L25.4095 1.40504C26.1958 0.629247 27.4706 0.629246 28.2568 1.40503C29.0431 2.18082 29.0431 3.43863 28.2568 4.21442L4.27102 27.8804C3.48475 28.6562 2.20995 28.6562 1.42367 27.8804Z"
+                      fill="#ffffff"
+                    />
+                    <path
+                      class="fill-black"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M1.93793 1.40469C2.7242 0.628901 3.999 0.628901 4.78528 1.40469L28.7711 25.0707C29.5574 25.8465 29.5574 27.1043 28.7711 27.8801C27.9848 28.6559 26.71 28.6559 25.9238 27.8801L1.93793 4.21407C1.15166 3.43828 1.15166 2.18048 1.93793 1.40469Z"
+                      fill="#ffffff"
+                    />
+                  </svg>
+                </div>
+          </div>
+          <ul
+            class="mt-4 leading-9 font-bold h-screen pt-5 relative"
+          >
+          <li><a class="px-[30px] cursor-pointer py-2 hover:bg-[#FFEE00] rounded-[4px] font-normal text-[18px] text-black hover:text-black" href="">Home</a></li>
+          <li><a class="px-[30px] cursor-pointer py-2 hover:bg-[#FFEE00] rounded-[4px] font-normal text-[18px] text-black hover:text-black" href="">Courses</a></li>
+          <li><a class="px-[30px] cursor-pointer py-2 hover:bg-[#FFEE00] rounded-[4px] font-normal text-[18px] text-black hover:text-black" href="">Mentors</a></li>
+          <li><a class="px-[30px] cursor-pointer py-2 hover:bg-[#FFEE00] rounded-[4px] font-normal text-[18px] text-black hover:text-black" href="">About</a></li>
+          <li><a class="px-[30px] cursor-pointer py-2 hover:bg-[#FFEE00] rounded-[4px] font-normal text-[18px] text-black hover:text-black" href="">Blog</a></li>
+    
+            <li>
+              <a
+              href=""
+              target="_blank"
+              class="px-[25px] cursor-pointer py-2 bg-[#0B0D21] hover:bg-[#FFEE00] rounded-[4px] font-bold text-[18px] text-white hover:text-black "
+              >Log In</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </nav>
+
+<main>
+    <!-- BANNER SECTION  -->
+    <section class="flex justify-center mx-auto px-5 mb-[50px] sm:mb-[100px] bg-[#FDF0DF]">
+        <div class="max-w-[1440px] w-full mx-auto ">
+                <div class="flex justify-center items-center w-full max-w-[1170px] mx-auto ">
+                    <div class="grid grid-cols-1 md:grid-cols-2  w-full max-w-[1170px] gap-x-[99px] lg:px-8 mx-auto">
+                       <!-- first-card ----- -->
+                        <div class=" py-[20px] sm:py-[40px]">
+                        <h1 class=" text-[35px] sm:text-[62px] font-extrabold text-[#0B0D21] leading-[38px] sm:leading-[66px] capitalize ">How to Build and
+                          Promote Your
+                          Online Courses</h1>
+                        <p class="text-[12px] sm:text-[18px] text-[#696B76] pt-[10px] pb-[20px] font-medium ">AUGUST 1, 2022 • Androniki Koumadoraki</p>
+                          <p class=" text-[14px] sm:text-[16px] text-[#696B76] font-normal leading-[20px] sm:leading-[24px] tracking-[-0.32px] pb-[20px] sm:pb-[30px]">Selling coaching online can help you grow your coaching business
+                            beyond your wildest dreams. Offering coaching online means
+                            expanding your local business beyond your community and offering a…</p>
+                          <button class=" px-[40px] py-[15px] cursor-pointer  bg-[#FFEE00] rounded-[8px] font-medium text-base text-black mx-auto text-center">
+                            Load more
+                        </button>
+                     </div>
+                      <!-- second-cadr ---- -->
+                        <div class="  py-[34px] sm:py-[40px] rounded-[20px]">
+                          <div class="flex justify-end items-center ">
+                             <img class="w-full object-cover " src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/BD5VKyB95YG6VKm2miMr1692269417.webp" alt="">
+                          </div>
+                          </div>
+
+                      
+                    </div>
+                </div>
+    
+                
+            </div>
+    </section>
+
+    <section class="flex justify-center mx-auto px-5 mb-[50px] sm:mb-[100px] bg-[#ffffff]">
+      <div class="max-w-[1440px] w-full mx-auto ">
+        <div class="flex justify-center items-center mx-auto w-full max-w-[1170px]">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-y-[25px] gap-x-[50px] pt-[50px] ">
+              <div class="max-w-[560px] mx-auto rounded-[10px] ">
+                  <div class=" flex justify-center items-center max-w-[560px] mx-auto rounded-[20px]">
+                  <img class="" src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/AP4lZezMY2M0pM6mWVEV1692287789.webp" alt="">
+                  </div>
+                  <h3 class="text-[12px] sm:text-[16px] font-medium text-[#434EC4] pt-[11px] sm:pt-[20px]">Marketing</h3>
+                  <h3 class="max-w-[560px] text-[20px] sm:text-[24px] text-black pt-[5px] sm:pt-[10px] pb-[10px] sm:pb-[20px]  capitalize font-medium leading-[22px] sm:leading-[36px] ">How to master top of funnel marketing for your business</h3>
+                  <p class="text-[12px] sm:text-[16px] text-[#686977] pt-[10px] sm:pt-[20px] pb-[10px] font-normal leading-[18px] sm:leading-[26px] ">Learn what top of funnel marketing is, how to use it to create a sales funnel that attracts and converts customers, and goals for an effective TOFU strategy.</p>
+                  <h4 class="text-[10px] sm:text-[16px] text-[#686977] hover:text-[#434EC4]">Read More</h4>
+              </div>
+              <div class="max-w-[560px] mx-auto rounded-[10px] ">
+                <div class=" flex justify-center items-center max-w-[560px] mx-auto rounded-[20px]">
+                  <img class="" src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/r1KsUou7EUEO3GlaFajh1692288071.webp" alt="">
+                  </div>
+                  <h3 class="text-[12px] sm:text-[16px] font-medium text-[#434EC4] pt-[11px] sm:pt-[20px]">Build Your Business</h3>
+                  <h3 class="max-w-[560px] text-[20px] sm:text-[24px] text-black pt-[5px] sm:pt-[10px] pb-[10px] sm:pb-[20px]  capitalize font-medium leading-[22px] sm:leading-[36px] ">The ultimate health insurance guide for self-employed creators</h3>
+                  <p class="text-[12px] sm:text-[16px] text-[#686977] pt-[10px] sm:pt-[20px] pb-[10px] font-normal leading-[18px] sm:leading-[26px] ">Discover how to get health insurance and what insurance options are available to you as a self-employed creator, plus bust some health insurance myths!</p>
+                  <h4 class="text-[10px] sm:text-[16px] text-[#686977] hover:text-[#434EC4]">Read More</h4>
+              </div>
+              <div class="max-w-[560px] mx-auto rounded-[10px] ">
+                <div class=" flex justify-center items-center max-w-[560px] mx-auto rounded-[20px]">
+                  <img class="" src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/iugdUBnIQZorCmw8aAVE1692288100.webp" alt="">
+                  </div>
+                  <h3 class="text-[12px] sm:text-[16px] font-medium text-[#434EC4] pt-[11px] sm:pt-[20px]">Hero Stories</h3>
+                  <h3 class="max-w-[560px] text-[20px] sm:text-[24px] text-black pt-[5px] sm:pt-[10px] pb-[10px] sm:pb-[20px]  capitalize font-medium leading-[22px] sm:leading-[36px] ">How to successfully collaborate with others to grow your brand</h3>
+                  <p class="text-[12px] sm:text-[16px] text-[#686977] pt-[10px] sm:pt-[20px] pb-[10px] font-normal leading-[18px] sm:leading-[26px] ">DLearn everything about content collaboration including its benefits, how to find the ideal collaborator, and the steps to create a successful collaboration.!</p>
+                  <h4 class="text-[10px] sm:text-[16px] text-[#686977] hover:text-[#434EC4]">Read More</h4>
+              </div>
+              <div class="max-w-[560px] mx-auto rounded-[10px] ">
+                <div class=" flex justify-center items-center max-w-[560px] mx-auto rounded-[20px]">
+                  <img class="" src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/CtYhuJJeciu5w24u530J1692288113.webp" alt="">
+                  </div>
+                  <h3 class="text-[12px] sm:text-[16px]  text-[#434EC4] pt-[11px] sm:pt-[20px]">Marketing</h3>
+                  <h3 class="max-w-[560px] text-[20px] sm:text-[24px] text-black pt-[5px] sm:pt-[10px] pb-[10px] sm:pb-[20px]  capitalize font-medium leading-[22px] sm:leading-[36px] ">First-time course creator goes from zero to Hero with single Kajabi mini-course</h3>
+                  <p class="text-[12px] sm:text-[16px] text-[#686977] pt-[10px] sm:pt-[20px] pb-[10px] font-normal leading-[18px] sm:leading-[26px] ">First-time course creator Marjorie Torrie took advantage of a Kajabi promotion,and in three months, built the foundation her successful knowledge business.</p>
+                  <h4 class="text-[10px] sm:text-[16px] text-[#686977] hover:text-[#434EC4]">Read More</h4>
+              </div>
+       </div>
+      </div>
+      <div class="flex justify-center items-center mx-auto pt-[40px] sm:pt-[50px]">
+          <button class=" px-[35px] py-[15px] cursor-pointer  bg-[#FFEE00] rounded-[8px] font-bold text-[18px] text-[#0B0D21] mx-auto text-center">
+            Veiw All Course
+          </button>
+      </div>
+        </div>
+        </section>
+</main>
+  <!-- FOOTER SECTION ------ -->
+  <footer class="bg-[#FDF0DF] pt-14 ">
+          <div class="container mx-auto px-4 pb-[50px]">
+            <div class="flex flex-wrap justify-between items-top max-w-[1170px] mx-auto">
+            <!-- Column 1 -->
+            <div class="w-full md:w-1/5 px-4">
+              <span class="block pb-4 text-[#0B0D21] text-lg font-bold">Courses</span>
+              <ul class="list-none">
+              <li>
+                <a class="text-[#686977] font-normal block pb-2 text-[16px] hover:text-black" href="#">Classroom Courses</a>
+              </li>
+              <li>
+                <a class="text-[#686977] font-normal block pb-2 text-lg hover:text-black" href="#">Virtual Classroom Courses</a>
+              </li>
+              <li>
+                <a class="text-[#686977] font-normal block pb-2 text-lg hover:text-black" href="#">E-Learning Courses</a>
+              </li>
+              <li>
+                <a class="text-[#686977] font-normal block pb-2 text-lg hover:text-black" href="#">University Courses</a>
+              </li>
+              <li>
+                <a class="text-[#686977] font-normal block pb-2 text-lg hover:text-black" href="#">University Degree</a>
+              </li>
+              </ul>
+            </div>
+            <!-- Column 2 -->
+            <div class="w-full md:w-1/5 px-4">
+              <span class="block pb-4 text-[#0B0D21] text-lg font-bold">Tutelage</span>
+              <ul class="list-none">
+              <li>
+                <a class="text-[#686977] font-normal block pb-2 text-lg hover:text-black" href="#">About us</a>
+              </li>
+              <li>
+                <a class="text-[#686977] font-normal block pb-2 text-lg hover:text-black" href="#">Testimonials</a>
+              </li>
+              <li>
+                <a class="text-[#686977] font-normal block pb-2 text-lg hover:text-black" href="#">Promotions</a>
+              </li>
+              <li>
+                <a class="text-[#686977] font-normal block pb-2 text-lg hover:text-black" href="#">Why Circuit</a>
+              </li>
+              <li>
+                <a class="text-[#686977] font-normal block pb-2 text-lg hover:text-black" href="#">Forum</a>
+              </li>
+              <li>
+                <a class="text-[#686977] font-normal block pb-2 text-lg hover:text-black" href="#">Podcasts</a>
+              </li>
+              </ul>
+            </div>
+            <!-- Column 3 -->
+            <div class="w-full md:w-1/5 px-4">
+              <span class="block pb-4 text-[#0B0D21] text-lg font-bold">Service</span>
+              <ul class="list-none">
+              <li>
+                <a class="text-[#686977] font-normal block pb-2 text-lg hover:text-black" href="#">Blog</a>
+              </li>
+              <li>
+                <a class="text-[#696B76] font-normal block pb-2 text-lg hover:text-white" href="#">Road Map</a>
+              </li>
+              <li>
+                <a class="text-[#696B76] font-normal block pb-2 text-lg hover:text-white" href="#">Testimonials</a>
+              </li>
+              <li>
+                <a class="text-[#696B76] font-normal block pb-2 text-lg hover:text-white" href="#">Good Tear</a>
+              </li>
+              </ul>
+            </div>
+            <!-- Column 4 -->
+            <div class="w-full md:w-1/5 px-4">
+              <h4 class=" text-[#686977]">Email us</h4>
+              <p class=" text-2xl font-bold text-[#0B0D21] py-[18px]">
+                email@gmail.com
+              </p>
+              <div class="flex pt-4">
+              <button class="bg-[#0B0D21] hover:bg-[#FFEE00] shadow-lg font-normal h-10 w-10 flex items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                <i class="fab fa-twitter"></i>
+              </button>
+              <button class="bg-[#0B0D21] hover:bg-[#FFEE00] shadow-lg font-normal h-10 w-10 flex items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+                <i class="fab fa-facebook-square"></i>
+              </button>
+              <button class="bg-[#0B0D21] hover:bg-[#FFEE00] shadow-lg font-normal h-10 w-10 flex items-center justify-center align-center rounded-full outline-none focus:outline-none" type="button">
+                <i class="fab fa-instagram"></i>
+              </button>
+              </div>
+            </div>
+            <!-- column 5 -->
+            <div class="w-full md:w-1/5 px-4">
+              <h4 class=" text-[#686977]">Call us</h4>
+              <p class=" text-2xl font-bold text-[#0B0D21] py-[18px]">
+                000 1234 5678
+              </p>
+            </div>
+            </div>
+          </div>
+          <hr class="max-w-[1170px] bg-[#5a5b65] mx-auto ">
+          <div class="max-w-[1170px] bg-[#FDF0DF] mx-auto py-[12px] ">
+            <div class="flex flex-wrap justify-between items-center mx-auto">
+            <div class="py-4 ">
+              <a  href="#" rel="noopener noreferrer"
+              ><img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/Vq6zqT8zg9FnTVqvgvtE1692285732.webp" alt="logo"
+              /></a>
+            </div>
+            <div class="flex juctify-center items-center gap-x-[36px] w-[222px] mx-auto ">
+						 <img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/MFUhCQLfrAePMsKj9kWm1690466576.webp" alt="">
+						 <img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/8F3f6VWGMZanRthhS9EN1690466596.webp" alt="">
+						 <img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/jreaHzI5ODDaWL5oEoqf1690466621.webp" alt="">
+						 </div>
+            <div class="py-4 text-center text-sm font-normal">
+              <p>
+              <a href="#" class="text-black">&copy; Copyright 2021 by UIHUT. All rights reserved.</a>
+              </p>
+            </div>
+            </div>
+          </div>
+  </footer>
+
+
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="./include-html.js"></script>
+<script src="./app.js"></script>
+
+
+</body>
+</html>

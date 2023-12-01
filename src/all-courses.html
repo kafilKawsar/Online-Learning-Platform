@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Courses</title>
+    <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <style>
+/* Marquee  */
+li {
+  list-style-type: none;
+}
+/* / Marquee styles / */
+.marquee {
+  --gap: 0rem;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+  width: 100%;
+}
+
+.marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: var(--gap);
+  min-width: fit-content;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+/* / Enable animation / */
+.enable-animation .marquee__content {
+  animation: scroll 15s linear infinite;
+}
+/* / Other page demo styles / */
+.marquee__content > * {
+  flex: 0 0 auto;
+  color: #1f1f1f;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 2px;
+  padding: 1rem 2rem;
+  border-radius: 0.25rem;
+  text-align: center;
+}
+
+  .mobile-menu {
+    left: -150%;
+    transition: 0.5s;
+  }
+  .mobile-menu.active {
+    left: 0;
+  }
+   /* slider ------- */
+ .swiper-button-next{
+  width: 60px;
+  height: 60px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 100%;
+  color: #686977;
+
+ }
+ .swiper-button-prev{
+  width: 60px;
+  height: 60px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 100%;
+  color: #686977;
+ }
+@media screen and (max-width: 640px) {
+  .swiper-button-next{
+  display: none;
+ }
+ .swiper-button-prev{
+  display: none;
+ }
+
+}
+@media screen and (max-width: 768px) {
+  .swiper-button-next{
+  display: none;
+ }
+ .swiper-button-prev{
+  display: none;
+ }
+
+}
+
+    </style>
+</head>
+<body>
+    <!-- MARQUEE  -->
+<section class="enable-animation">
+  <div class="marquee bg-[#FFEE00]">
+    <ul class="marquee__content">
+      <li>・Get Discount Of 10% On All our Video Courses For a Limited Time </li>      
+      <li>・Get Discount Of 10% On All our Video Courses For a Limited Time </li>      
+      <li>・Get Discount Of 10% On All our Video Courses For a Limited Time </li> 
+    </ul>
+    <ul class="marquee__content">
+      <li>・Get Discount Of 10% On All our Video Courses For a Limited Time </li>      
+      <li>・Get Discount Of 10% On All our Video Courses For a Limited Time </li>      
+      <li>・Get Discount Of 10% On All our Video Courses For a Limited Time </li> 
+    </ul>
+  </div>
+</section>
+
+    <!-- NAVBAR START  -->
+    <nav class="relative z-[999] bg-[#FDF0DF] text-black py-5">
+      <div class="max-w-[1170px] mx-auto px-5 ">
+        <div class="flex justify-between items-center">
+          <div>
+            <a  href="./index.html" rel="noopener noreferrer"
+            ><img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/Vq6zqT8zg9FnTVqvgvtE1692285732.webp" alt="logo"
+          /></a>
+          </div>
+          
+          <div class="flex  items-center ">
+            <ul class="hidden md:flex  py-5 justify-end">
+              <li><a class="px-[14px] lg:px-[30px] cursor-pointer py-2 hover:bg-[#FFEE00] rounded-[4px] font-normal text-[16px] sm:text-[18px] text-black hover:text-black" href="./index.html">Home</a></li>
+              <li><a class="px-[14px] lg:px-[30px] cursor-pointer py-2 hover:bg-[#FFEE00] rounded-[4px] font-normal text-[16px] sm:text-[18px] text-black hover:text-black" href="./all-courses.html">Courses</a></li>
+              <li><a class="px-[14px] lg:px-[30px] cursor-pointer py-2 hover:bg-[#FFEE00] rounded-[4px] font-normal text-[16px] sm:text-[18px] text-black hover:text-black" href="./mentors.html">Mentors</a></li>
+              <li><a class="px-[14px] lg:px-[30px] cursor-pointer py-2 hover:bg-[#FFEE00] rounded-[4px] font-normal text-[16px] sm:text-[18px] text-black hover:text-black" href="./about.html">About</a></li>
+              <li><a class="px-[14px] lg:px-[30px] cursor-pointer py-2 hover:bg-[#FFEE00] rounded-[4px] font-normal text-[16px] sm:text-[18px] text-black hover:text-black" href="./blog.html">Blog</a></li>
+            </ul>
+            <a
+              href=""
+              target="_blank"
+              class="ml-[54px] px-[25px] cursor-pointer py-2 bg-[#0B0D21] hover:bg-[#FFEE00] rounded-[4px] font-bold text-[18px] text-white hover:text-black hidden md:block"
+              >Log In</a>
+          </div>
+          <!-- Mobile menu icon -->
+      
+          <div id="openMenuIcon" class="md:hidden inline-block cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none">
+              <rect width="18" height="2" fill="#0B0D21"/>
+              <rect y="7" width="18" height="2" fill="#0B0D21"/>
+              <rect y="14" width="18" height="2" fill="#0B0D21"/>
+            </svg>
+          </div>
+          
+        </div>
+      
+        <!-- Mobile menu -->
+        <div class="md:hidden flex justify-center w-full ">
+          <div id="mobile-content" class="mobile-menu absolute top-0 w-full bg-[#FDF0DF] px-5 pt-5">
+            <!-- add hidden here later -->
+            <div class="flex justify-between items-center">
+                <a  href="/" rel="noopener noreferrer"
+                ><img class="hidden md:block" src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/Vq6zqT8zg9FnTVqvgvtE1692285732.webp" alt="logo"
+              /></a>
+                <div id="closeMenuIcon" class="md:hidden inline-block cursor-pointer">
+                    <svg
+                      width="31"
+                      height="30"
+                      viewBox="0 0 31 30"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                      class="fill-black"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M1.42367 27.8804C0.6374 27.1046 0.6374 25.8468 1.42367 25.071L25.4095 1.40504C26.1958 0.629247 27.4706 0.629246 28.2568 1.40503C29.0431 2.18082 29.0431 3.43863 28.2568 4.21442L4.27102 27.8804C3.48475 28.6562 2.20995 28.6562 1.42367 27.8804Z"
+                        fill="#ffffff"
+                      />
+                      <path
+                        class="fill-black"
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M1.93793 1.40469C2.7242 0.628901 3.999 0.628901 4.78528 1.40469L28.7711 25.0707C29.5574 25.8465 29.5574 27.1043 28.7711 27.8801C27.9848 28.6559 26.71 28.6559 25.9238 27.8801L1.93793 4.21407C1.15166 3.43828 1.15166 2.18048 1.93793 1.40469Z"
+                        fill="#ffffff"
+                      />
+                    </svg>
+                  </div>
+            </div>
+            <ul
+              class="mt-4 leading-9 font-bold h-screen pt-5 relative"
+            >
+            <li><a class="px-[30px] cursor-pointer py-2 hover:bg-[#FFEE00] rounded-[4px] font-normal text-[18px] text-black hover:text-black" href="">Home</a></li>
+            <li><a class="px-[30px] cursor-pointer py-2 hover:bg-[#FFEE00] rounded-[4px] font-normal text-[18px] text-black hover:text-black" href="">Courses</a></li>
+            <li><a class="px-[30px] cursor-pointer py-2 hover:bg-[#FFEE00] rounded-[4px] font-normal text-[18px] text-black hover:text-black" href="">Mentors</a></li>
+            <li><a class="px-[30px] cursor-pointer py-2 hover:bg-[#FFEE00] rounded-[4px] font-normal text-[18px] text-black hover:text-black" href="">About</a></li>
+            <li><a class="px-[30px] cursor-pointer py-2 hover:bg-[#FFEE00] rounded-[4px] font-normal text-[18px] text-black hover:text-black" href="">Blog</a></li>
+      
+              <li>
+                <a
+                href=""
+                target="_blank"
+                class="px-[25px] cursor-pointer py-2 bg-[#0B0D21] hover:bg-[#FFEE00] rounded-[4px] font-bold text-[18px] text-white hover:text-black "
+                >Log In</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </nav>
+    <main>
+    <!-- ALL-CORSES  -->
+    <section class="flex justify-center items-center mx-auto bg-[#FDF0DF] pb-[100px]">
+        <div class="max-w-[1440px] mx-auto text-center">
+            <h1 class="max-w-[570px] mx-auto text-[42px] font-extrabold leading-[52px] text-black text-center py-4">Providing the best solutions for your study</h1>
+                    <p class="max-w-[570px] mx-auto pb-[40px] sm:pb-[84px] text-[18px] leading-[28px]  text-center font-normal text-[#686977]">You learn today and earn tomorrow. The roots of education are bitter but the fruits are sweet.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-[30px] max-w-[1170px]">
+    
+                  <div class="max-w-[370px]">
+                <div
+                  class=" bg-white py-4 lg:py-[20px] px-[15px] lg:px-5 rounded-[12px] shadow-[0px_40px_150px_-35px_rgba(0,0,0,0.06)]"
+                >
+                  <img
+                    class="rounded-[15px] object-cover "
+                    src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/nUJllIl5e4nrTZ6ZwsVm1692460751.webp"
+                    alt="product"
+                  />
+                  <div class=" mt-[12px]">
+                    <h4 class="text-[#434EC4]">UI/UX DESIGN</h4>
+                    <h2 class="text-[18px] font-bold">Become a UX designer in 2022</h2>
+                  </div>
+                  <div class="flex justify-start items-center mx-auto">
+                    <img  src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/EGEUgBRqKI4WkCjUvINq1692461080.webp" alt="" /> <span class="text-[16px] font-normal text-[#83848C] pl-2 py-[12px]">by Eichiro D. Lucky</span>
+                  </div>
+                  <div class="flex justify-start items-center mx-auto pb-[20px]">
+                    <!-- first --- -->
+                    <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                      <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M9 3.1333V9.26663L12.4667 11.1333" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></span><h1 class="text-[16px] text-[#686977] pr-[18px]">8hr 39min</h1>
+                    <!-- second --- -->
+                    <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                      <path d="M11.1335 11.5333C11.1335 11.6394 11.0914 11.7411 11.0164 11.8162C10.9414 11.8912 10.8396 11.9333 10.7335 11.9333H4.6002C4.49411 11.9333 4.39237 11.8912 4.31735 11.8162C4.24234 11.7411 4.2002 11.6394 4.2002 11.5333V6.46665C4.2002 6.36056 4.24234 6.25882 4.31735 6.18381C4.39237 6.10879 4.49411 6.06665 4.6002 6.06665H10.7335C10.8396 6.06665 10.9414 6.10879 11.0164 6.18381C11.0914 6.25882 11.1335 6.36056 11.1335 6.46665V11.5333ZM14.3335 6.59998V11.4L11.1335 10.0667V7.93332L14.3335 6.59998Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M14.3333 1H3.66667C2.19391 1 1 2.19391 1 3.66667V14.3333C1 15.8061 2.19391 17 3.66667 17H14.3333C15.8061 17 17 15.8061 17 14.3333V3.66667C17 2.19391 15.8061 1 14.3333 1Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></span><h1 class="text-[16px] text-[#686977] pr-[18px]">18 classes</h1>
+                    <!-- third --- -->
+                    <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                      <path d="M8 0.999999V13M8 13L13 8M8 13L3 8" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1 13V17H15V13" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></span><h1 class="text-[16px] text-[#686977]">572 sales</h1>
+    
+                  </div>
+                  <div
+                  class="flex justify-between items-center">
+                  <p class="text-[18px] font-bold text-[#0B0D21]">$134</p>
+                    <div class="flex">
+                      <button class="text-[18px] font-bold py-[15px] px-[35px] text-[#0B0D21] border  hover:bg-[#FFEE00] rounded-[6px]">Enroll</button>
+                    </div>
+                    
+                  </div>
+                </div>
+                  </div>
+                  <div class="max-w-[370px]">
+                <div
+                  class=" bg-white py-4 lg:py-[20px] px-[15px] lg:px-5 rounded-[12px] shadow-[0px_40px_150px_-35px_rgba(0,0,0,0.06)]"
+                >
+                  <img
+                    class="rounded-[15px] object-cover "
+                    src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/400MIdo7f5GDuJh6dH821692463391.webp"
+                    alt=""
+                  />
+                  <div class=" mt-[12px]">
+                    <h4 class="text-[#434EC4]">UI/UX DESIGN</h4>
+                    <h2 class="text-[18px] font-bold">Become a UX designer in 2022</h2>
+                  </div>
+                  <div class="flex justify-start items-center mx-auto">
+                    <img  src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/EGEUgBRqKI4WkCjUvINq1692461080.webp" alt="" /> <span class="text-[16px] font-normal text-[#83848C] pl-2 py-[12px]">by Eichiro D. Lucky</span>
+                  </div>
+                  <div class="flex justify-start items-center mx-auto pb-[20px]">
+                    <!-- first --- -->
+                    <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                      <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M9 3.1333V9.26663L12.4667 11.1333" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></span><h1 class="text-[16px] text-[#686977] pr-[18px]">8hr 39min</h1>
+                    <!-- second --- -->
+                    <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                      <path d="M11.1335 11.5333C11.1335 11.6394 11.0914 11.7411 11.0164 11.8162C10.9414 11.8912 10.8396 11.9333 10.7335 11.9333H4.6002C4.49411 11.9333 4.39237 11.8912 4.31735 11.8162C4.24234 11.7411 4.2002 11.6394 4.2002 11.5333V6.46665C4.2002 6.36056 4.24234 6.25882 4.31735 6.18381C4.39237 6.10879 4.49411 6.06665 4.6002 6.06665H10.7335C10.8396 6.06665 10.9414 6.10879 11.0164 6.18381C11.0914 6.25882 11.1335 6.36056 11.1335 6.46665V11.5333ZM14.3335 6.59998V11.4L11.1335 10.0667V7.93332L14.3335 6.59998Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M14.3333 1H3.66667C2.19391 1 1 2.19391 1 3.66667V14.3333C1 15.8061 2.19391 17 3.66667 17H14.3333C15.8061 17 17 15.8061 17 14.3333V3.66667C17 2.19391 15.8061 1 14.3333 1Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></span><h1 class="text-[16px] text-[#686977] pr-[18px]">18 classes</h1>
+                    <!-- third --- -->
+                    <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                      <path d="M8 0.999999V13M8 13L13 8M8 13L3 8" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M1 13V17H15V13" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></span><h1 class="text-[16px] text-[#686977]">572 sales</h1>
+    
+                  </div>
+                  <div
+                  class="flex justify-between items-center">
+                  <p class="text-[18px] font-bold text-[#0B0D21]">$134</p>
+                    <div class="flex">
+                      <button class="text-[18px] font-bold py-[15px] px-[35px] text-[#0B0D21] border  hover:bg-[#FFEE00] rounded-[6px]">Enroll</button>
+                    </div>
+                    
+                  </div>
+                </div>
+                  </div>
+                  <div class="max-w-[370px]">
+                    <div
+                      class=" bg-white py-4 lg:py-[20px] px-[15px] lg:px-5 rounded-[12px] shadow-[0px_40px_150px_-35px_rgba(0,0,0,0.06)]"
+                    >
+                      <img
+                        class="rounded-[15px] object-cover "
+                        src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/W8p1osmeDGBDPi58UmRy1692463499.webp"
+                        alt="product"
+                      />
+                      <div class=" mt-[12px]">
+                        <h4 class="text-[#434EC4]">UI/UX DESIGN</h4>
+                        <h2 class="text-[18px] font-bold">Become a UX designer in 2022</h2>
+                      </div>
+                      <div class="flex justify-start items-center mx-auto">
+                        <img  src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/EGEUgBRqKI4WkCjUvINq1692461080.webp" alt="" /> <span class="text-[16px] font-normal text-[#83848C] pl-2 py-[12px]">by Eichiro D. Lucky</span>
+                      </div>
+                      <div class="flex justify-start items-center mx-auto pb-[20px]">
+                        <!-- first --- -->
+                        <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                          <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M9 3.1333V9.26663L12.4667 11.1333" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg></span><h1 class="text-[16px] text-[#686977] pr-[18px]">8hr 39min</h1>
+                        <!-- second --- -->
+                        <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                          <path d="M11.1335 11.5333C11.1335 11.6394 11.0914 11.7411 11.0164 11.8162C10.9414 11.8912 10.8396 11.9333 10.7335 11.9333H4.6002C4.49411 11.9333 4.39237 11.8912 4.31735 11.8162C4.24234 11.7411 4.2002 11.6394 4.2002 11.5333V6.46665C4.2002 6.36056 4.24234 6.25882 4.31735 6.18381C4.39237 6.10879 4.49411 6.06665 4.6002 6.06665H10.7335C10.8396 6.06665 10.9414 6.10879 11.0164 6.18381C11.0914 6.25882 11.1335 6.36056 11.1335 6.46665V11.5333ZM14.3335 6.59998V11.4L11.1335 10.0667V7.93332L14.3335 6.59998Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M14.3333 1H3.66667C2.19391 1 1 2.19391 1 3.66667V14.3333C1 15.8061 2.19391 17 3.66667 17H14.3333C15.8061 17 17 15.8061 17 14.3333V3.66667C17 2.19391 15.8061 1 14.3333 1Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg></span><h1 class="text-[16px] text-[#686977] pr-[18px]">18 classes</h1>
+                        <!-- third --- -->
+                        <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                          <path d="M8 0.999999V13M8 13L13 8M8 13L3 8" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M1 13V17H15V13" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg></span><h1 class="text-[16px] text-[#686977]">572 sales</h1>
+    
+                      </div>
+                      <div
+                      class="flex justify-between items-center">
+                      <p class="text-[18px] font-bold text-[#0B0D21]">$134</p>
+                        <div class="flex">
+                          <button class="text-[18px] font-bold py-[15px] px-[35px] text-[#0B0D21] border  hover:bg-[#FFEE00] rounded-[6px]">Enroll</button>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="max-w-[370px]">
+                    <div
+                      class=" bg-white py-4 lg:py-[20px] px-[15px] lg:px-5 rounded-[12px] shadow-[0px_40px_150px_-35px_rgba(0,0,0,0.06)]"
+                    >
+                      <img
+                        class="rounded-[15px] object-cover "
+                        src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/01nprxRa9vvA6B5Icp7k1692463406.webp"
+                        alt="product"
+                      />
+                      <div class=" mt-[12px]">
+                        <h4 class="text-[#434EC4]">UI/UX DESIGN</h4>
+                        <h2 class="text-[18px] font-bold">Become a UX designer in 2022</h2>
+                      </div>
+                      <div class="flex justify-start items-center mx-auto">
+                        <img  src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/EGEUgBRqKI4WkCjUvINq1692461080.webp" alt="" /> <span class="text-[16px] font-normal text-[#83848C] pl-2 py-[12px]">by Eichiro D. Lucky</span>
+                      </div>
+                      <div class="flex justify-start items-center mx-auto pb-[20px]">
+                        <!-- first --- -->
+                        <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                          <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M9 3.1333V9.26663L12.4667 11.1333" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg></span><h1 class="text-[16px] text-[#686977] pr-[18px]">8hr 39min</h1>
+                        <!-- second --- -->
+                        <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                          <path d="M11.1335 11.5333C11.1335 11.6394 11.0914 11.7411 11.0164 11.8162C10.9414 11.8912 10.8396 11.9333 10.7335 11.9333H4.6002C4.49411 11.9333 4.39237 11.8912 4.31735 11.8162C4.24234 11.7411 4.2002 11.6394 4.2002 11.5333V6.46665C4.2002 6.36056 4.24234 6.25882 4.31735 6.18381C4.39237 6.10879 4.49411 6.06665 4.6002 6.06665H10.7335C10.8396 6.06665 10.9414 6.10879 11.0164 6.18381C11.0914 6.25882 11.1335 6.36056 11.1335 6.46665V11.5333ZM14.3335 6.59998V11.4L11.1335 10.0667V7.93332L14.3335 6.59998Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M14.3333 1H3.66667C2.19391 1 1 2.19391 1 3.66667V14.3333C1 15.8061 2.19391 17 3.66667 17H14.3333C15.8061 17 17 15.8061 17 14.3333V3.66667C17 2.19391 15.8061 1 14.3333 1Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg></span><h1 class="text-[16px] text-[#686977] pr-[18px]">18 classes</h1>
+                        <!-- third --- -->
+                        <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                          <path d="M8 0.999999V13M8 13L13 8M8 13L3 8" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M1 13V17H15V13" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg></span><h1 class="text-[16px] text-[#686977]">572 sales</h1>
+    
+                      </div>
+                      <div
+                      class="flex justify-between items-center">
+                      <p class="text-[18px] font-bold text-[#0B0D21]">$134</p>
+                        <div class="flex">
+                          <button class="text-[18px] font-bold py-[15px] px-[35px] text-[#0B0D21] border  hover:bg-[#FFEE00] rounded-[6px]">Enroll</button>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="max-w-[370px]">
+                    <div
+                      class=" bg-white py-4 lg:py-[20px] px-[15px] lg:px-5 rounded-[12px] shadow-[0px_40px_150px_-35px_rgba(0,0,0,0.06)]"
+                    >
+                      <img
+                        class="rounded-[15px] object-cover "
+                        src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/SeLC26zKQrhIODbNxT0e1692463447.webp"
+                        alt="product"
+                      />
+                      <div class=" mt-[12px]">
+                        <h4 class="text-[#434EC4]">UI/UX DESIGN</h4>
+                        <h2 class="text-[18px] font-bold">Become a UX designer in 2022</h2>
+                      </div>
+                      <div class="flex justify-start items-center mx-auto">
+                        <img  src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/EGEUgBRqKI4WkCjUvINq1692461080.webp" alt="" /> <span class="text-[16px] font-normal text-[#83848C] pl-2 py-[12px]">by Eichiro D. Lucky</span>
+                      </div>
+                      <div class="flex justify-start items-center mx-auto pb-[20px]">
+                        <!-- first --- -->
+                        <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                          <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M9 3.1333V9.26663L12.4667 11.1333" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg></span><h1 class="text-[16px] text-[#686977] pr-[18px]">8hr 39min</h1>
+                        <!-- second --- -->
+                        <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                          <path d="M11.1335 11.5333C11.1335 11.6394 11.0914 11.7411 11.0164 11.8162C10.9414 11.8912 10.8396 11.9333 10.7335 11.9333H4.6002C4.49411 11.9333 4.39237 11.8912 4.31735 11.8162C4.24234 11.7411 4.2002 11.6394 4.2002 11.5333V6.46665C4.2002 6.36056 4.24234 6.25882 4.31735 6.18381C4.39237 6.10879 4.49411 6.06665 4.6002 6.06665H10.7335C10.8396 6.06665 10.9414 6.10879 11.0164 6.18381C11.0914 6.25882 11.1335 6.36056 11.1335 6.46665V11.5333ZM14.3335 6.59998V11.4L11.1335 10.0667V7.93332L14.3335 6.59998Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M14.3333 1H3.66667C2.19391 1 1 2.19391 1 3.66667V14.3333C1 15.8061 2.19391 17 3.66667 17H14.3333C15.8061 17 17 15.8061 17 14.3333V3.66667C17 2.19391 15.8061 1 14.3333 1Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg></span><h1 class="text-[16px] text-[#686977] pr-[18px]">18 classes</h1>
+                        <!-- third --- -->
+                        <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                          <path d="M8 0.999999V13M8 13L13 8M8 13L3 8" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M1 13V17H15V13" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg></span><h1 class="text-[16px] text-[#686977]">572 sales</h1>
+    
+                      </div>
+                      <div
+                      class="flex justify-between items-center">
+                      <p class="text-[18px] font-bold text-[#0B0D21]">$134</p>
+                        <div class="flex">
+                          <button class="text-[18px] font-bold py-[15px] px-[35px] text-[#0B0D21] border  hover:bg-[#FFEE00] rounded-[6px]">Enroll</button>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="max-w-[370px]">
+                    <div
+                      class=" bg-white py-4 lg:py-[20px] px-[15px] lg:px-5 rounded-[12px] shadow-[0px_40px_150px_-35px_rgba(0,0,0,0.06)]"
+                    >
+                      <img
+                        class="rounded-[15px] object-cover "
+                        src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/nUJllIl5e4nrTZ6ZwsVm1692460751.webp"
+                        alt="product"
+                      />
+                      <div class=" mt-[12px]">
+                        <h4 class="text-[#434EC4]">UI/UX DESIGN</h4>
+                        <h2 class="text-[18px] font-bold">Become a UX designer in 2022</h2>
+                      </div>
+                      <div class="flex justify-start items-center mx-auto">
+                        <img  src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/EGEUgBRqKI4WkCjUvINq1692461080.webp" alt="" /> <span class="text-[16px] font-normal text-[#83848C] pl-2 py-[12px]">by Eichiro D. Lucky</span>
+                      </div>
+                      <div class="flex justify-start items-center mx-auto pb-[20px]">
+                        <!-- first --- -->
+                        <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                          <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M9 3.1333V9.26663L12.4667 11.1333" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg></span><h1 class="text-[16px] text-[#686977] pr-[18px]">8hr 39min</h1>
+                        <!-- second --- -->
+                        <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                          <path d="M11.1335 11.5333C11.1335 11.6394 11.0914 11.7411 11.0164 11.8162C10.9414 11.8912 10.8396 11.9333 10.7335 11.9333H4.6002C4.49411 11.9333 4.39237 11.8912 4.31735 11.8162C4.24234 11.7411 4.2002 11.6394 4.2002 11.5333V6.46665C4.2002 6.36056 4.24234 6.25882 4.31735 6.18381C4.39237 6.10879 4.49411 6.06665 4.6002 6.06665H10.7335C10.8396 6.06665 10.9414 6.10879 11.0164 6.18381C11.0914 6.25882 11.1335 6.36056 11.1335 6.46665V11.5333ZM14.3335 6.59998V11.4L11.1335 10.0667V7.93332L14.3335 6.59998Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M14.3333 1H3.66667C2.19391 1 1 2.19391 1 3.66667V14.3333C1 15.8061 2.19391 17 3.66667 17H14.3333C15.8061 17 17 15.8061 17 14.3333V3.66667C17 2.19391 15.8061 1 14.3333 1Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg></span><h1 class="text-[16px] text-[#686977] pr-[18px]">18 classes</h1>
+                        <!-- third --- -->
+                        <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                          <path d="M8 0.999999V13M8 13L13 8M8 13L3 8" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M1 13V17H15V13" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg></span><h1 class="text-[16px] text-[#686977]">572 sales</h1>
+        
+                      </div>
+                      <div
+                      class="flex justify-between items-center">
+                      <p class="text-[18px] font-bold text-[#0B0D21]">$134</p>
+                        <div class="flex">
+                          <button class="text-[18px] font-bold py-[15px] px-[35px] text-[#0B0D21] border  hover:bg-[#FFEE00] rounded-[6px]">Enroll</button>
+                        </div>
+                        
+                      </div>
+                    </div>
+                      </div>
+                      <div class="max-w-[370px]">
+                    <div
+                      class=" bg-white py-4 lg:py-[20px] px-[15px] lg:px-5 rounded-[12px] shadow-[0px_40px_150px_-35px_rgba(0,0,0,0.06)]"
+                    >
+                      <img
+                        class="rounded-[15px] object-cover "
+                        src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/400MIdo7f5GDuJh6dH821692463391.webp"
+                        alt=""
+                      />
+                      <div class=" mt-[12px]">
+                        <h4 class="text-[#434EC4]">UI/UX DESIGN</h4>
+                        <h2 class="text-[18px] font-bold">Become a UX designer in 2022</h2>
+                      </div>
+                      <div class="flex justify-start items-center mx-auto">
+                        <img  src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/EGEUgBRqKI4WkCjUvINq1692461080.webp" alt="" /> <span class="text-[16px] font-normal text-[#83848C] pl-2 py-[12px]">by Eichiro D. Lucky</span>
+                      </div>
+                      <div class="flex justify-start items-center mx-auto pb-[20px]">
+                        <!-- first --- -->
+                        <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                          <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M9 3.1333V9.26663L12.4667 11.1333" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg></span><h1 class="text-[16px] text-[#686977] pr-[18px]">8hr 39min</h1>
+                        <!-- second --- -->
+                        <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                          <path d="M11.1335 11.5333C11.1335 11.6394 11.0914 11.7411 11.0164 11.8162C10.9414 11.8912 10.8396 11.9333 10.7335 11.9333H4.6002C4.49411 11.9333 4.39237 11.8912 4.31735 11.8162C4.24234 11.7411 4.2002 11.6394 4.2002 11.5333V6.46665C4.2002 6.36056 4.24234 6.25882 4.31735 6.18381C4.39237 6.10879 4.49411 6.06665 4.6002 6.06665H10.7335C10.8396 6.06665 10.9414 6.10879 11.0164 6.18381C11.0914 6.25882 11.1335 6.36056 11.1335 6.46665V11.5333ZM14.3335 6.59998V11.4L11.1335 10.0667V7.93332L14.3335 6.59998Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M14.3333 1H3.66667C2.19391 1 1 2.19391 1 3.66667V14.3333C1 15.8061 2.19391 17 3.66667 17H14.3333C15.8061 17 17 15.8061 17 14.3333V3.66667C17 2.19391 15.8061 1 14.3333 1Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg></span><h1 class="text-[16px] text-[#686977] pr-[18px]">18 classes</h1>
+                        <!-- third --- -->
+                        <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                          <path d="M8 0.999999V13M8 13L13 8M8 13L3 8" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M1 13V17H15V13" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg></span><h1 class="text-[16px] text-[#686977]">572 sales</h1>
+        
+                      </div>
+                      <div
+                      class="flex justify-between items-center">
+                      <p class="text-[18px] font-bold text-[#0B0D21]">$134</p>
+                        <div class="flex">
+                          <button class="text-[18px] font-bold py-[15px] px-[35px] text-[#0B0D21] border  hover:bg-[#FFEE00] rounded-[6px]">Enroll</button>
+                        </div>
+                        
+                      </div>
+                    </div>
+                      </div>
+                      <div class="max-w-[370px]">
+                        <div
+                          class=" bg-white py-4 lg:py-[20px] px-[15px] lg:px-5 rounded-[12px] shadow-[0px_40px_150px_-35px_rgba(0,0,0,0.06)]"
+                        >
+                          <img
+                            class="rounded-[15px] object-cover "
+                            src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/W8p1osmeDGBDPi58UmRy1692463499.webp"
+                            alt="product"
+                          />
+                          <div class=" mt-[12px]">
+                            <h4 class="text-[#434EC4]">UI/UX DESIGN</h4>
+                            <h2 class="text-[18px] font-bold">Become a UX designer in 2022</h2>
+                          </div>
+                          <div class="flex justify-start items-center mx-auto">
+                            <img  src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/EGEUgBRqKI4WkCjUvINq1692461080.webp" alt="" /> <span class="text-[16px] font-normal text-[#83848C] pl-2 py-[12px]">by Eichiro D. Lucky</span>
+                          </div>
+                          <div class="flex justify-start items-center mx-auto pb-[20px]">
+                            <!-- first --- -->
+                            <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                              <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M9 3.1333V9.26663L12.4667 11.1333" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg></span><h1 class="text-[16px] text-[#686977] pr-[18px]">8hr 39min</h1>
+                            <!-- second --- -->
+                            <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                              <path d="M11.1335 11.5333C11.1335 11.6394 11.0914 11.7411 11.0164 11.8162C10.9414 11.8912 10.8396 11.9333 10.7335 11.9333H4.6002C4.49411 11.9333 4.39237 11.8912 4.31735 11.8162C4.24234 11.7411 4.2002 11.6394 4.2002 11.5333V6.46665C4.2002 6.36056 4.24234 6.25882 4.31735 6.18381C4.39237 6.10879 4.49411 6.06665 4.6002 6.06665H10.7335C10.8396 6.06665 10.9414 6.10879 11.0164 6.18381C11.0914 6.25882 11.1335 6.36056 11.1335 6.46665V11.5333ZM14.3335 6.59998V11.4L11.1335 10.0667V7.93332L14.3335 6.59998Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M14.3333 1H3.66667C2.19391 1 1 2.19391 1 3.66667V14.3333C1 15.8061 2.19391 17 3.66667 17H14.3333C15.8061 17 17 15.8061 17 14.3333V3.66667C17 2.19391 15.8061 1 14.3333 1Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg></span><h1 class="text-[16px] text-[#686977] pr-[18px]">18 classes</h1>
+                            <!-- third --- -->
+                            <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                              <path d="M8 0.999999V13M8 13L13 8M8 13L3 8" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M1 13V17H15V13" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg></span><h1 class="text-[16px] text-[#686977]">572 sales</h1>
+        
+                          </div>
+                          <div
+                          class="flex justify-between items-center">
+                          <p class="text-[18px] font-bold text-[#0B0D21]">$134</p>
+                            <div class="flex">
+                              <button class="text-[18px] font-bold py-[15px] px-[35px] text-[#0B0D21] border  hover:bg-[#FFEE00] rounded-[6px]">Enroll</button>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <div class="max-w-[370px]">
+                        <div
+                          class=" bg-white py-4 lg:py-[20px] px-[15px] lg:px-5 rounded-[12px] shadow-[0px_40px_150px_-35px_rgba(0,0,0,0.06)]"
+                        >
+                          <img
+                            class="rounded-[15px] object-cover "
+                            src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/01nprxRa9vvA6B5Icp7k1692463406.webp"
+                            alt="product"
+                          />
+                          <div class=" mt-[12px]">
+                            <h4 class="text-[#434EC4]">UI/UX DESIGN</h4>
+                            <h2 class="text-[18px] font-bold">Become a UX designer in 2022</h2>
+                          </div>
+                          <div class="flex justify-start items-center mx-auto">
+                            <img  src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/EGEUgBRqKI4WkCjUvINq1692461080.webp" alt="" /> <span class="text-[16px] font-normal text-[#83848C] pl-2 py-[12px]">by Eichiro D. Lucky</span>
+                          </div>
+                          <div class="flex justify-start items-center mx-auto pb-[20px]">
+                            <!-- first --- -->
+                            <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                              <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M9 3.1333V9.26663L12.4667 11.1333" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg></span><h1 class="text-[16px] text-[#686977] pr-[18px]">8hr 39min</h1>
+                            <!-- second --- -->
+                            <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                              <path d="M11.1335 11.5333C11.1335 11.6394 11.0914 11.7411 11.0164 11.8162C10.9414 11.8912 10.8396 11.9333 10.7335 11.9333H4.6002C4.49411 11.9333 4.39237 11.8912 4.31735 11.8162C4.24234 11.7411 4.2002 11.6394 4.2002 11.5333V6.46665C4.2002 6.36056 4.24234 6.25882 4.31735 6.18381C4.39237 6.10879 4.49411 6.06665 4.6002 6.06665H10.7335C10.8396 6.06665 10.9414 6.10879 11.0164 6.18381C11.0914 6.25882 11.1335 6.36056 11.1335 6.46665V11.5333ZM14.3335 6.59998V11.4L11.1335 10.0667V7.93332L14.3335 6.59998Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M14.3333 1H3.66667C2.19391 1 1 2.19391 1 3.66667V14.3333C1 15.8061 2.19391 17 3.66667 17H14.3333C15.8061 17 17 15.8061 17 14.3333V3.66667C17 2.19391 15.8061 1 14.3333 1Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg></span><h1 class="text-[16px] text-[#686977] pr-[18px]">18 classes</h1>
+                            <!-- third --- -->
+                            <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                              <path d="M8 0.999999V13M8 13L13 8M8 13L3 8" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M1 13V17H15V13" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg></span><h1 class="text-[16px] text-[#686977]">572 sales</h1>
+        
+                          </div>
+                          <div
+                          class="flex justify-between items-center">
+                          <p class="text-[18px] font-bold text-[#0B0D21]">$134</p>
+                            <div class="flex">
+                              <button class="text-[18px] font-bold py-[15px] px-[35px] text-[#0B0D21] border  hover:bg-[#FFEE00] rounded-[6px]">Enroll</button>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <div class="max-w-[370px]">
+                        <div
+                          class=" bg-white py-4 lg:py-[20px] px-[15px] lg:px-5 rounded-[12px] shadow-[0px_40px_150px_-35px_rgba(0,0,0,0.06)]"
+                        >
+                          <img
+                            class="rounded-[15px] object-cover "
+                            src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/SeLC26zKQrhIODbNxT0e1692463447.webp"
+                            alt="product"
+                          />
+                          <div class=" mt-[12px]">
+                            <h4 class="text-[#434EC4]">UI/UX DESIGN</h4>
+                            <h2 class="text-[18px] font-bold">Become a UX designer in 2022</h2>
+                          </div>
+                          <div class="flex justify-start items-center mx-auto">
+                            <img  src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/EGEUgBRqKI4WkCjUvINq1692461080.webp" alt="" /> <span class="text-[16px] font-normal text-[#83848C] pl-2 py-[12px]">by Eichiro D. Lucky</span>
+                          </div>
+                          <div class="flex justify-start items-center mx-auto pb-[20px]">
+                            <!-- first --- -->
+                            <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                              <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M9 3.1333V9.26663L12.4667 11.1333" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg></span><h1 class="text-[16px] text-[#686977] pr-[18px]">8hr 39min</h1>
+                            <!-- second --- -->
+                            <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                              <path d="M11.1335 11.5333C11.1335 11.6394 11.0914 11.7411 11.0164 11.8162C10.9414 11.8912 10.8396 11.9333 10.7335 11.9333H4.6002C4.49411 11.9333 4.39237 11.8912 4.31735 11.8162C4.24234 11.7411 4.2002 11.6394 4.2002 11.5333V6.46665C4.2002 6.36056 4.24234 6.25882 4.31735 6.18381C4.39237 6.10879 4.49411 6.06665 4.6002 6.06665H10.7335C10.8396 6.06665 10.9414 6.10879 11.0164 6.18381C11.0914 6.25882 11.1335 6.36056 11.1335 6.46665V11.5333ZM14.3335 6.59998V11.4L11.1335 10.0667V7.93332L14.3335 6.59998Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M14.3333 1H3.66667C2.19391 1 1 2.19391 1 3.66667V14.3333C1 15.8061 2.19391 17 3.66667 17H14.3333C15.8061 17 17 15.8061 17 14.3333V3.66667C17 2.19391 15.8061 1 14.3333 1Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg></span><h1 class="text-[16px] text-[#686977] pr-[18px]">18 classes</h1>
+                            <!-- third --- -->
+                            <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                              <path d="M8 0.999999V13M8 13L13 8M8 13L3 8" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M1 13V17H15V13" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg></span><h1 class="text-[16px] text-[#686977]">572 sales</h1>
+        
+                          </div>
+                          <div
+                          class="flex justify-between items-center">
+                          <p class="text-[18px] font-bold text-[#0B0D21]">$134</p>
+                            <div class="flex">
+                              <button class="text-[18px] font-bold py-[15px] px-[35px] text-[#0B0D21] border  hover:bg-[#FFEE00] rounded-[6px]">Enroll</button>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <div class="max-w-[370px]">
+                        <div
+                          class=" bg-white py-4 lg:py-[20px] px-[15px] lg:px-5 rounded-[12px] shadow-[0px_40px_150px_-35px_rgba(0,0,0,0.06)]"
+                        >
+                          <img
+                            class="rounded-[15px] object-cover "
+                            src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/nUJllIl5e4nrTZ6ZwsVm1692460751.webp"
+                            alt="product"
+                          />
+                          <div class=" mt-[12px]">
+                            <h4 class="text-[#434EC4]">UI/UX DESIGN</h4>
+                            <h2 class="text-[18px] font-bold">Become a UX designer in 2022</h2>
+                          </div>
+                          <div class="flex justify-start items-center mx-auto">
+                            <img  src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/EGEUgBRqKI4WkCjUvINq1692461080.webp" alt="" /> <span class="text-[16px] font-normal text-[#83848C] pl-2 py-[12px]">by Eichiro D. Lucky</span>
+                          </div>
+                          <div class="flex justify-start items-center mx-auto pb-[20px]">
+                            <!-- first --- -->
+                            <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                              <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M9 3.1333V9.26663L12.4667 11.1333" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg></span><h1 class="text-[16px] text-[#686977] pr-[18px]">8hr 39min</h1>
+                            <!-- second --- -->
+                            <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                              <path d="M11.1335 11.5333C11.1335 11.6394 11.0914 11.7411 11.0164 11.8162C10.9414 11.8912 10.8396 11.9333 10.7335 11.9333H4.6002C4.49411 11.9333 4.39237 11.8912 4.31735 11.8162C4.24234 11.7411 4.2002 11.6394 4.2002 11.5333V6.46665C4.2002 6.36056 4.24234 6.25882 4.31735 6.18381C4.39237 6.10879 4.49411 6.06665 4.6002 6.06665H10.7335C10.8396 6.06665 10.9414 6.10879 11.0164 6.18381C11.0914 6.25882 11.1335 6.36056 11.1335 6.46665V11.5333ZM14.3335 6.59998V11.4L11.1335 10.0667V7.93332L14.3335 6.59998Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M14.3333 1H3.66667C2.19391 1 1 2.19391 1 3.66667V14.3333C1 15.8061 2.19391 17 3.66667 17H14.3333C15.8061 17 17 15.8061 17 14.3333V3.66667C17 2.19391 15.8061 1 14.3333 1Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg></span><h1 class="text-[16px] text-[#686977] pr-[18px]">18 classes</h1>
+                            <!-- third --- -->
+                            <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                              <path d="M8 0.999999V13M8 13L13 8M8 13L3 8" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M1 13V17H15V13" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg></span><h1 class="text-[16px] text-[#686977]">572 sales</h1>
+            
+                          </div>
+                          <div
+                          class="flex justify-between items-center">
+                          <p class="text-[18px] font-bold text-[#0B0D21]">$134</p>
+                            <div class="flex">
+                              <button class="text-[18px] font-bold py-[15px] px-[35px] text-[#0B0D21] border  hover:bg-[#FFEE00] rounded-[6px]">Enroll</button>
+                            </div>
+                            
+                          </div>
+                        </div>
+                          </div>
+                          <div class="max-w-[370px]">
+                        <div
+                          class=" bg-white py-4 lg:py-[20px] px-[15px] lg:px-5 rounded-[12px] shadow-[0px_40px_150px_-35px_rgba(0,0,0,0.06)]"
+                        >
+                          <img
+                            class="rounded-[15px] object-cover "
+                            src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/400MIdo7f5GDuJh6dH821692463391.webp"
+                            alt=""
+                          />
+                          <div class=" mt-[12px]">
+                            <h4 class="text-[#434EC4]">UI/UX DESIGN</h4>
+                            <h2 class="text-[18px] font-bold">Become a UX designer in 2022</h2>
+                          </div>
+                          <div class="flex justify-start items-center mx-auto">
+                            <img  src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/EGEUgBRqKI4WkCjUvINq1692461080.webp" alt="" /> <span class="text-[16px] font-normal text-[#83848C] pl-2 py-[12px]">by Eichiro D. Lucky</span>
+                          </div>
+                          <div class="flex justify-start items-center mx-auto pb-[20px]">
+                            <!-- first --- -->
+                            <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                              <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M9 3.1333V9.26663L12.4667 11.1333" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg></span><h1 class="text-[16px] text-[#686977] pr-[18px]">8hr 39min</h1>
+                            <!-- second --- -->
+                            <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                              <path d="M11.1335 11.5333C11.1335 11.6394 11.0914 11.7411 11.0164 11.8162C10.9414 11.8912 10.8396 11.9333 10.7335 11.9333H4.6002C4.49411 11.9333 4.39237 11.8912 4.31735 11.8162C4.24234 11.7411 4.2002 11.6394 4.2002 11.5333V6.46665C4.2002 6.36056 4.24234 6.25882 4.31735 6.18381C4.39237 6.10879 4.49411 6.06665 4.6002 6.06665H10.7335C10.8396 6.06665 10.9414 6.10879 11.0164 6.18381C11.0914 6.25882 11.1335 6.36056 11.1335 6.46665V11.5333ZM14.3335 6.59998V11.4L11.1335 10.0667V7.93332L14.3335 6.59998Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M14.3333 1H3.66667C2.19391 1 1 2.19391 1 3.66667V14.3333C1 15.8061 2.19391 17 3.66667 17H14.3333C15.8061 17 17 15.8061 17 14.3333V3.66667C17 2.19391 15.8061 1 14.3333 1Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg></span><h1 class="text-[16px] text-[#686977] pr-[18px]">18 classes</h1>
+                            <!-- third --- -->
+                            <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                              <path d="M8 0.999999V13M8 13L13 8M8 13L3 8" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M1 13V17H15V13" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg></span><h1 class="text-[16px] text-[#686977]">572 sales</h1>
+            
+                          </div>
+                          <div
+                          class="flex justify-between items-center">
+                          <p class="text-[18px] font-bold text-[#0B0D21]">$134</p>
+                            <div class="flex">
+                              <button class="text-[18px] font-bold py-[15px] px-[35px] text-[#0B0D21] border  hover:bg-[#FFEE00] rounded-[6px]">Enroll</button>
+                            </div>
+                            
+                          </div>
+                        </div>
+                          </div>
+                          <div class="max-w-[370px]">
+                            <div
+                              class=" bg-white py-4 lg:py-[20px] px-[15px] lg:px-5 rounded-[12px] shadow-[0px_40px_150px_-35px_rgba(0,0,0,0.06)]"
+                            >
+                              <img
+                                class="rounded-[15px] object-cover "
+                                src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/W8p1osmeDGBDPi58UmRy1692463499.webp"
+                                alt="product"
+                              />
+                              <div class=" mt-[12px]">
+                                <h4 class="text-[#434EC4]">UI/UX DESIGN</h4>
+                                <h2 class="text-[18px] font-bold">Become a UX designer in 2022</h2>
+                              </div>
+                              <div class="flex justify-start items-center mx-auto">
+                                <img  src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/EGEUgBRqKI4WkCjUvINq1692461080.webp" alt="" /> <span class="text-[16px] font-normal text-[#83848C] pl-2 py-[12px]">by Eichiro D. Lucky</span>
+                              </div>
+                              <div class="flex justify-start items-center mx-auto pb-[20px]">
+                                <!-- first --- -->
+                                <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                  <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M9 3.1333V9.26663L12.4667 11.1333" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg></span><h1 class="text-[16px] text-[#686977] pr-[18px]">8hr 39min</h1>
+                                <!-- second --- -->
+                                <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                  <path d="M11.1335 11.5333C11.1335 11.6394 11.0914 11.7411 11.0164 11.8162C10.9414 11.8912 10.8396 11.9333 10.7335 11.9333H4.6002C4.49411 11.9333 4.39237 11.8912 4.31735 11.8162C4.24234 11.7411 4.2002 11.6394 4.2002 11.5333V6.46665C4.2002 6.36056 4.24234 6.25882 4.31735 6.18381C4.39237 6.10879 4.49411 6.06665 4.6002 6.06665H10.7335C10.8396 6.06665 10.9414 6.10879 11.0164 6.18381C11.0914 6.25882 11.1335 6.36056 11.1335 6.46665V11.5333ZM14.3335 6.59998V11.4L11.1335 10.0667V7.93332L14.3335 6.59998Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M14.3333 1H3.66667C2.19391 1 1 2.19391 1 3.66667V14.3333C1 15.8061 2.19391 17 3.66667 17H14.3333C15.8061 17 17 15.8061 17 14.3333V3.66667C17 2.19391 15.8061 1 14.3333 1Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg></span><h1 class="text-[16px] text-[#686977] pr-[18px]">18 classes</h1>
+                                <!-- third --- -->
+                                <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                                  <path d="M8 0.999999V13M8 13L13 8M8 13L3 8" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M1 13V17H15V13" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg></span><h1 class="text-[16px] text-[#686977]">572 sales</h1>
+            
+                              </div>
+                              <div
+                              class="flex justify-between items-center">
+                              <p class="text-[18px] font-bold text-[#0B0D21]">$134</p>
+                                <div class="flex">
+                                  <button class="text-[18px] font-bold py-[15px] px-[35px] text-[#0B0D21] border  hover:bg-[#FFEE00] rounded-[6px]">Enroll</button>
+                                </div>
+                                
+                              </div>
+                            </div>
+                          </div>
+                          <div class="max-w-[370px]">
+                            <div
+                              class=" bg-white py-4 lg:py-[20px] px-[15px] lg:px-5 rounded-[12px] shadow-[0px_40px_150px_-35px_rgba(0,0,0,0.06)]"
+                            >
+                              <img
+                                class="rounded-[15px] object-cover "
+                                src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/01nprxRa9vvA6B5Icp7k1692463406.webp"
+                                alt="product"
+                              />
+                              <div class=" mt-[12px]">
+                                <h4 class="text-[#434EC4]">UI/UX DESIGN</h4>
+                                <h2 class="text-[18px] font-bold">Become a UX designer in 2022</h2>
+                              </div>
+                              <div class="flex justify-start items-center mx-auto">
+                                <img  src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/EGEUgBRqKI4WkCjUvINq1692461080.webp" alt="" /> <span class="text-[16px] font-normal text-[#83848C] pl-2 py-[12px]">by Eichiro D. Lucky</span>
+                              </div>
+                              <div class="flex justify-start items-center mx-auto pb-[20px]">
+                                <!-- first --- -->
+                                <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                  <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M9 3.1333V9.26663L12.4667 11.1333" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg></span><h1 class="text-[16px] text-[#686977] pr-[18px]">8hr 39min</h1>
+                                <!-- second --- -->
+                                <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                  <path d="M11.1335 11.5333C11.1335 11.6394 11.0914 11.7411 11.0164 11.8162C10.9414 11.8912 10.8396 11.9333 10.7335 11.9333H4.6002C4.49411 11.9333 4.39237 11.8912 4.31735 11.8162C4.24234 11.7411 4.2002 11.6394 4.2002 11.5333V6.46665C4.2002 6.36056 4.24234 6.25882 4.31735 6.18381C4.39237 6.10879 4.49411 6.06665 4.6002 6.06665H10.7335C10.8396 6.06665 10.9414 6.10879 11.0164 6.18381C11.0914 6.25882 11.1335 6.36056 11.1335 6.46665V11.5333ZM14.3335 6.59998V11.4L11.1335 10.0667V7.93332L14.3335 6.59998Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M14.3333 1H3.66667C2.19391 1 1 2.19391 1 3.66667V14.3333C1 15.8061 2.19391 17 3.66667 17H14.3333C15.8061 17 17 15.8061 17 14.3333V3.66667C17 2.19391 15.8061 1 14.3333 1Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg></span><h1 class="text-[16px] text-[#686977] pr-[18px]">18 classes</h1>
+                                <!-- third --- -->
+                                <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                                  <path d="M8 0.999999V13M8 13L13 8M8 13L3 8" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M1 13V17H15V13" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg></span><h1 class="text-[16px] text-[#686977]">572 sales</h1>
+            
+                              </div>
+                              <div
+                              class="flex justify-between items-center">
+                              <p class="text-[18px] font-bold text-[#0B0D21]">$134</p>
+                                <div class="flex">
+                                  <button class="text-[18px] font-bold py-[15px] px-[35px] text-[#0B0D21] border  hover:bg-[#FFEE00] rounded-[6px]">Enroll</button>
+                                </div>
+                                
+                              </div>
+                            </div>
+                          </div>
+                          <div class="max-w-[370px]">
+                            <div
+                              class=" bg-white py-4 lg:py-[20px] px-[15px] lg:px-5 rounded-[12px] shadow-[0px_40px_150px_-35px_rgba(0,0,0,0.06)]"
+                            >
+                              <img
+                                class="rounded-[15px] object-cover "
+                                src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/SeLC26zKQrhIODbNxT0e1692463447.webp"
+                                alt="product"
+                              />
+                              <div class=" mt-[12px]">
+                                <h4 class="text-[#434EC4]">UI/UX DESIGN</h4>
+                                <h2 class="text-[18px] font-bold">Become a UX designer in 2022</h2>
+                              </div>
+                              <div class="flex justify-start items-center mx-auto">
+                                <img  src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/EGEUgBRqKI4WkCjUvINq1692461080.webp" alt="" /> <span class="text-[16px] font-normal text-[#83848C] pl-2 py-[12px]">by Eichiro D. Lucky</span>
+                              </div>
+                              <div class="flex justify-start items-center mx-auto pb-[20px]">
+                                <!-- first --- -->
+                                <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                  <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M9 3.1333V9.26663L12.4667 11.1333" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg></span><h1 class="text-[16px] text-[#686977] pr-[18px]">8hr 39min</h1>
+                                <!-- second --- -->
+                                <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                  <path d="M11.1335 11.5333C11.1335 11.6394 11.0914 11.7411 11.0164 11.8162C10.9414 11.8912 10.8396 11.9333 10.7335 11.9333H4.6002C4.49411 11.9333 4.39237 11.8912 4.31735 11.8162C4.24234 11.7411 4.2002 11.6394 4.2002 11.5333V6.46665C4.2002 6.36056 4.24234 6.25882 4.31735 6.18381C4.39237 6.10879 4.49411 6.06665 4.6002 6.06665H10.7335C10.8396 6.06665 10.9414 6.10879 11.0164 6.18381C11.0914 6.25882 11.1335 6.36056 11.1335 6.46665V11.5333ZM14.3335 6.59998V11.4L11.1335 10.0667V7.93332L14.3335 6.59998Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M14.3333 1H3.66667C2.19391 1 1 2.19391 1 3.66667V14.3333C1 15.8061 2.19391 17 3.66667 17H14.3333C15.8061 17 17 15.8061 17 14.3333V3.66667C17 2.19391 15.8061 1 14.3333 1Z" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg></span><h1 class="text-[16px] text-[#686977] pr-[18px]">18 classes</h1>
+                                <!-- third --- -->
+                                <span class="pr-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 18" fill="none">
+                                  <path d="M8 0.999999V13M8 13L13 8M8 13L3 8" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M1 13V17H15V13" stroke="#686977" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg></span><h1 class="text-[16px] text-[#686977]">572 sales</h1>
+            
+                              </div>
+                              <div
+                              class="flex justify-between items-center">
+                              <p class="text-[18px] font-bold text-[#0B0D21]">$134</p>
+                                <div class="flex">
+                                  <button class="text-[18px] font-bold py-[15px] px-[35px] text-[#0B0D21] border  hover:bg-[#FFEE00] rounded-[6px]">Enroll</button>
+                                </div>
+                                
+                              </div>
+                            </div>
+                          </div>
+            </div>
+          </div>
+    </section>
+    
+    <!-- POPULAR TOPICS  -->
+    <section class="flex justify-center items-center mx-auto bg-[#ffffff]">
+            <div class="max-w-[1440px] mx-auto px-5">
+                <h1 class="max-w-[570px] mx-auto text-[24px] sm:text-[42px] font-extrabold leading-[30px] sm:leading-[52px] text-black text-center py-[45px] sm:py-[100px]">Popular tropics</h1>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-[30px] max-w-[1170px]">
+                    <div class="max-w-[370px]">
+                      <div class=" bg-white py-4 lg:py-[20px] px-[15px] lg:px-5 border border-[#E9EAF0] rounded-[12px] shadow-[0px_40px_150px_-35px_rgba(0,0,0,0.06)]">
+                      <img
+                        class="rounded-[15px] object-cover "
+                        src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/nUJllIl5e4nrTZ6ZwsVm1692460751.webp"
+                        alt="product"/>
+                      <div class=" mt-[12px]">
+                        <h4 class="text-[#434EC4]">UI/UX DESIGN</h4>
+                        <h2 class="text-[18px] font-bold">Become a UX designer in 2022</h2>
+                      </div>
+                    </div>
+                      </div>
+                    <div class="max-w-[370px]">
+                        <div class=" bg-white py-4 lg:py-[20px] px-[15px] lg:px-5 border border-[#E9EAF0] rounded-[12px] shadow-[0px_40px_150px_-35px_rgba(0,0,0,0.06)]">
+                        <img
+                          class="rounded-[15px] object-cover "
+                          src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/400MIdo7f5GDuJh6dH821692463391.webp"
+                          alt="product"/>
+                        <div class=" mt-[12px]">
+                          <h4 class="text-[#434EC4]">Freelancing</h4>
+                          <h2 class="text-[18px] font-bold">Become a UX designer in 2022</h2>
+                        </div>
+                      </div>
+                      </div>
+                    <div class="max-w-[370px]">
+                        <div class=" bg-white py-4 lg:py-[20px] px-[15px] lg:px-5 border border-[#E9EAF0] rounded-[12px] shadow-[0px_40px_150px_-35px_rgba(0,0,0,0.06)]">
+                        <img
+                          class="rounded-[15px] object-cover "
+                          src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/01nprxRa9vvA6B5Icp7k1692463406.webp"
+                          alt="product"/>
+                        <div class=" mt-[12px]">
+                          <h4 class="text-[#434EC4]">Business Strategy</h4>
+                          <h2 class="text-[18px] font-bold">Become a UX designer in 2022</h2>
+                        </div>
+                      </div>
+                      </div>
+                    <div class="max-w-[370px]">
+                        <div class=" bg-white py-4 lg:py-[20px] px-[15px] lg:px-5 border border-[#E9EAF0] rounded-[12px] shadow-[0px_40px_150px_-35px_rgba(0,0,0,0.06)]">
+                        <img
+                          class="rounded-[15px] object-cover "
+                          src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/W8p1osmeDGBDPi58UmRy1692463499.webp"
+                          alt="product"/>
+                        <div class=" mt-[12px]">
+                          <h4 class="text-[#434EC4]">Online Business</h4>
+                          <h2 class="text-[18px] font-bold">Become a UX designer in 2022</h2>
+                        </div>
+                      </div>
+                      </div>
+                    <div class="max-w-[370px]">
+                        <div class=" bg-white py-4 lg:py-[20px] px-[15px] lg:px-5 border border-[#E9EAF0] rounded-[12px] shadow-[0px_40px_150px_-35px_rgba(0,0,0,0.06)]">
+                        <img
+                          class="rounded-[15px] object-cover "
+                          src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/SeLC26zKQrhIODbNxT0e1692463447.webp"
+                          alt="product"/>
+                        <div class=" mt-[12px]">
+                          <h4 class="text-[#434EC4]">Business Fundamentals</h4>
+                          <h2 class="text-[18px] font-bold">Become a UX designer in 2022</h2>
+                        </div>
+                      </div>
+                      </div>
+                    <div class="max-w-[370px]">
+                        <div class=" bg-white py-4 lg:py-[20px] px-[15px] lg:px-5 border border-[#E9EAF0] rounded-[12px] shadow-[0px_40px_150px_-35px_rgba(0,0,0,0.06)]">
+                        <img
+                          class="rounded-[15px] object-cover "
+                          src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/nUJllIl5e4nrTZ6ZwsVm1692460751.webp"
+                          alt="product"/>
+                        <div class=" mt-[12px]">
+                          <h4 class="text-[#434EC4]">Home Business</h4>
+                          <h2 class="text-[18px] font-bold">Become a UX designer in 2022</h2>
+                        </div>
+                      </div>
+                      </div>
+                              
+                </div>
+              </div>
+    </section>
+
+    <!-- SWIPER SLIDER ---------- -->
+    <section class=" bg-[#ffffff]">
+    <h1 class="text-[26px] mx-auto sm:text-[42px] font-extrabold leading-[52px] text-[#0B0D21] text-center pb-[30px] pt-[100px]">Popular Instructors</h1>
+  <!-- Swiper -->
+  <div class="swiper tips-and-tricks-slider max-w-[1170px] mx-auto py-[70px]">
+    <div class="swiper-wrapper ">
+      <div class="swiper-slide  ">
+        <div class=" w-[277px] mx-auto text-center">
+            <div class=" flex justify-center items-center w-[277px] h-[315px] mx-auto rounded-[10px]">
+                <img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/xUhe2I3xUzfQsJLTFjiP1692548231.webp" alt="">
+            </div>
+            <h1 class="text-[18px] font-bold text-[#0B0D21]">Chris Haroun</h1>
+            <p class="text-[14px] text-[#686977] font-normal leading-[24px] ">Business Fundamentals</p>
+        </div>
+      </div>
+      <div class="swiper-slide  ">
+        <div class=" w-[277px] mx-auto text-center">
+            <div class=" flex justify-center items-center w-[277px] h-[315px] mx-auto rounded-[10px]">
+                <img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/41x1ffbSDlX52PvMGozF1692548293.webp" alt="">
+            </div>
+            <h1 class="text-[18px] font-bold text-[#0B0D21]">Hussain Ahmed</h1>
+            <p class="text-[14px] text-[#686977]  font-normal leading-[24px] ">Business Strategy</p>
+        </div>
+      </div>
+      <div class="swiper-slide  ">
+        <div class=" w-[277px] mx-auto text-center">
+            <div class=" flex justify-center items-center w-[277px] h-[315px] mx-auto rounded-[10px]">
+                <img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/QklLtOxcUH8DAmKEl5H01692548267.webp" alt="">
+            </div>
+            <h1 class="text-[18px] font-bold text-[#0B0D21]">Robert Steele</h1>
+            <p class="text-[14px] text-[#686977]  font-normal leading-[24px] ">Freelancing</p>
+        </div>
+      </div>
+      <div class="swiper-slide  ">
+        <div class=" w-[277px] mx-auto text-center">
+            <div class=" flex justify-center items-center w-[277px] h-[315px] mx-auto rounded-[10px]">
+                <img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/KuArXclayja9hwugDgxy1692548308.webp" alt="">
+            </div>
+            <h1 class="text-[18px] font-bold text-[#0B0D21]">Sethiya Godin</h1>
+            <p class="text-[14px] text-[#686977] font-normal leading-[24px] ">UI/UX Design</p>
+        </div>
+      </div>
+      <div class="swiper-slide  ">
+        <div class=" w-[277px] mx-auto text-center">
+            <div class=" flex justify-center items-center w-[277px] h-[315px] mx-auto rounded-[10px]">
+                <img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/xUhe2I3xUzfQsJLTFjiP1692548231.webp" alt="">
+            </div>
+            <h1 class="text-[18px] font-bold text-[#0B0D21]">Chris Haroun</h1>
+            <p class="text-[14px] text-[#686977] font-normal leading-[24px] ">Business Fundamentals</p>
+        </div>
+      </div>
+      <div class="swiper-slide  ">
+        <div class=" w-[277px] mx-auto text-center">
+            <div class=" flex justify-center items-center w-[277px] h-[315px] mx-auto rounded-[10px]">
+                <img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/41x1ffbSDlX52PvMGozF1692548293.webp" alt="">
+            </div>
+            <h1 class="text-[18px] font-bold text-[#0B0D21]">Hussain Ahmed</h1>
+            <p class="text-[14px] text-[#686977]  font-normal leading-[24px] ">Business Strategy</p>
+        </div>
+      </div>
+      <div class="swiper-slide  ">
+        <div class=" w-[277px] mx-auto text-center">
+            <div class=" flex justify-center items-center w-[277px] h-[315px] mx-auto rounded-[10px]">
+                <img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/QklLtOxcUH8DAmKEl5H01692548267.webp" alt="">
+            </div>
+            <h1 class="text-[18px] font-bold text-[#0B0D21]">Robert Steele</h1>
+            <p class="text-[14px] text-[#686977]  font-normal leading-[24px] ">Freelancing</p>
+        </div>
+      </div>
+      <div class="swiper-slide  ">
+        <div class=" w-[277px] mx-auto text-center">
+            <div class=" flex justify-center items-center w-[277px] h-[315px] mx-auto rounded-[10px]">
+                <img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/KuArXclayja9hwugDgxy1692548308.webp" alt="">
+            </div>
+            <h1 class="text-[18px] font-bold text-[#0B0D21]">Sethiya Godin</h1>
+            <p class="text-[14px] text-[#686977] font-normal leading-[24px] ">UI/UX Design</p>
+        </div>
+      </div>
+      
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    
+  </div>
+    </section>
+    </main>
+
+
+    <!-- FOOTER SECTION ------ -->
+    <footer class="bg-[#FDF0DF] pt-14 ">
+    <div class="container mx-auto px-4 pb-[50px]">
+      <div class="flex flex-wrap justify-between items-top max-w-[1170px] mx-auto">
+      <!-- Column 1 -->
+      <div class="w-full md:w-1/5 px-4">
+        <span class="block pb-4 text-[#0B0D21] text-lg font-bold">Courses</span>
+        <ul class="list-none">
+        <li>
+          <a class="text-[#686977] font-normal block pb-2 text-[16px] hover:text-black" href="#">Classroom Courses</a>
+        </li>
+        <li>
+          <a class="text-[#686977] font-normal block pb-2 text-lg hover:text-black" href="#">Virtual Classroom Courses</a>
+        </li>
+        <li>
+          <a class="text-[#686977] font-normal block pb-2 text-lg hover:text-black" href="#">E-Learning Courses</a>
+        </li>
+        <li>
+          <a class="text-[#686977] font-normal block pb-2 text-lg hover:text-black" href="#">University Courses</a>
+        </li>
+        <li>
+          <a class="text-[#686977] font-normal block pb-2 text-lg hover:text-black" href="#">University Degree</a>
+        </li>
+        </ul>
+      </div>
+      <!-- Column 2 -->
+      <div class="w-full md:w-1/5 px-4">
+        <span class="block pb-4 text-[#0B0D21] text-lg font-bold">Tutelage</span>
+        <ul class="list-none">
+        <li>
+          <a class="text-[#686977] font-normal block pb-2 text-lg hover:text-black" href="#">About us</a>
+        </li>
+        <li>
+          <a class="text-[#686977] font-normal block pb-2 text-lg hover:text-black" href="#">Testimonials</a>
+        </li>
+        <li>
+          <a class="text-[#686977] font-normal block pb-2 text-lg hover:text-black" href="#">Promotions</a>
+        </li>
+        <li>
+          <a class="text-[#686977] font-normal block pb-2 text-lg hover:text-black" href="#">Why Circuit</a>
+        </li>
+        <li>
+          <a class="text-[#686977] font-normal block pb-2 text-lg hover:text-black" href="#">Forum</a>
+        </li>
+        <li>
+          <a class="text-[#686977] font-normal block pb-2 text-lg hover:text-black" href="#">Podcasts</a>
+        </li>
+        </ul>
+      </div>
+      <!-- Column 3 -->
+      <div class="w-full md:w-1/5 px-4">
+        <span class="block pb-4 text-[#0B0D21] text-lg font-bold">Service</span>
+        <ul class="list-none">
+        <li>
+          <a class="text-[#686977] font-normal block pb-2 text-lg hover:text-black" href="#">Blog</a>
+        </li>
+        <li>
+          <a class="text-[#696B76] font-normal block pb-2 text-lg hover:text-white" href="#">Road Map</a>
+        </li>
+        <li>
+          <a class="text-[#696B76] font-normal block pb-2 text-lg hover:text-white" href="#">Testimonials</a>
+        </li>
+        <li>
+          <a class="text-[#696B76] font-normal block pb-2 text-lg hover:text-white" href="#">Good Tear</a>
+        </li>
+        </ul>
+      </div>
+      <!-- Column 4 -->
+      <div class="w-full md:w-1/5 px-4">
+        <h4 class=" text-[#686977]">Email us</h4>
+        <p class=" text-2xl font-bold text-[#0B0D21] py-[18px]">
+          email@gmail.com
+        </p>
+        <div class="flex pt-4">
+        <button class="bg-[#0B0D21] hover:bg-[#FFEE00] shadow-lg font-normal h-10 w-10 flex items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+          <i class="fab fa-twitter"></i>
+        </button>
+        <button class="bg-[#0B0D21] hover:bg-[#FFEE00] shadow-lg font-normal h-10 w-10 flex items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2" type="button">
+          <i class="fab fa-facebook-square"></i>
+        </button>
+        <button class="bg-[#0B0D21] hover:bg-[#FFEE00] shadow-lg font-normal h-10 w-10 flex items-center justify-center align-center rounded-full outline-none focus:outline-none" type="button">
+          <i class="fab fa-instagram"></i>
+        </button>
+        </div>
+      </div>
+      <!-- column 5 -->
+      <div class="w-full md:w-1/5 px-4">
+        <h4 class=" text-[#686977]">Call us</h4>
+        <p class=" text-2xl font-bold text-[#0B0D21] py-[18px]">
+          000 1234 5678
+        </p>
+      </div>
+      </div>
+    </div>
+    <hr class="max-w-[1170px] bg-[#5a5b65] mx-auto ">
+    <div class="max-w-[1170px] bg-[#FDF0DF] mx-auto py-[12px] px-4">
+      <div class="flex flex-wrap justify-between items-center mx-auto">
+      <div class="py-4">
+        <a  href="#" rel="noopener noreferrer"
+        ><img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/Vq6zqT8zg9FnTVqvgvtE1692285732.webp" alt="logo"
+        /></a>
+      </div>
+      <div class="flex juctify-center items-center gap-x-[36px] w-[220px] mx-auto ">
+                   <img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/MFUhCQLfrAePMsKj9kWm1690466576.webp" alt="">
+                   <img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/8F3f6VWGMZanRthhS9EN1690466596.webp" alt="">
+                   <img src="https://besnik-space.fra1.cdn.digitaloceanspaces.com/tailwindtemplates-net/jreaHzI5ODDaWL5oEoqf1690466621.webp" alt="">
+                   </div>
+      <div class="py-4 text-center text-sm font-normal">
+        <p>
+        <a href="#" class="text-black">&copy; Copyright 2021 by UIHUT. All rights reserved.</a>
+        </p>
+      </div>
+      </div>
+    </div>
+    </footer>
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper(".tips-and-tricks-slider", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints:{
+    640:{
+      slidesPerView: 2,
+  spaceBetween: 30,
+    },
+    1280:{
+      slidesPerView: 4,
+  spaceBetween: 40,
+    },
+  },
+  navigation: {
+   nextEl: ".swiper-button-next",
+   prevEl: ".swiper-button-prev",
+ },
+});
+</script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./include-html.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

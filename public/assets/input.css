@@ -1,0 +1,48 @@
+
+/* @font-face {
+  font-family: "Satoshi";
+  src: url("font/Satoshi-Black.woff2")
+    url("font/Satoshi-Bold.woff" )
+    url("font/Satoshi-Light.woff2")
+    url("font/Satoshi-Medium.woff2")
+    url("font/Satoshi-Regular.woff2");
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+
+} 
+
+/* start nav */
+.mobile-menu {
+  left: -200%;
+  transition: 0.5s;
+}
+
+.mobile-menu.active {
+  left: 0;
+}
+
+/* end nav */
+
+.our-services-card-size {
+  background-size: 100% 100%;
+}
+
+.our-best-collection .swiper-grid-column > .swiper-wrapper {
+  flex-direction: row;
+}
+.our-best-collection .swiper {
+
+}
+
+.our-best-collection .swiper-wrapper {
+  
+}
+.our-best-collection .swiper-slide {
+  margin: 10px;
+}
